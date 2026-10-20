@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="BiomeDefinition" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/content/biome_definition.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "base.biome.verdant"
+display_name = "青穹街区"
+provider_id = "base.generator.modular_city"
+tags = PackedStringArray("surface", "city", "garden")
+region_bounds = AABB(0, -64, -256, 128, 192, 512)
+priority = 10
+palette = PackedColorArray(0.25, 0.37, 0.40, 1, 0.35, 0.48, 0.40, 1, 0.28, 0.83, 0.73, 1)
+parameters = {"building_min": 8, "building_max": 28, "layer": "surface"}

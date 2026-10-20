@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="DronePresetDefinition" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/content/drone_preset_definition.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "base.preset.light35"
+display_name = "Light 3.5 / 轻行者"
+frame_id = "base.frame.f35"
+motor_set_id = "base.motor.m35"
+propeller_set_id = "base.prop.p35_general"

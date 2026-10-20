@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="OfferDefinition" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/content/offer_definition.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "base.offer.smooth"
+display_name = "P5 柔和桨叶组"
+part_id = "base.prop.p5_smooth"
+price = 150
+city_tag = "industrial"

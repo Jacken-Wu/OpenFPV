@@ -1,0 +1,34 @@
+[gd_resource type="Resource" script_class="ContentManifest" load_steps=21 format=3]
+
+[ext_resource type="Script" path="res://scripts/content/content_manifest.gd" id="1"]
+[ext_resource type="Resource" path="res://content/base/f5.tres" id="2"]
+[ext_resource type="Resource" path="res://content/base/f35.tres" id="3"]
+[ext_resource type="Resource" path="res://content/base/m5.tres" id="4"]
+[ext_resource type="Resource" path="res://content/base/m35.tres" id="5"]
+[ext_resource type="Resource" path="res://content/base/p5_general.tres" id="6"]
+[ext_resource type="Resource" path="res://content/base/p5_smooth.tres" id="7"]
+[ext_resource type="Resource" path="res://content/base/p35_general.tres" id="8"]
+[ext_resource type="Resource" path="res://content/base/explorer5.tres" id="9"]
+[ext_resource type="Resource" path="res://content/base/light35.tres" id="10"]
+[ext_resource type="Resource" path="res://content/base/map5.tres" id="11"]
+[ext_resource type="Resource" path="res://content/base/map5_smooth.tres" id="12"]
+[ext_resource type="Resource" path="res://content/base/map35.tres" id="13"]
+[ext_resource type="Resource" path="res://content/base/rustworks.tres" id="14"]
+[ext_resource type="Resource" path="res://content/base/verdant.tres" id="15"]
+[ext_resource type="Resource" path="res://content/base/canyon.tres" id="16"]
+[ext_resource type="Resource" path="res://content/base/sky.tres" id="17"]
+[ext_resource type="Resource" path="res://content/base/underground.tres" id="18"]
+[ext_resource type="Resource" path="res://content/base/relay_reward.tres" id="19"]
+[ext_resource type="Resource" path="res://content/base/smooth_offer.tres" id="20"]
+
+[resource]
+script = ExtResource("1")
+content_version = "0.1.0"
+world_version = 1
+initial_preset_id = "base.preset.explorer5"
+parts = Array[Resource]([ExtResource("2"), ExtResource("3"), ExtResource("4"), ExtResource("5"), ExtResource("6"), ExtResource("7"), ExtResource("8")])
+presets = Array[Resource]([ExtResource("9"), ExtResource("10")])
+propulsion_maps = Array[Resource]([ExtResource("11"), ExtResource("12"), ExtResource("13")])
+biomes = Array[Resource]([ExtResource("14"), ExtResource("15"), ExtResource("16"), ExtResource("17"), ExtResource("18")])
+rewards = Array[Resource]([ExtResource("19")])
+offers = Array[Resource]([ExtResource("20")])

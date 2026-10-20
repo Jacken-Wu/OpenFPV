@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="BiomeDefinition" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/content/biome_definition.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "base.biome.rustworks"
+display_name = "锈港工业区"
+provider_id = "base.generator.modular_city"
+tags = PackedStringArray("surface", "industrial", "city")
+region_bounds = AABB(-256, -64, -256, 256, 192, 512)
+priority = 10
+palette = PackedColorArray(0.22, 0.31, 0.34, 1, 0.53, 0.35, 0.22, 1, 0.95, 0.62, 0.25, 1)
+parameters = {"building_min": 12, "building_max": 40, "layer": "surface"}

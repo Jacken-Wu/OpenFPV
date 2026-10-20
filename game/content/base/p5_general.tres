@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="PartDefinition" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/content/part_definition.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "base.prop.p5_general"
+display_name = "P5 通用桨叶组"
+kind = "propeller_set"
+mass_per_component_kg = 0.004
+component_count = 4
+stats = {"diameter_inches": 5.0, "shaft_mm": 5.0}
+tuning = {"aero_trim": {"min": 0.98, "max": 1.02, "default": 1.0, "step": 0.005, "unit": "ratio"}}

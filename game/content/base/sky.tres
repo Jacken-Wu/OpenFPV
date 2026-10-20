@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="BiomeDefinition" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/content/biome_definition.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "base.biome.sky_fixture"
+display_name = "浮岛观测站"
+provider_id = "base.generator.sky_island"
+tags = PackedStringArray("volume", "sky")
+region_bounds = AABB(64, 80, -128, 96, 96, 96)
+priority = 20
+palette = PackedColorArray(0.28, 0.40, 0.40, 1, 0.39, 0.53, 0.35, 1, 0.83, 0.73, 0.48, 1)
+parameters = {"layer": "volume", "anchor": Vector3(112, 108, -80)}

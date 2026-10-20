@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="PartDefinition" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/content/part_definition.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "base.motor.m35"
+display_name = "M35 轻型电机组"
+kind = "motor_set"
+mass_per_component_kg = 0.017
+component_count = 4
+stats = {"mount": "12x12", "shaft_mm": 1.5}
+tuning = {"response_trim": {"min": 0.95, "max": 1.05, "default": 1.0, "step": 0.01, "unit": "ratio"}}
