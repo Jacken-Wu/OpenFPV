@@ -1,0 +1,15 @@
+conventions: []
+pitfalls: []
+journal:
+  - id: "2026-10-21-fpv-proposal-v1"
+    date: "2026-10-21"
+    desc: "完成 OpenFPV 第一版方案书，内容为历史参考；引擎与地图方向已由 2026-10-21 第二版修订，第一版 PDF 与 Markdown 保留。"
+    freshness: "volatile"
+  - id: "2026-10-21-fpv-proposal-v2"
+    date: "2026-10-21"
+    desc: "用户明确个人开发、游戏开源、偏好 Godot 4、程序化地图与像素风，并希望主要借助 Codex 和 ChatGPT 开发。已交付第二版 15 页 PDF 与 Markdown，建议块状网格加模块化世界，先做飞行、拍摄、数据快递及设施状态闭环；重连边境是建议世界观，尚未由用户选定，游戏原型尚未开始。"
+    freshness: "volatile"
+  - id: "2026-10-21-development-contract"
+    date: "2026-10-21"
+    desc: "用户已选定 Godot 4 加 GDScript，要求后续依开发文档推进；新增群系须覆盖不同城市、空岛空城和地下，套机与机架电机桨叶需可扩展、有限调参和任务商店等获取渠道，明确无电池与续航。已建立 AGENTS.md、README 和 docs/DEVELOPMENT.md、CONTENT.md、ROADMAP.md、SETUP.md。官方最新稳定版核实为 4.7.2（2026-08-18），预览 4.8 beta1；本机仅发现并运行确认 Godot 4.3，待提供 4.7.2 路径后进入 M0，当前尚无游戏工程。用户试飞设备为富斯 i6x 航模遥控器，通过加密狗转 USB 连接，具体轴与开关映射尚待实测。"
+    freshness: "volatile"

@@ -1,0 +1,17 @@
+# Engine caches, local configuration, builds and captures
+game/.godot/
+builds/
+captures/
+tmp/
+.local/
+*.log
+*.tmp
+*.bak
+# Keep editable research, exclude generated PDFs.
+output/*
+!output/proposal/
+# Editors and OS
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store
