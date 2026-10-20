@@ -46,12 +46,15 @@ func read_channel(channel: String) -> float:
 		return 0.0
 	var axis: Dictionary = profile.axes[channel]
 	var raw := Input.get_joy_axis(selected_device, int(axis.axis))
+	return normalize_axis(raw, axis, channel == "throttle")
+
+static func normalize_axis(raw: float, axis: Dictionary, throttle: bool) -> float:
 	var low := float(axis.min)
 	var high := float(axis.max)
 	if high - low < 0.2:
 		return 0.0
 	var value: float
-	if channel == "throttle":
+	if throttle:
 		value = (raw - low) / (high - low)
 		if bool(axis.invert):
 			value = 1.0 - value
@@ -69,9 +72,35 @@ func activate_profile(value: Dictionary, device: int) -> void:
 	using_radio = device >= 0 and Input.get_connected_joypads().has(device)
 	channels = Vector4.ZERO
 
+static func valid_profile(value: Dictionary) -> bool:
+	if not value.has("axes") or not value.axes is Dictionary:
+		return false
+	var used: Array[int] = []
+	for channel: String in CHANNELS:
+		if not value.axes.has(channel) or not value.axes[channel] is Dictionary:
+			return false
+		var axis: Dictionary = value.axes[channel]
+		if not axis.has_all(["axis", "min", "max", "center", "invert"]):
+			return false
+		var index := int(axis.axis)
+		if used.has(index) or index < 0 or index >= 10 or not is_finite(float(axis.min)) or not is_finite(float(axis.max)) or not is_finite(float(axis.center)) or float(axis.max) - float(axis.min) < 0.2:
+			return false
+		if channel != "throttle" and (float(axis.center) <= float(axis.min) or float(axis.center) >= float(axis.max)):
+			return false
+		var deadzone := float(axis.get("deadzone", 0.025))
+		if not is_finite(deadzone) or deadzone < 0 or deadzone > 0.2 or not axis.invert is bool:
+			return false
+		used.append(index)
+	return true
+
 func reset_throttle() -> void:
 	keyboard_throttle = 0.0
 	channels = Vector4.ZERO
+
+func throttle_now() -> float:
+	if using_radio:
+		return read_channel("throttle") if Input.get_connected_joypads().has(selected_device) else 1.0
+	return keyboard_throttle
 
 func _on_connection_changed(device: int, connected: bool) -> void:
 	if not connected and using_radio and device == selected_device:

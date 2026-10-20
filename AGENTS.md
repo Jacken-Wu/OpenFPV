@@ -2,7 +2,7 @@
 
 ## 开始工作
 
-- 先读取 `docs/DEVELOPMENT.md` 与 `docs/ROADMAP.md`，确认当前阶段；涉及内容扩展时再读 `docs/CONTENT.md`，涉及环境时读 `docs/SETUP.md`。
+- 先读取 `docs/DEVELOPMENT.md`、`docs/IMPLEMENTATION.md` 与 `docs/ROADMAP.md`，确认现有代码与当前阶段；验证证据见 `docs/VALIDATION.md`。涉及内容扩展时再读 `docs/CONTENT.md`，涉及环境时读 `docs/SETUP.md`。
 - 读取 `.codex/memory.yaml`，遵守用户的记忆分级规则；该文件是唯一的项目记忆数据源。
 - 用户的新指令优先于开发文档。文档随实现更新，不能把旧方案书当作当前需求。
 - 当前基线为 Godot 4.7.2 Standard 与类型标注的 GDScript；不要自行切换 C#、自建引擎或原生插件路线。

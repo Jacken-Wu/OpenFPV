@@ -1,0 +1,21 @@
+{
+	"collision_wait_frames": 399,
+	"discarded_jobs": 0,
+	"engine": "4.7.2-stable (official)",
+	"final_nodes": 1072.0,
+	"final_static_memory_mb": 63.2903099060059,
+	"frames": 11993,
+	"kind": "scripted streaming tour, not human flight or RC validation",
+	"max_ms": 20.412,
+	"measurement": "monotonic wall-clock frame intervals",
+	"p50_ms": 10.004,
+	"p95_ms": 10.223,
+	"p99_ms": 10.47,
+	"peak_nodes": 1227,
+	"peak_static_memory_mb": 64.1260681152344,
+	"physics_backend": "DEFAULT",
+	"renderer": "NVIDIA GeForce RTX 4060 Ti",
+	"resolution": "(1920, 1080)",
+	"seconds": 120.007487,
+	"seed": 271828
+}

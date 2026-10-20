@@ -1,6 +1,12 @@
 # 群系与装备内容契约
 
-版本 0.1，2026-10-21。本文规定如何添加内容；所有定义尚待 M2、M3、M4 实现。JSON 仅用于说明字段与可验证样例，实际内置资源采用自定义 Resource 与 `.tres`。
+版本 0.2，2026-10-21。P1 已有内置 Resource 与 `.tres` 管线。实际字段与新增步骤以 [IMPLEMENTATION.md](IMPLEMENTATION.md) 和 `game/content/base/` 为准。下文 JSON 为完整目标示意，不能原样作为 P1 可加载资源。
+
+## 0 P1 对应关系
+
+实际为 ContentManifest、PartDefinition、DronePresetDefinition、PropulsionMapDefinition、BiomeDefinition、RewardDefinition、OfferDefinition；所有配件共用 PartDefinition，而非分别建立 Frame/Motor/Propeller 类。版本集中在 manifest；来源许可集中记录于 ASSETS.md，尚无每个条目的 schema_version 与 license 字段。
+
+TuningSpec 当前为带 min/max/default/step/unit 的 Dictionary，作用由装配器的三个已实现参数绑定。获取规则当前是任务标签和城市标签的 AND，加独立商店；尚无通用 OR 条件图、条件循环校验、任务池或结构池编辑器。WorldProvider 输出三维盒描述，未实现独立 RegionPlan 类。不要根据后文目标字段假设功能已存在。
 
 ## 1 统一内容规则
 

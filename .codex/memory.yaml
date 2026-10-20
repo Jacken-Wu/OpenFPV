@@ -1,5 +1,11 @@
 conventions: []
-pitfalls: []
+pitfalls:
+  - id: "godot472-packed-biome-palette"
+    date: "2026-10-21"
+    desc: "本项目 4.7.2 打包暂禁用文本 Resource 转二进制；源工程通过不能代替资源包验证。"
+    evidence: "tools/Build.ps1 在 convert_text_resources_to_binary=true 时，包内 WorldProvider._city/_canyon 报 Out of bounds get index 0/1 (PackedColorArray)；源 .tres 和 ResourceSaver roundtrip 均 palette=3。设为 false 后便携包正常，源与包 fingerprint 相同。"
+    freshness: "durable"
+    death_condition: "升级引擎或修复转换路径并通过源工程、包内色板及指纹一致性检查后删除。"
 journal:
   - id: "2026-10-21-fpv-proposal-v1"
     date: "2026-10-21"
@@ -12,4 +18,8 @@ journal:
   - id: "2026-10-21-development-contract"
     date: "2026-10-21"
     desc: "用户已选定 Godot 4 加 GDScript，要求后续依开发文档推进；新增群系须覆盖不同城市、空岛空城和地下，套机与机架电机桨叶需可扩展、有限调参和任务商店等获取渠道，明确无电池与续航。已建立 AGENTS.md、README 和 docs/DEVELOPMENT.md、CONTENT.md、ROADMAP.md、SETUP.md。官方最新稳定版核实为 4.7.2（2026-08-18），预览 4.8 beta1；本机仅发现并运行确认 Godot 4.3，待提供 4.7.2 路径后进入 M0，当前尚无游戏工程。用户试飞设备为富斯 i6x 航模遥控器，通过加密狗转 USB 连接，具体轴与开关映射尚待实测。"
+    freshness: "volatile"
+  - id: "2026-10-21-playable-p1"
+    date: "2026-10-21"
+    desc: "用户已安装 D:/Tools/Godot 的 4.7.2.stable.official.ed1daf0bf。P1 已实现 Acro、通用四轴校准、三维分块城市峡谷空岛地下、资源化装备、维修开门商店、事务存档、货车跟拍与截图。Git main 本地分阶段提交，Play.cmd 与 builds/OpenFPV-P1 可运行。实际接口见 IMPLEMENTATION.md，证据见 VALIDATION.md。63 项逻辑检查、窗口与包内启动通过；1080p 120 秒巡检 P99 10.47 ms。实际 i6x 手感、15 分钟人工飞行、标准精简导出和旧世界迁移仍待验收。"
     freshness: "volatile"

@@ -55,6 +55,36 @@ func run() -> void:
 	drone.armed = false
 	await wait_physics(120)
 	check(drone.total_thrust < 0.001, "disarmed motors spool down")
+	var ground := WorldGeometry.create_box(Vector3(0, 0, 0), Vector3(20, 0.2, 20), Color.GRAY)
+	root.add_child(ground)
+	drone.reset_drone(Vector3(0, 2, 0))
+	await wait_physics(150)
+	check(drone.position.y > 0.1 and drone.position.y < 0.3 and drone.linear_velocity.length() < 0.5, "ground contact settles on collider")
+	var wall := WorldGeometry.create_box(Vector3(0, 2, -8), Vector3(20, 8, 0.1), Color.GRAY)
+	root.add_child(wall)
+	drone.reset_drone(Vector3(0, 3, 0))
+	await wait_physics(3)
+	drone.linear_velocity = Vector3(0, 0, -60)
+	await wait_physics(30)
+	check(drone.position.z > -8, "60 m/s approach does not tunnel through thin wall")
+	ground.queue_free()
+	wall.queue_free()
+	var catalog := ContentCatalog.new()
+	var assembler := DroneAssembler.new(catalog)
+	var builds: Array[Dictionary] = [assembler.from_preset("base.preset.explorer5"), assembler.from_preset("base.preset.light35"), assembler.from_preset("base.preset.explorer5")]
+	builds[2].propeller_set_id = "base.prop.p5_smooth"
+	var velocities: Array[float] = []
+	for build: Dictionary in builds:
+		drone.reset_drone(Vector3(0, 100, 0))
+		drone.apply_spec(assembler.resolve(build, [], true).spec)
+		await wait_physics(3)
+		drone.linear_velocity = Vector3.ZERO
+		drone.controls = Vector4(0, 0, 0, 1)
+		drone.armed = true
+		await wait_physics(36)
+		velocities.append(drone.linear_velocity.y)
+	print("Full-throttle 300ms vertical speeds: ", velocities)
+	check(absf(velocities[0] - velocities[1]) > 0.2 and velocities[0] > velocities[2] + 0.2, "preset and propeller differences affect actual physical response")
 	drone.queue_free()
 	await process_frame
 	print("FLIGHT_TESTS: %d failure(s)" % failed)

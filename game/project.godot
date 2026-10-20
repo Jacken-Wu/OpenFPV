@@ -23,6 +23,9 @@ environment/defaults/default_clear_color=Color(0.06, 0.1, 0.15, 1)
 common/physics_ticks_per_second=120
 3d/default_gravity=9.81
 
+[editor]
+export/convert_text_resources_to_binary=false
+
 [input_devices]
 joypads/ignore_joypad_on_unfocused_application=true
 

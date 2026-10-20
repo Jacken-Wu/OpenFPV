@@ -53,3 +53,27 @@
 - `.codex/changelog.md` — 追加本次任务日志。
 
 ---
+
+
+## 2026-10-21 02:35
+
+### 任务描述
+使用用户安装的 Godot 4.7.2 开发 OpenFPV 第一版，并用 Git 管理代码版本。
+
+### 修改内容
+建立可试玩 P1：120 Hz Acro 四旋翼、逐轴遥控器校准与断连失焦保护、三维分块城市/峡谷/空岛/地下、资源化套机配件和有限改装、中继维修开门、商店永久解锁、事务存档与备份、移动货车和照片复现信息。提供启动、测试、打包和便携试玩包，保持无电池续航。63 项逻辑检查、正常窗口巡检、包内独立运行通过；1080p 两分钟脚本巡检 P99 10.47 ms，最长帧 20.412 ms。实际 i6x 手感与 15 分钟人工飞行仍待用户验收；正式精简模板导出未完成。建立并分阶段提交本地 Git，未推送远程。
+
+### 修改的文件
+- `game/project.godot`、`game/scenes/main.tscn`、`game/export_presets.cfg` — 工程、场景与打包预设。
+- `game/scripts/flight/` — 四电机物理、Acro、输入校准数据与即时油门保护。
+- `game/scripts/content/`、`game/content/base/` — 定义、目录校验、两套机和可扩展群系装备资源。
+- `game/scripts/equipment/`、`game/scripts/progress/` — 兼容装配、有限调参、原子奖励购买与持久化。
+- `game/scripts/world/` — 三维提供者、确定性生成、碰撞门槛、后台加载与原点平移。
+- `game/scripts/ui/`、`game/scripts/main.gd` — 校准、装备、地图、帮助、终端商店、照片及整合。
+- `game/tests/`、`tools/`、`Play.cmd` — 逻辑及整合检查、窗口巡检、启动和便携包。
+- `README.md`、`AGENTS.md`、`docs/` — 更新实际接口、试玩、环境、素材、验收和后续入口；保存性能原始报告。
+- `.gitignore`、`.gitattributes` — 忽略运行产物并规范文本。
+- `.codex/memory.yaml` — 记录已完成原型及有报错证据的打包差异。
+- `.codex/changelog.md` — 本次任务日志。
+
+---
