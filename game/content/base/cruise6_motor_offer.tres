@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="OfferDefinition" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/content/offer_definition.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "base.offer.cruise6.motor"
+display_name = "远景6电机组"
+description = "四个同型号电机，16x16安装孔、5mm桨轴；需匹配动力数据。"
+part_id = "base.motor.m_cruise6"
+price = 220
+city_tag = "industrial"

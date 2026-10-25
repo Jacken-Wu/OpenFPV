@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="MissionDefinition" load_steps=2 format=3]
+[ext_resource type="Script" path="res://scripts/content/mission_definition.gd" id="1"]
+[resource]
+script = ExtResource("1")
+id = "base.template.courier"
+display_name = "数据快递"
+description = "飞到数据节点 3 米内，低速按 E 取件；再返回服务平台，低速按 E 提交。两个阶段分别保存，无倒计时。"
+kind = "courier"
+reward_id = "base.reward.exploration"
+mission_tag = "exploration"
+city_tag = "any"
+interaction_radius = 3.0

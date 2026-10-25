@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="BiomeDefinition" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scripts/content/biome_definition.gd" id="1"]
+[ext_resource type="AudioStream" path="res://audio/music/ruined_city.wav" id="music"]
+
+[resource]
+script = ExtResource("1")
+id = "base.biome.ruined_city"
+display_name = "失落废城区"
+provider_id = "base.generator.canyon"
+tags = PackedStringArray("surface", "ruins", "abandoned")
+region_bounds = AABB(0, -64, 0, 768, 384, 768)
+priority = 10
+palette = PackedColorArray(0.46667, 0.49804, 0.46275, 1, 0.70196, 0.67843, 0.56863, 1, 0.4, 0.75, 0.8, 1)
+parameters = {"regional_tasks": [{"mode": "repair", "title": "修复线路 · 电源干线", "description": "按导航依次飞抵三座维修终端，低速靠近并按住 E 1.2 秒修复。三条独立线路全部修好，恢复本地区传送网络。", "portal_required": true}, {"mode": "repair", "title": "修复线路 · 信号中继", "description": "依次修好三个信号中继终端，低速靠近并按住 E 1.2 秒。进度独立保存，无倒计时。", "portal_required": true}, {"mode": "repair", "title": "修复线路 · 传送同步", "description": "校准三个传送同步终端，低速靠近并按住 E 1.2 秒。全部三条线路完成后自动解锁当地传送点。", "portal_required": true}], "feature_profile": "ruined_grid", "layer": "surface", "climate": Vector3(0.5, 0.5, 0.5), "min_world_version": 4, "extension": true, "terrain_style": "ruined_city", "terrain_low": Color(0.46667, 0.49804, 0.46275, 1), "terrain_high": Color(0.70196, 0.67843, 0.56863, 1), "landmark_pool": [{"kind": "broken_blocks", "count": 5, "chance": 0.95}, {"kind": "open_house", "count": 3, "chance": 0.75}, {"kind": "pipe_stack", "count": 2, "chance": 0.6}]}
+music = ExtResource("music")
+music_title = "残墙间的风"

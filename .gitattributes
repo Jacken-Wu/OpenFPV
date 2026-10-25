@@ -10,4 +10,9 @@
 *.uid text eol=lf
 *.cmd text eol=crlf
 *.png binary
+*.ico binary
+*.wav binary
+*.svg text eol=lf
+LICENSE whitespace=-blank-at-eof
+game/legal/*.txt text eol=lf whitespace=-blank-at-eof
 *.pdf binary

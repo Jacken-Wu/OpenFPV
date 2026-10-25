@@ -1,0 +1,463 @@
+{
+	"collision_wait_frames": 659,
+	"discarded_jobs": 21,
+	"engine": "4.7.2-stable (official)",
+	"final_nodes": 3318.0,
+	"final_static_memory_mb": 141.71836566925,
+	"frames": 11732,
+	"kind": "scripted streaming tour, not human flight or RC validation",
+	"max_ms": 480.254,
+	"measurement": "monotonic wall-clock frame intervals",
+	"p50_ms": 9.999,
+	"p95_ms": 10.881,
+	"p99_ms": 15.605,
+	"peak_nodes": 5122,
+	"peak_static_memory_mb": 151.267833709717,
+	"physics_backend": "DEFAULT",
+	"renderer": "NVIDIA GeForce RTX 4060 Ti",
+	"resolution": "(1920, 1080)",
+	"route": [
+		[
+			-192.0,
+			13.1999998092651,
+			264.0
+		],
+		[
+			256.0,
+			13.1999998092651,
+			-376.0
+		],
+		[
+			256.0,
+			13.1999998092651,
+			456.0
+		],
+		[
+			-1994.80065917969,
+			32.8437728881836,
+			1212.89086914063
+		],
+		[
+			-1792.0,
+			13.1999998092651,
+			1736.0
+		],
+		[
+			-1600.0,
+			13.1999998092651,
+			1864.0
+		],
+		[
+			-1344.0,
+			13.1999998092651,
+			1864.0
+		],
+		[
+			-1344.0,
+			13.1999998092651,
+			2120.0
+		],
+		[
+			-1648.0,
+			-83.4730834960938,
+			1728.0
+		],
+		[
+			-1776.0,
+			-83.4730834960938,
+			1712.0
+		],
+		[
+			4396.36474609375,
+			54.6670112609863,
+			-4306.7861328125
+		],
+		[
+			4539.0283203125,
+			43.5718307495117,
+			-4307.75146484375
+		],
+		[
+			4276.2578125,
+			7.31974983215332,
+			-3229.306640625
+		],
+		[
+			5029.9111328125,
+			41.2707862854004,
+			-4038.64965820313
+		],
+		[
+			4185.3125,
+			220.122467041016,
+			-4106.78173828125
+		],
+		[
+			20553.83984375,
+			50.2551498413086,
+			10357.9130859375
+		],
+		[
+			20416.0,
+			13.1999998092651,
+			10952.0
+		],
+		[
+			20672.0,
+			13.1999998092651,
+			11016.0
+		],
+		[
+			21056.0,
+			13.1999998092651,
+			10440.0
+		],
+		[
+			-20544.0,
+			13.1999998092651,
+			-10360.0
+		],
+		[
+			-20416.0,
+			13.1999998092651,
+			-9400.0
+		],
+		[
+			-20544.0,
+			13.1999998092651,
+			-9528.0
+		],
+		[
+			-19648.0,
+			13.1999998092651,
+			-10296.0
+		],
+		[
+			-19712.0,
+			13.1999998092651,
+			-10424.0
+		],
+		[
+			-19520.0,
+			13.1999998092651,
+			-9720.0
+		]
+	],
+	"seconds": 120.004543,
+	"seed": 271828,
+	"slow_frames": [
+		{
+			"active": 0,
+			"commit_ms": 0.002,
+			"ms": 30.036,
+			"pending": 4,
+			"point_index": 1,
+			"seconds": 3.043171
+		},
+		{
+			"active": 0,
+			"commit_ms": 0.002,
+			"ms": 73.283,
+			"pending": 4,
+			"point_index": 2,
+			"seconds": 6.087841
+		},
+		{
+			"active": 0,
+			"commit_ms": 0.003,
+			"ms": 160.527,
+			"pending": 4,
+			"point_index": 3,
+			"seconds": 9.180662
+		},
+		{
+			"active": 17,
+			"commit_ms": 17.274,
+			"ms": 26.128,
+			"pending": 4,
+			"point_index": 3,
+			"seconds": 9.392524
+		},
+		{
+			"active": 0,
+			"commit_ms": 0.012,
+			"ms": 27.82,
+			"pending": 4,
+			"point_index": 4,
+			"seconds": 12.055605
+		},
+		{
+			"active": 315,
+			"commit_ms": 0.002,
+			"ms": 83.699,
+			"pending": 4,
+			"point_index": 7,
+			"seconds": 21.116179
+		},
+		{
+			"active": 60,
+			"commit_ms": 0.002,
+			"ms": 26.194,
+			"pending": 4,
+			"point_index": 8,
+			"seconds": 24.060394
+		},
+		{
+			"active": 0,
+			"commit_ms": 0.001,
+			"ms": 51.852,
+			"pending": 4,
+			"point_index": 10,
+			"seconds": 30.088962
+		},
+		{
+			"active": 78,
+			"commit_ms": 0.013,
+			"ms": 25.368,
+			"pending": 4,
+			"point_index": 10,
+			"seconds": 30.723448
+		},
+		{
+			"active": 86,
+			"commit_ms": 2.501,
+			"ms": 25.529,
+			"pending": 4,
+			"point_index": 10,
+			"seconds": 30.813643
+		},
+		{
+			"active": 426,
+			"commit_ms": 2.368,
+			"ms": 39.201,
+			"pending": 4,
+			"point_index": 11,
+			"seconds": 33.078076
+		},
+		{
+			"active": 0,
+			"commit_ms": 0.001,
+			"ms": 31.835,
+			"pending": 4,
+			"point_index": 12,
+			"seconds": 36.072347
+		},
+		{
+			"active": 0,
+			"commit_ms": 0.002,
+			"ms": 53.324,
+			"pending": 4,
+			"point_index": 13,
+			"seconds": 39.095163
+		},
+		{
+			"active": 0,
+			"commit_ms": 0.001,
+			"ms": 99.495,
+			"pending": 4,
+			"point_index": 14,
+			"seconds": 42.143099
+		},
+		{
+			"active": 0,
+			"commit_ms": 0.045,
+			"ms": 145.765,
+			"pending": 4,
+			"point_index": 15,
+			"seconds": 45.194614
+		},
+		{
+			"active": 0,
+			"commit_ms": 0.014,
+			"ms": 42.751,
+			"pending": 4,
+			"point_index": 16,
+			"seconds": 48.099554
+		},
+		{
+			"active": 301,
+			"commit_ms": 0.169,
+			"ms": 27.896,
+			"pending": 4,
+			"point_index": 16,
+			"seconds": 49.485263
+		},
+		{
+			"active": 0,
+			"commit_ms": 0.002,
+			"ms": 97.517,
+			"pending": 4,
+			"point_index": 18,
+			"seconds": 54.157288
+		},
+		{
+			"active": 0,
+			"commit_ms": 0.002,
+			"ms": 276.412,
+			"pending": 4,
+			"point_index": 19,
+			"seconds": 57.338016
+		},
+		{
+			"active": 50,
+			"commit_ms": 0.728,
+			"ms": 345.527,
+			"pending": 4,
+			"point_index": 19,
+			"seconds": 57.957224
+		},
+		{
+			"active": 0,
+			"commit_ms": 0.002,
+			"ms": 480.254,
+			"pending": 4,
+			"point_index": 20,
+			"seconds": 60.543376
+		},
+		{
+			"active": 0,
+			"commit_ms": 0.002,
+			"ms": 103.298,
+			"pending": 4,
+			"point_index": 22,
+			"seconds": 66.169309
+		},
+		{
+			"active": 0,
+			"commit_ms": 0.002,
+			"ms": 187.983,
+			"pending": 4,
+			"point_index": 24,
+			"seconds": 72.257392
+		},
+		{
+			"active": 0,
+			"commit_ms": 0.001,
+			"ms": 63.493,
+			"pending": 4,
+			"point_index": 0,
+			"seconds": 75.134194
+		},
+		{
+			"active": 0,
+			"commit_ms": 0.002,
+			"ms": 25.461,
+			"pending": 4,
+			"point_index": 1,
+			"seconds": 78.097941
+		},
+		{
+			"active": 402,
+			"commit_ms": 0.027,
+			"ms": 28.066,
+			"pending": 4,
+			"point_index": 1,
+			"seconds": 79.901658
+		},
+		{
+			"active": 418,
+			"commit_ms": 0.037,
+			"ms": 34.147,
+			"pending": 4,
+			"point_index": 1,
+			"seconds": 79.966415
+		},
+		{
+			"active": 422,
+			"commit_ms": 0.025,
+			"ms": 25.963,
+			"pending": 4,
+			"point_index": 1,
+			"seconds": 79.992378
+		},
+		{
+			"active": 426,
+			"commit_ms": 0.026,
+			"ms": 26.657,
+			"pending": 4,
+			"point_index": 1,
+			"seconds": 80.019035
+		},
+		{
+			"active": 0,
+			"commit_ms": 0.002,
+			"ms": 68.369,
+			"pending": 4,
+			"point_index": 2,
+			"seconds": 81.14241
+		},
+		{
+			"active": 0,
+			"commit_ms": 0.002,
+			"ms": 152.315,
+			"pending": 4,
+			"point_index": 3,
+			"seconds": 84.227973
+		},
+		{
+			"active": 0,
+			"commit_ms": 0.016,
+			"ms": 27.489,
+			"pending": 4,
+			"point_index": 4,
+			"seconds": 87.104616
+		},
+		{
+			"active": 315,
+			"commit_ms": 0.002,
+			"ms": 85.469,
+			"pending": 4,
+			"point_index": 7,
+			"seconds": 96.167312
+		},
+		{
+			"active": 60,
+			"commit_ms": 0.002,
+			"ms": 27.155,
+			"pending": 4,
+			"point_index": 8,
+			"seconds": 99.110658
+		},
+		{
+			"active": 0,
+			"commit_ms": 0.002,
+			"ms": 54.331,
+			"pending": 4,
+			"point_index": 10,
+			"seconds": 105.140943
+		},
+		{
+			"active": 433,
+			"commit_ms": 0.02,
+			"ms": 35.431,
+			"pending": 4,
+			"point_index": 11,
+			"seconds": 108.123855
+		},
+		{
+			"active": 0,
+			"commit_ms": 0.001,
+			"ms": 29.094,
+			"pending": 4,
+			"point_index": 12,
+			"seconds": 111.118715
+		},
+		{
+			"active": 0,
+			"commit_ms": 0.002,
+			"ms": 55.893,
+			"pending": 4,
+			"point_index": 13,
+			"seconds": 114.147002
+		},
+		{
+			"active": 0,
+			"commit_ms": 0.002,
+			"ms": 98.935,
+			"pending": 4,
+			"point_index": 14,
+			"seconds": 117.1917
+		}
+	],
+	"world_version": 4
+}

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="MissionDefinition" load_steps=2 format=3]
+[ext_resource type="Script" path="res://scripts/content/mission_definition.gd" id="1"]
+[resource]
+script = ExtResource("1")
+id = "base.template.survey"
+display_name = "定点勘测"
+description = "飞到勘测信标 4 米以内，以低于 5.4 km/h 的速度稳定停留 3 秒。离开范围会重新计时，暂停不计时。"
+kind = "survey"
+reward_id = "base.reward.exploration"
+mission_tag = "exploration"
+city_tag = "any"
+interaction_radius = 4.0
+hold_seconds = 3.0

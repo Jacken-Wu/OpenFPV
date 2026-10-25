@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="BiomeDefinition" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scripts/content/biome_definition.gd" id="1"]
+[ext_resource type="AudioStream" path="res://audio/music/monument.wav" id="music"]
+
+[resource]
+script = ExtResource("1")
+id = "base.biome.monument"
+display_name = "远古巨构遗址"
+provider_id = "base.generator.canyon"
+tags = PackedStringArray("surface", "ruins", "monument")
+region_bounds = AABB(0, -64, 0, 768, 384, 768)
+priority = 10
+palette = PackedColorArray(0.6, 0.54902, 0.43922, 1, 0.78039, 0.72157, 0.57647, 1, 0.4, 0.75, 0.8, 1)
+parameters = {"regional_tasks": [{"mode": "sequence", "title": "巨构密钥 · 四象回路", "description": "依次寻找标记为 Ⅰ → Ⅱ → Ⅲ → Ⅳ 的终端，靠近后按住 E 激活。提前触碰后续终端会重置顺序。可慢慢探索，没有时限。"}, {"mode": "clean", "title": "巨构试炼 · 无痕穿行", "description": "从 1 号节点开始，沿编号完成巨构中的立体路线。没有时限，但途中碰到墙壁、障碍物或地面会重置本次路线；重置或传送也会重置。"}], "feature_profile": "megastructure", "layer": "surface", "climate": Vector3(0.5, 0.5, 0.5), "min_world_version": 4, "extension": true, "terrain_style": "monument", "terrain_low": Color(0.6, 0.54902, 0.43922, 1), "terrain_high": Color(0.78039, 0.72157, 0.57647, 1), "landmark_pool": [{"kind": "mega_ruins", "count": 2, "chance": 1.0}, {"kind": "aqueduct", "chance": 0.6}, {"kind": "ruins", "chance": 0.6}]}
+music = ExtResource("music")
+music_title = "巨门回响"

@@ -1,0 +1,290 @@
+{
+  "date_local": "2026-10-25 17:52",
+  "content_version": "0.22.0",
+  "world_version": 4,
+  "fingerprint": "27b7d65d366dc3e52caef89837cc1fd3858590f964d05992472ae1e300555b7f",
+  "source_suites": {
+    "navigation_preview": {
+      "log": ".local/navigation_preview022.log",
+      "checks": 75
+    },
+    "about": {
+      "log": ".local/about022.log",
+      "checks": 7
+    },
+    "regional_world": {
+      "log": ".local/regional_world022.log",
+      "checks": 77
+    },
+    "map": {
+      "log": ".local/map022.log",
+      "checks": 47
+    },
+    "hud_audio": {
+      "log": ".local/hud_audio022.log",
+      "checks": 52
+    },
+    "actions": {
+      "log": ".local/actions022.log",
+      "checks": 44
+    },
+    "streaming": {
+      "log": ".local/streaming022.log",
+      "checks": 12
+    },
+    "content": {
+      "log": ".local/content022.log",
+      "checks": 18
+    }
+  },
+  "normal_window_suites": {
+    "about": {
+      "log": ".local/about022-window.log",
+      "checks": 9
+    },
+    "navigation_preview": {
+      "log": ".local/navigation_preview022-window.log",
+      "checks": 82
+    },
+    "streaming": {
+      "log": ".local/streaming022-window.log",
+      "checks": 12
+    },
+    "hud_audio": {
+      "log": ".local/hud_audio022-window.log",
+      "checks": 68
+    },
+    "refinement_visual": {
+      "log": ".local/refinement_visual022-window.log",
+      "checks": 46
+    },
+    "regional_visual": {
+      "log": ".local/regional_visual022-window-retry.log",
+      "checks": 49
+    },
+    "playability": {
+      "log": ".local/playability022-window.log",
+      "checks": 53
+    },
+    "actions": {
+      "log": ".local/actions022-window.log",
+      "checks": 44
+    }
+  },
+  "city_frame_diagnostic": {
+    "events": [],
+    "frames": 1200,
+    "point": [
+      8705,
+      46,
+      576
+    ],
+    "rendering_method": "mobile",
+    "scope": "Scripted mounted FPV pose/movement with all HUD layers and repair stage 3. Per-frame GPU readback synchronizes rendering; zero events cannot prove an intermittent presentation/driver issue absent in human flight or recording.",
+    "seed": 1919810,
+    "window": "(2560, 1351)",
+    "worst_black": 0.0
+  },
+  "initial_gl_diagnostic": {
+    "events": [],
+    "frames": 1200,
+    "point": [
+      8705,
+      46,
+      576
+    ],
+    "seed": 1919810,
+    "window": "(2560, 1351)",
+    "worst_black": 0.0
+  },
+  "backend_route_comparison": {
+    "gl_compatibility": {
+      "camera": "mounted FPV camera; turn whole drone, not camera through own model",
+      "collision_wait_frames": 0,
+      "frames": 5997,
+      "initial": [
+        -192.0,
+        66.1999969482422,
+        256.0
+      ],
+      "max_ms": 18.975,
+      "over25": 0,
+      "p50": 9.953,
+      "p95": 12.061,
+      "p99": 12.526,
+      "peak_commit_ms": 1.901,
+      "renderer": "NVIDIA GeForce RTX 4060 Ti",
+      "rendering_method": "gl_compatibility",
+      "route": "initial + (38*t, 0, 100*sin(0.13*t))",
+      "seconds": 60.005058,
+      "speed": 38,
+      "stalls": [],
+      "window": "(2560, 1351)"
+    },
+    "mobile": {
+      "camera": "mounted FPV camera; turn whole drone, not camera through own model",
+      "collision_wait_frames": 0,
+      "frames": 5983,
+      "initial": [
+        -192.0,
+        66.1999969482422,
+        256.0
+      ],
+      "max_ms": 30.247,
+      "over25": 3,
+      "p50": 10.002,
+      "p95": 10.255,
+      "p99": 10.955,
+      "peak_commit_ms": 21.093,
+      "renderer": "NVIDIA GeForce RTX 4060 Ti",
+      "rendering_method": "mobile",
+      "route": "initial + (38*t, 0, 100*sin(0.13*t))",
+      "seconds": 60.009283,
+      "speed": 38,
+      "stalls": [
+        {
+          "active": 515,
+          "commit_ms": 21.093,
+          "interactions_ms": 0.068,
+          "main_ms": 0.653,
+          "ms": 26.06,
+          "pending": 4,
+          "s": 37.143777
+        },
+        {
+          "active": 504,
+          "commit_ms": 0.002,
+          "interactions_ms": 0.103,
+          "main_ms": 0.721,
+          "ms": 25.059,
+          "pending": 4,
+          "s": 40.454643
+        },
+        {
+          "active": 504,
+          "commit_ms": 0.002,
+          "interactions_ms": 0.133,
+          "main_ms": 8.97,
+          "ms": 30.247,
+          "pending": 4,
+          "s": 55.617094
+        }
+      ],
+      "window": "(2560, 1351)"
+    },
+    "scope": "Same current code, seed, mounted FPV route and 60 seconds each, sequential independent normal-window processes without screenshots. One sample, not all-biome or human flight certification."
+  },
+  "native": {
+    "Debug": {
+      "configuration": "Debug",
+      "debug": true,
+      "editor": false,
+      "licenses": {
+        "engine_sha256": "0673f16579d902765eb0635d09949f254359217e8b2cdaa47cecc98088f033c7",
+        "ok": true,
+        "project_sha256": "ae94d2d06d68854a3c9fddc5ad9e13ae3a7c5ae1188c15e1d7d9c66329fea6b2"
+      },
+      "template": true,
+      "user_data_dir": "C:/Users/Jacken/AppData/Roaming/Godot/app_userdata/OpenFPV · 重连边境"
+    },
+    "Release": {
+      "configuration": "Release",
+      "debug": false,
+      "editor": false,
+      "licenses": {
+        "engine_sha256": "0673f16579d902765eb0635d09949f254359217e8b2cdaa47cecc98088f033c7",
+        "ok": true,
+        "project_sha256": "ae94d2d06d68854a3c9fddc5ad9e13ae3a7c5ae1188c15e1d7d9c66329fea6b2"
+      },
+      "template": true,
+      "user_data_dir": "C:/Users/Jacken/AppData/Roaming/OpenFPV/Release"
+    }
+  },
+  "distribution": {
+    "reports": [
+      {
+        "credits": 111,
+        "debug": true,
+        "directory": "C:/Users/Jacken/AppData/Roaming/Godot/app_userdata/OpenFPV · 重连边境",
+        "existing": false,
+        "ok": true,
+        "photo": "absent"
+      },
+      {
+        "credits": 222,
+        "debug": false,
+        "directory": "C:/Users/Jacken/AppData/Roaming/OpenFPV/Release",
+        "existing": false,
+        "ok": true,
+        "photo": "absent"
+      },
+      {
+        "credits": 111.0,
+        "debug": true,
+        "directory": "C:/Users/Jacken/AppData/Roaming/Godot/app_userdata/OpenFPV · 重连边境",
+        "existing": true,
+        "ok": true,
+        "photo": "111"
+      },
+      {
+        "credits": 222.0,
+        "debug": false,
+        "directory": "C:/Users/Jacken/AppData/Roaming/OpenFPV/Release",
+        "existing": true,
+        "ok": true,
+        "photo": "222"
+      }
+    ],
+    "standalone": "D:\\files\\projects\\codex\\OpenFPV\\.local\\test-results\\distribution_639285183252113271\\standalone\\OpenFPV.exe",
+    "releaseEmbedded": true,
+    "ok": true,
+    "debugHasNoDistributionDocs": true,
+    "releaseOnlyExe": true
+  },
+  "release_window_log": ".local/release022-tour.log",
+  "artifacts": {
+    "builds/Debug/OpenFPV.exe": {
+      "bytes": 103247360,
+      "sha256": "11d8c3935af51ec796a44383bac3a91cd1d53276affc1a2d996607f29dc0df4b"
+    },
+    "builds/Debug/OpenFPV.pck": {
+      "bytes": 6215372,
+      "sha256": "58f7754cd5afcf655ffd9ec9a12794aceec51fa4897849e0c825a9e9d3335f08"
+    },
+    "builds/Release/OpenFPV.exe": {
+      "bytes": 115554520,
+      "sha256": "8280ac711e589e1abb1ea046a348eba4157400c48ac79af165c1293927c0aeb5"
+    }
+  },
+  "sources": {
+    "game/project.godot": "342633890c75a4445a886c164c471aa3ec807aedc3bd9502ed67067bb033ec9b",
+    "game/export_presets.cfg": "2ac826bde87ec7220ed0a962c7ba0c097f27b4a7c3215f38ed42b040f483e113",
+    "game/content/base/manifest.tres": "90eaedba861697d4b05d0af1c788f063c9ea645c55013f2e8e99014156b1464c",
+    "game/scripts/main.gd": "efdde3ccfd1d255e0f6b4944eb7a11796e0a1bb2e9c709c7ed28c424fb32a71a",
+    "game/scripts/world/regional_features.gd": "d8da24f1bcbf1640d91e435b066f1322032c5aa151c8a277f59e986fd6fec42b",
+    "game/scripts/world/biome_world.gd": "3e5469da7019e54cf5f93a43fc6d5355d363f633090d7f78318e3c2746c954ea",
+    "game/scripts/ui/navigation_hud.gd": "33103c04b57cf3e6abe92e2c486c16412f73e287eb7cb55ec06e04f91399546e",
+    "game/scripts/ui/flight_effects.gd": "57f5b0518b54f2184522f03d5d5ebb6eeecaf95b7012026552cc285e8f527c46",
+    "game/scripts/ui/pause_menu.gd": "62db2795e15fb24682495b8e743caf214b7a07f522eab86cbc1b05c06da06cb0",
+    "game/scripts/ui/about_menu.gd": "5d6efe8747153a69bc9947212408464a3767a4e8d63d37df8d26394bab1c089b",
+    "game/legal/openfpv-license.txt": "ae94d2d06d68854a3c9fddc5ad9e13ae3a7c5ae1188c15e1d7d9c66329fea6b2",
+    "game/legal/godot-notices.txt": "0673f16579d902765eb0635d09949f254359217e8b2cdaa47cecc98088f033c7",
+    "game/tests/about_tests.gd": "8277fce858e50f0aeae65ec49765d6d86e9cb9ea1cfb967306ff4a3a97dbbcf5",
+    "game/tests/city_render_tests.gd": "47b0363d6ed7feb08acded7d3fd90077ec4568d2b726936022abb6d49728469c",
+    "game/tests/navigation_preview_tests.gd": "371d74c47aa53b348b0f1ad156b37a4a415699a90937e9e7b93026b2823b5925",
+    "game/tests/regional_world_tests.gd": "7ab10502b415832d5f052aa0692eda89d6f2eda26971c581b674904856883889",
+    "game/tests/streaming_tour_tests.gd": "6d70eb7aa7762c8a30638f8c35a958a0a38bf2492e9b3c442243f5692aa58825",
+    "tools/Build.ps1": "753fc6056472dd8ccc6edb5e5a5e28cb557c01b509f827a7c84fa60fcfdacf63",
+    "tools/Test-Distribution.ps1": "46f202b5f312c0203b17e47e6d28cf51885444b30d9236ce059fb84b817c15d0",
+    "tools/Test.ps1": "671d9645a90cfabc2a62a82028f8679f067d49b40c3a4debcae3b75be8071895",
+    "README.md": "96a2a6a97237d160dbaa072e505278e8cf8d6568e68ca286e52430bbcdd8ee9f"
+  },
+  "limits": [
+    "The attached single-frame black block covers HUD as well as the 3D world. This supports investigating composition/draw data, but does not prove an OpenGL/driver root cause.",
+    "No original large black block reproduced in either GL or Vulkan finite readback sample. GPU image readback synchronizes rendering and may affect intermittent presentation behavior; user recording/human flight confirmation remains necessary.",
+    "One regional_visual window invocation ended before a result without script errors; excluded. Independent retry completed 49 checks. Original log kept at .local/regional_visual022-window.log.",
+    "The native GUI launch wrapper initially tried to read its log too early; the actual Release process subsequently completed SMOKE_OK with matching fingerprint and was confirmed exited.",
+    "Eight related headless suites, eight other normal-window suites plus the 1200-frame city group; not the complete 36-suite entry point. No new 120-second all-biome performance certification.",
+    "Mobile improved P99 in the finite route, but had three >25ms frames and a 21.093ms mesh commit. This is not a claim of no stalls or a guaranteed worst-frame improvement."
+  ]
+}

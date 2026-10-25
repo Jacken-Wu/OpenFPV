@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="MissionDefinition" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/content/mission_definition.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "base.mission.relay"
+display_name = "重连锈港"
+description = "飞抵中继维修终端，低速停留并按住 E 两秒。维修后闸门开启，获得完整轻型套机与 200 信用点。暂停时也可维修，无倒计时。"
+kind = "hold_interact"
+location_id = "mission.relay"
+reward_id = "base.reward.relay"
+mission_tag = "maintenance.relay"
+city_tag = "industrial"
+facility_id = "world.relay.harbor.01"
+target_point = Vector3(-18, 1.3, 12)

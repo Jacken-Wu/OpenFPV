@@ -1,0 +1,104 @@
+{
+  "content_version": "0.15.0",
+  "world_version": 4,
+  "method": "Native Godot Master output, eight seconds at fixed maximum thrust. Hann-windowed 65536-frame FFT, stereo and block-averaged power. No acoustic/system-loopback or human listening claim.",
+  "previous_014_spectrum": {
+    "centroid_hz": 711.0315251325521,
+    "below_300hz_energy_fraction": 0.15215668624091258,
+    "above_1khz_energy_fraction": 0.16635804930386383
+  },
+  "source_spectrum": {
+    "centroid_hz": 1001.7881394145625,
+    "below_300hz_energy_fraction": 0.05459159513694244,
+    "above_1khz_energy_fraction": 0.3332988484596754
+  },
+  "bundle_spectrum": {
+    "centroid_hz": 1010.7730069203254,
+    "below_300hz_energy_fraction": 0.05549261585151438,
+    "above_1khz_energy_fraction": 0.3309816972237126
+  },
+  "source_native": {
+    "checks": 31,
+    "failures": 0,
+    "native_combined": {
+      "frames": 71680,
+      "peak": 0.89125120639801,
+      "rms": 0.202904526962614
+    },
+    "native_full_envelope": {
+      "old_cadence_correlation": 0.0100221028085735,
+      "p05": 0.151847794651985,
+      "p95": 0.201279655098915,
+      "ratio": 1.3255355835771
+    },
+    "native_full_motor": {
+      "frames": 384000,
+      "peak": 0.681139945983887,
+      "rms": 0.175754696236208
+    },
+    "native_half_motor": {
+      "frames": 72704,
+      "peak": 0.340432167053223,
+      "rms": 0.0871080438237018
+    },
+    "native_music": {
+      "frames": 60416,
+      "peak": 0.500633716583252,
+      "rms": 0.103874357234941
+    },
+    "native_overload_probe": {
+      "frames": 24064,
+      "peak": 0.891259074211121,
+      "rms": 0.630101421335897
+    },
+    "waveform": {
+      "loop_seam": 0.016876220703125,
+      "one_revolution_correlation": 0.361167609246812,
+      "peak": 0.699951171875,
+      "rms": 0.200485366117341
+    }
+  },
+  "bundle_native": {
+    "checks": 31,
+    "failures": 0,
+    "native_combined": {
+      "frames": 71680,
+      "peak": 0.833674132823944,
+      "rms": 0.202728810048739
+    },
+    "native_full_envelope": {
+      "old_cadence_correlation": 0.00528267375851049,
+      "p05": 0.153518244624138,
+      "p95": 0.203756675124168,
+      "ratio": 1.32724729639158
+    },
+    "native_full_motor": {
+      "frames": 384512,
+      "peak": 0.695297598838806,
+      "rms": 0.177628040390544
+    },
+    "native_half_motor": {
+      "frames": 72192,
+      "peak": 0.313501089811325,
+      "rms": 0.0879697466646747
+    },
+    "native_music": {
+      "frames": 60928,
+      "peak": 0.500633716583252,
+      "rms": 0.104176764142009
+    },
+    "native_overload_probe": {
+      "frames": 24064,
+      "peak": 0.891259074211121,
+      "rms": 0.630311798955823
+    },
+    "waveform": {
+      "loop_seam": 0.016876220703125,
+      "one_revolution_correlation": 0.361167609246812,
+      "peak": 0.699951171875,
+      "rms": 0.200485366117341
+    }
+  },
+  "pcm_sha256": "fbc4a430a40ea74bbd405da7efdf5b931ed033c84651c5e0d6c9ca2fa3596567",
+  "subjective_acceptance": "Waiting for user listening. Brighter spectrum and reduced old repeat envelope are measured, not a claim of subjective realism or absence of every possible tick."
+}

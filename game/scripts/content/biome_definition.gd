@@ -9,3 +9,5 @@ extends Resource
 @export var priority: int = 0
 @export var palette: PackedColorArray = []
 @export var parameters: Dictionary = {}
+@export var music: AudioStream
+@export var music_title: String = ""

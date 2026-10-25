@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="BiomeDefinition" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scripts/content/biome_definition.gd" id="1"]
+[ext_resource type="AudioStream" path="res://audio/music/alpine.wav" id="music"]
+
+[resource]
+script = ExtResource("1")
+id = "base.biome.alpine"
+display_name = "苍脊高山"
+provider_id = "base.generator.canyon"
+tags = PackedStringArray("surface", "mountain", "rock")
+region_bounds = AABB(0, -64, 0, 768, 384, 768)
+priority = 10
+palette = PackedColorArray(0.49804, 0.53725, 0.48627, 1, 0.71373, 0.7098, 0.6549, 1, 0.4, 0.75, 0.8, 1)
+parameters = {"caves": true, "layer": "surface", "climate": Vector3(0.5, 0.5, 0.5), "min_world_version": 4, "extension": true, "terrain_style": "alpine", "terrain_low": Color(0.49804, 0.53725, 0.48627, 1), "terrain_high": Color(0.71373, 0.7098, 0.6549, 1), "landmark_pool": [{"kind": "rock_arch", "chance": 0.9}, {"kind": "base_station", "chance": 0.5}, {"kind": "pipe_stack", "chance": 0.3}]}
+music = ExtResource("music")
+music_title = "越过苍脊"

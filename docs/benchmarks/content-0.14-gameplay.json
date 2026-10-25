@@ -1,0 +1,1240 @@
+{
+  "content_version": "0.14.0",
+  "world_version": 4,
+  "fingerprint": "470a86feddf2653f0f8e0107bd84c557e1d407fd1d4f052935cb66bd37a71aba",
+  "environment_routes": {
+    "checks": 17,
+    "failures": 0,
+    "fallbacks": [],
+    "routes": [
+      {
+        "environment": "base.generator.modular_city",
+        "gates": 7,
+        "id": "proc:4:surface:-3:-3:0:play:flow",
+        "longest_leg": 64.0065536499023,
+        "maximum_turn": 90.0254396890675,
+        "seed": 271828,
+        "shortest_leg": 32.0002517700195
+      },
+      {
+        "environment": "base.generator.pine_valley",
+        "gates": 6,
+        "id": "proc:4:surface:-3:-2:1:play:flow",
+        "longest_leg": 50.7526397705078,
+        "maximum_turn": 29.3239656314801,
+        "seed": 271828,
+        "shortest_leg": 28.0454502105713
+      },
+      {
+        "environment": "maze",
+        "gates": 13,
+        "id": "proc:4:maze:-3:-1:1:play:flow",
+        "longest_leg": 32.0,
+        "maximum_turn": 90.0,
+        "seed": 271828,
+        "shortest_leg": 16.0
+      },
+      {
+        "environment": "base.generator.modular_city",
+        "gates": 7,
+        "id": "proc:4:surface:-3:0:0:play:flow",
+        "longest_leg": 64.0023651123047,
+        "maximum_turn": 90.0653093358311,
+        "seed": 271828,
+        "shortest_leg": 32.0028457641602
+      },
+      {
+        "environment": "base.generator.modular_city",
+        "gates": 8,
+        "id": "proc:4:surface:-3:0:1:play:flow",
+        "longest_leg": 64.0064163208008,
+        "maximum_turn": 90.0279013422051,
+        "seed": 271828,
+        "shortest_leg": 32.0016937255859
+      },
+      {
+        "environment": "base.generator.modular_city",
+        "gates": 8,
+        "id": "proc:4:surface:-3:0:2:play:flow",
+        "longest_leg": 64.0007476806641,
+        "maximum_turn": 90.0011317168846,
+        "seed": 271828,
+        "shortest_leg": 32.000171661377
+      },
+      {
+        "environment": "base.generator.modular_city",
+        "gates": 10,
+        "id": "proc:4:surface:-3:0:3:play:flow",
+        "longest_leg": 64.0076675415039,
+        "maximum_turn": 90.0288236529773,
+        "seed": 271828,
+        "shortest_leg": 32.0007286071777
+      },
+      {
+        "environment": "maze",
+        "gates": 11,
+        "id": "proc:4:maze:-3:0:3:play:flow",
+        "longest_leg": 32.0,
+        "maximum_turn": 90.0,
+        "seed": 271828,
+        "shortest_leg": 16.0
+      },
+      {
+        "environment": "base.generator.pine_valley",
+        "gates": 7,
+        "id": "proc:4:surface:-3:1:3:play:flow",
+        "longest_leg": 41.0636787414551,
+        "maximum_turn": 44.8608483660745,
+        "seed": 271828,
+        "shortest_leg": 19.1950206756592
+      },
+      {
+        "environment": "sky",
+        "gates": 7,
+        "id": "proc:4:sky:-3:2:2:play:flow",
+        "longest_leg": 29.4462985992432,
+        "maximum_turn": 40.2863243003384,
+        "seed": 271828,
+        "shortest_leg": 21.1574974060059
+      },
+      {
+        "environment": "sky",
+        "gates": 7,
+        "id": "proc:4:sky:-3:2:4:play:flow",
+        "longest_leg": 11.6523485183716,
+        "maximum_turn": 38.7431653463736,
+        "seed": 271828,
+        "shortest_leg": 8.70546531677246
+      },
+      {
+        "environment": "sky",
+        "gates": 7,
+        "id": "proc:4:sky:-3:3:0:play:flow",
+        "longest_leg": 18.8332710266113,
+        "maximum_turn": 46.750651854671,
+        "seed": 271828,
+        "shortest_leg": 13.6743249893188
+      },
+      {
+        "environment": "sky",
+        "gates": 9,
+        "id": "proc:4:sky:-3:3:1:play:flow",
+        "longest_leg": 14.9645910263062,
+        "maximum_turn": 43.137993509315,
+        "seed": 271828,
+        "shortest_leg": 10.5636157989502
+      },
+      {
+        "environment": "base.generator.modular_city",
+        "gates": 10,
+        "id": "proc:4:surface:-2:-3:1:play:flow",
+        "longest_leg": 64.0005111694336,
+        "maximum_turn": 90.0343782484709,
+        "seed": 271828,
+        "shortest_leg": 32.0005569458008
+      },
+      {
+        "environment": "base.generator.pine_valley",
+        "gates": 8,
+        "id": "proc:4:surface:-2:-2:0:play:flow",
+        "longest_leg": 50.8661804199219,
+        "maximum_turn": 39.5136905734126,
+        "seed": 271828,
+        "shortest_leg": 18.1098899841309
+      },
+      {
+        "environment": "base.generator.pine_valley",
+        "gates": 6,
+        "id": "proc:4:surface:-2:-2:2:play:flow",
+        "longest_leg": 47.6883201599121,
+        "maximum_turn": 23.863188197015,
+        "seed": 271828,
+        "shortest_leg": 30.694709777832
+      },
+      {
+        "environment": "base.generator.pine_valley",
+        "gates": 7,
+        "id": "proc:4:surface:-2:-2:3:play:flow",
+        "longest_leg": 50.0621795654297,
+        "maximum_turn": 21.2746766183572,
+        "seed": 271828,
+        "shortest_leg": 23.6709270477295
+      },
+      {
+        "environment": "maze",
+        "gates": 7,
+        "id": "proc:4:maze:-2:-2:0:play:flow",
+        "longest_leg": 48.0,
+        "maximum_turn": 90.0,
+        "seed": 271828,
+        "shortest_leg": 16.0
+      },
+      {
+        "environment": "maze",
+        "gates": 9,
+        "id": "proc:4:maze:-2:-2:2:play:flow",
+        "longest_leg": 64.0,
+        "maximum_turn": 90.0,
+        "seed": 271828,
+        "shortest_leg": 16.0
+      },
+      {
+        "environment": "sky",
+        "gates": 8,
+        "id": "proc:4:sky:-2:-1:0:play:flow",
+        "longest_leg": 24.6364917755127,
+        "maximum_turn": 43.5909503989655,
+        "seed": 271828,
+        "shortest_leg": 17.8788909912109
+      },
+      {
+        "environment": "base.generator.pine_valley",
+        "gates": 7,
+        "id": "proc:4:surface:-2:0:2:play:flow",
+        "longest_leg": 41.8575248718262,
+        "maximum_turn": 30.6772579318214,
+        "seed": 271828,
+        "shortest_leg": 23.5495471954346
+      },
+      {
+        "environment": "base.generator.pine_valley",
+        "gates": 8,
+        "id": "proc:4:surface:-2:0:3:play:flow",
+        "longest_leg": 48.6186676025391,
+        "maximum_turn": 31.3481795837164,
+        "seed": 271828,
+        "shortest_leg": 16.6141738891602
+      },
+      {
+        "environment": "sky",
+        "gates": 7,
+        "id": "proc:4:sky:-2:1:1:play:flow",
+        "longest_leg": 13.5977935791016,
+        "maximum_turn": 55.8183032853008,
+        "seed": 271828,
+        "shortest_leg": 8.99368572235107
+      },
+      {
+        "environment": "maze",
+        "gates": 8,
+        "id": "proc:4:maze:-2:1:0:play:flow",
+        "longest_leg": 64.0,
+        "maximum_turn": 90.0,
+        "seed": 271828,
+        "shortest_leg": 16.0
+      },
+      {
+        "environment": "base.generator.modular_city",
+        "gates": 7,
+        "id": "proc:4:surface:-2:2:2:play:flow",
+        "longest_leg": 64.0068740844727,
+        "maximum_turn": 90.0337939103428,
+        "seed": 271828,
+        "shortest_leg": 32.0013008117676
+      },
+      {
+        "environment": "base.generator.modular_city",
+        "gates": 11,
+        "id": "proc:4:surface:-2:3:0:play:flow",
+        "longest_leg": 32.0184669494629,
+        "maximum_turn": 90.0440063762054,
+        "seed": 271828,
+        "shortest_leg": 32.0000381469727
+      },
+      {
+        "environment": "maze",
+        "gates": 10,
+        "id": "proc:4:maze:-2:3:0:play:flow",
+        "longest_leg": 32.0,
+        "maximum_turn": 90.0,
+        "seed": 271828,
+        "shortest_leg": 16.0
+      },
+      {
+        "environment": "maze",
+        "gates": 10,
+        "id": "proc:4:maze:-2:3:1:play:flow",
+        "longest_leg": 48.0,
+        "maximum_turn": 90.0,
+        "seed": 271828,
+        "shortest_leg": 16.0
+      },
+      {
+        "environment": "base.generator.pine_valley",
+        "gates": 7,
+        "id": "proc:4:surface:-1:-3:0:play:flow",
+        "longest_leg": 46.4326705932617,
+        "maximum_turn": 15.9262526826823,
+        "seed": 271828,
+        "shortest_leg": 16.4471454620361
+      },
+      {
+        "environment": "base.generator.modular_city",
+        "gates": 8,
+        "id": "proc:4:surface:-1:-1:1:play:flow",
+        "longest_leg": 64.0000839233398,
+        "maximum_turn": 90.0234176710772,
+        "seed": 271828,
+        "shortest_leg": 32.0005493164063
+      },
+      {
+        "environment": "sky",
+        "gates": 7,
+        "id": "proc:4:sky:-1:-1:2:play:flow",
+        "longest_leg": 12.7505006790161,
+        "maximum_turn": 54.6914221632301,
+        "seed": 271828,
+        "shortest_leg": 9.67731094360352
+      },
+      {
+        "environment": "base.generator.modular_city",
+        "gates": 7,
+        "id": "proc:4:surface:-1:1:1:play:flow",
+        "longest_leg": 32.0169868469238,
+        "maximum_turn": 90.0230244199019,
+        "seed": 271828,
+        "shortest_leg": 32.0009117126465
+      },
+      {
+        "environment": "sky",
+        "gates": 10,
+        "id": "proc:4:sky:-1:1:0:play:flow",
+        "longest_leg": 14.2039403915405,
+        "maximum_turn": 48.0270280608029,
+        "seed": 271828,
+        "shortest_leg": 10.1687479019165
+      },
+      {
+        "environment": "base.generator.canyon",
+        "gates": 6,
+        "id": "proc:4:surface:-1:2:1:play:flow",
+        "longest_leg": 50.1976623535156,
+        "maximum_turn": 30.4763841928967,
+        "seed": 271828,
+        "shortest_leg": 16.4625854492188
+      },
+      {
+        "environment": "base.generator.canyon",
+        "gates": 8,
+        "id": "proc:4:surface:-1:3:0:play:flow",
+        "longest_leg": 48.069881439209,
+        "maximum_turn": 35.9103456455903,
+        "seed": 271828,
+        "shortest_leg": 19.4642295837402
+      },
+      {
+        "environment": "base.generator.canyon",
+        "gates": 7,
+        "id": "proc:4:surface:-1:3:3:play:flow",
+        "longest_leg": 46.9037055969238,
+        "maximum_turn": 46.6544120864867,
+        "seed": 271828,
+        "shortest_leg": 21.0923004150391
+      },
+      {
+        "environment": "maze",
+        "gates": 6,
+        "id": "proc:4:maze:-1:3:1:play:flow",
+        "longest_leg": 48.0,
+        "maximum_turn": 90.0,
+        "seed": 271828,
+        "shortest_leg": 16.0
+      },
+      {
+        "environment": "base.generator.modular_city",
+        "gates": 7,
+        "id": "proc:4:surface:0:-2:0:play:flow",
+        "longest_leg": 64.0027313232422,
+        "maximum_turn": 90.0091961327204,
+        "seed": 271828,
+        "shortest_leg": 32.0048332214355
+      },
+      {
+        "environment": "base.generator.modular_city",
+        "gates": 8,
+        "id": "proc:4:surface:0:-1:1:play:flow",
+        "longest_leg": 64.0067291259766,
+        "maximum_turn": 90.0379418403497,
+        "seed": 271828,
+        "shortest_leg": 32.0001602172852
+      },
+      {
+        "environment": "base.generator.modular_city",
+        "gates": 10,
+        "id": "proc:4:surface:0:-1:2:play:flow",
+        "longest_leg": 64.0009460449219,
+        "maximum_turn": 90.0176622208055,
+        "seed": 271828,
+        "shortest_leg": 32.0001335144043
+      },
+      {
+        "environment": "base.generator.pine_valley",
+        "gates": 7,
+        "id": "proc:4:surface:-3:-3:1:play:flow",
+        "longest_leg": 29.5686531066895,
+        "maximum_turn": 35.209042573046,
+        "seed": 42,
+        "shortest_leg": 19.3502731323242
+      },
+      {
+        "environment": "base.generator.modular_city",
+        "gates": 9,
+        "id": "proc:4:surface:-3:-2:2:play:flow",
+        "longest_leg": 64.0001754760742,
+        "maximum_turn": 90.0154101475932,
+        "seed": 42,
+        "shortest_leg": 32.0001029968262
+      },
+      {
+        "environment": "base.generator.modular_city",
+        "gates": 7,
+        "id": "proc:4:surface:-3:-2:3:play:flow",
+        "longest_leg": 64.0002975463867,
+        "maximum_turn": 90.0021541978505,
+        "seed": 42,
+        "shortest_leg": 32.000659942627
+      },
+      {
+        "environment": "base.generator.modular_city",
+        "gates": 12,
+        "id": "proc:4:surface:-3:-1:2:play:flow",
+        "longest_leg": 64.0060653686523,
+        "maximum_turn": 90.0181583566997,
+        "seed": 42,
+        "shortest_leg": 32.0004615783691
+      },
+      {
+        "environment": "base.generator.modular_city",
+        "gates": 7,
+        "id": "proc:4:surface:-3:-1:3:play:flow",
+        "longest_leg": 32.0206260681152,
+        "maximum_turn": 90.0221845500275,
+        "seed": 42,
+        "shortest_leg": 32.0018615722656
+      },
+      {
+        "environment": "sky",
+        "gates": 10,
+        "id": "proc:4:sky:-3:-1:1:play:flow",
+        "longest_leg": 20.2606906890869,
+        "maximum_turn": 47.8036114416502,
+        "seed": 42,
+        "shortest_leg": 13.974555015564
+      },
+      {
+        "environment": "sky",
+        "gates": 9,
+        "id": "proc:4:sky:-3:-1:2:play:flow",
+        "longest_leg": 34.9725914001465,
+        "maximum_turn": 45.5017051203519,
+        "seed": 42,
+        "shortest_leg": 22.5639934539795
+      },
+      {
+        "environment": "base.generator.modular_city",
+        "gates": 11,
+        "id": "proc:4:surface:-3:0:0:play:flow",
+        "longest_leg": 64.0017623901367,
+        "maximum_turn": 90.0079414948242,
+        "seed": 42,
+        "shortest_leg": 32.0000343322754
+      },
+      {
+        "environment": "base.generator.modular_city",
+        "gates": 12,
+        "id": "proc:4:surface:-3:1:0:play:flow",
+        "longest_leg": 64.0032958984375,
+        "maximum_turn": 90.042949831014,
+        "seed": 42,
+        "shortest_leg": 32.0000457763672
+      },
+      {
+        "environment": "base.generator.pine_valley",
+        "gates": 7,
+        "id": "proc:4:surface:-3:2:0:play:flow",
+        "longest_leg": 44.9057388305664,
+        "maximum_turn": 29.8611187387745,
+        "seed": 42,
+        "shortest_leg": 14.584906578064
+      },
+      {
+        "environment": "maze",
+        "gates": 12,
+        "id": "proc:4:maze:-3:2:1:play:flow",
+        "longest_leg": 48.0,
+        "maximum_turn": 90.0,
+        "seed": 42,
+        "shortest_leg": 16.0
+      },
+      {
+        "environment": "base.generator.pine_valley",
+        "gates": 7,
+        "id": "proc:4:surface:-2:-3:0:play:flow",
+        "longest_leg": 42.8715705871582,
+        "maximum_turn": 49.4128968601879,
+        "seed": 42,
+        "shortest_leg": 24.4975776672363
+      },
+      {
+        "environment": "base.generator.pine_valley",
+        "gates": 7,
+        "id": "proc:4:surface:-2:-3:1:play:flow",
+        "longest_leg": 44.8266677856445,
+        "maximum_turn": 32.2968896580324,
+        "seed": 42,
+        "shortest_leg": 23.7235412597656
+      },
+      {
+        "environment": "base.generator.canyon",
+        "gates": 6,
+        "id": "proc:4:surface:-2:-1:1:play:flow",
+        "longest_leg": 51.9891357421875,
+        "maximum_turn": 24.3489553480897,
+        "seed": 42,
+        "shortest_leg": 15.0594520568848
+      },
+      {
+        "environment": "base.generator.canyon",
+        "gates": 6,
+        "id": "proc:4:surface:-2:1:1:play:flow",
+        "longest_leg": 46.5155220031738,
+        "maximum_turn": 29.834700956701,
+        "seed": 42,
+        "shortest_leg": 23.0923442840576
+      },
+      {
+        "environment": "maze",
+        "gates": 6,
+        "id": "proc:4:maze:-2:1:2:play:flow",
+        "longest_leg": 64.0,
+        "maximum_turn": 90.0,
+        "seed": 42,
+        "shortest_leg": 16.0
+      },
+      {
+        "environment": "base.generator.modular_city",
+        "gates": 10,
+        "id": "proc:4:surface:-2:2:1:play:flow",
+        "longest_leg": 64.0065307617188,
+        "maximum_turn": 90.046285725765,
+        "seed": 42,
+        "shortest_leg": 32.0009841918945
+      },
+      {
+        "environment": "base.generator.modular_city",
+        "gates": 10,
+        "id": "proc:4:surface:-2:2:2:play:flow",
+        "longest_leg": 64.0175323486328,
+        "maximum_turn": 90.0567000375768,
+        "seed": 42,
+        "shortest_leg": 32.0007781982422
+      },
+      {
+        "environment": "base.generator.canyon",
+        "gates": 7,
+        "id": "proc:4:surface:-2:3:0:play:flow",
+        "longest_leg": 45.9365577697754,
+        "maximum_turn": 30.4279156167476,
+        "seed": 42,
+        "shortest_leg": 24.7537307739258
+      },
+      {
+        "environment": "base.generator.canyon",
+        "gates": 6,
+        "id": "proc:4:surface:-2:3:2:play:flow",
+        "longest_leg": 45.0150871276855,
+        "maximum_turn": 28.7645601346974,
+        "seed": 42,
+        "shortest_leg": 19.2063694000244
+      },
+      {
+        "environment": "base.generator.pine_valley",
+        "gates": 7,
+        "id": "proc:4:surface:-1:-3:3:play:flow",
+        "longest_leg": 48.1191139221191,
+        "maximum_turn": 25.752160947875,
+        "seed": 42,
+        "shortest_leg": 14.676646232605
+      },
+      {
+        "environment": "maze",
+        "gates": 11,
+        "id": "proc:4:maze:-1:-3:1:play:flow",
+        "longest_leg": 32.0,
+        "maximum_turn": 90.0,
+        "seed": 42,
+        "shortest_leg": 16.0
+      },
+      {
+        "environment": "base.generator.modular_city",
+        "gates": 10,
+        "id": "proc:4:surface:-1:-2:0:play:flow",
+        "longest_leg": 64.0032501220703,
+        "maximum_turn": 90.0053522352925,
+        "seed": 42,
+        "shortest_leg": 32.0002784729004
+      },
+      {
+        "environment": "sky",
+        "gates": 11,
+        "id": "proc:4:sky:-1:-2:2:play:flow",
+        "longest_leg": 13.1226167678833,
+        "maximum_turn": 47.8915543904211,
+        "seed": 42,
+        "shortest_leg": 8.83024311065674
+      },
+      {
+        "environment": "base.generator.modular_city",
+        "gates": 8,
+        "id": "proc:4:surface:-1:-1:0:play:flow",
+        "longest_leg": 64.0011138916016,
+        "maximum_turn": 90.0137299109978,
+        "seed": 42,
+        "shortest_leg": 32.0001487731934
+      },
+      {
+        "environment": "base.generator.modular_city",
+        "gates": 12,
+        "id": "proc:4:surface:-1:0:2:play:flow",
+        "longest_leg": 64.0134887695313,
+        "maximum_turn": 90.0320522418323,
+        "seed": 42,
+        "shortest_leg": 32.0000534057617
+      },
+      {
+        "environment": "base.generator.modular_city",
+        "gates": 9,
+        "id": "proc:4:surface:-1:1:2:play:flow",
+        "longest_leg": 64.0041732788086,
+        "maximum_turn": 90.0074720468803,
+        "seed": 42,
+        "shortest_leg": 32.0000076293945
+      },
+      {
+        "environment": "sky",
+        "gates": 10,
+        "id": "proc:4:sky:-1:1:0:play:flow",
+        "longest_leg": 12.560396194458,
+        "maximum_turn": 45.0673884325181,
+        "seed": 42,
+        "shortest_leg": 8.56586647033691
+      },
+      {
+        "environment": "base.generator.modular_city",
+        "gates": 7,
+        "id": "proc:4:surface:-1:2:0:play:flow",
+        "longest_leg": 64.0000076293945,
+        "maximum_turn": 89.99913465054,
+        "seed": 42,
+        "shortest_leg": 32.0001106262207
+      },
+      {
+        "environment": "base.generator.canyon",
+        "gates": 8,
+        "id": "proc:4:surface:-1:3:0:play:flow",
+        "longest_leg": 44.3120384216309,
+        "maximum_turn": 38.0792060607845,
+        "seed": 42,
+        "shortest_leg": 17.2619533538818
+      },
+      {
+        "environment": "base.generator.pine_valley",
+        "gates": 6,
+        "id": "proc:4:surface:0:-3:0:play:flow",
+        "longest_leg": 50.0146942138672,
+        "maximum_turn": 17.0781381833166,
+        "seed": 42,
+        "shortest_leg": 20.8628883361816
+      },
+      {
+        "environment": "base.generator.modular_city",
+        "gates": 7,
+        "id": "proc:4:surface:0:-2:0:play:flow",
+        "longest_leg": 64.0032119750977,
+        "maximum_turn": 90.0116703179289,
+        "seed": 42,
+        "shortest_leg": 32.0005149841309
+      },
+      {
+        "environment": "maze",
+        "gates": 6,
+        "id": "proc:4:maze:0:-2:0:play:flow",
+        "longest_leg": 48.0,
+        "maximum_turn": 90.0,
+        "seed": 42,
+        "shortest_leg": 16.0
+      },
+      {
+        "environment": "base.generator.pine_valley",
+        "gates": 9,
+        "id": "proc:4:surface:0:-1:2:play:flow",
+        "longest_leg": 46.7712936401367,
+        "maximum_turn": 33.1189864092216,
+        "seed": 42,
+        "shortest_leg": 15.3639869689941
+      },
+      {
+        "environment": "sky",
+        "gates": 7,
+        "id": "proc:4:sky:1:-3:1:play:flow",
+        "longest_leg": 21.7447090148926,
+        "maximum_turn": 43.895437365729,
+        "seed": 42,
+        "shortest_leg": 16.0401954650879
+      },
+      {
+        "environment": "sky",
+        "gates": 11,
+        "id": "proc:4:sky:1:-3:3:play:flow",
+        "longest_leg": 19.1307945251465,
+        "maximum_turn": 44.2048254321377,
+        "seed": 42,
+        "shortest_leg": 12.6699371337891
+      },
+      {
+        "environment": "sky",
+        "gates": 8,
+        "id": "proc:4:sky:1:1:1:play:flow",
+        "longest_leg": 19.6355876922607,
+        "maximum_turn": 46.5740093756446,
+        "seed": 42,
+        "shortest_leg": 14.2840642929077
+      },
+      {
+        "environment": "sky",
+        "gates": 9,
+        "id": "proc:4:sky:1:1:2:play:flow",
+        "longest_leg": 14.4534349441528,
+        "maximum_turn": 49.1652108796498,
+        "seed": 42,
+        "shortest_leg": 10.9799394607544
+      },
+      {
+        "environment": "base.generator.modular_city",
+        "gates": 10,
+        "id": "proc:4:surface:-3:-3:0:play:flow",
+        "longest_leg": 64.0032730102539,
+        "maximum_turn": 90.0492226180821,
+        "seed": 314159,
+        "shortest_leg": 32.000171661377
+      },
+      {
+        "environment": "base.generator.modular_city",
+        "gates": 6,
+        "id": "proc:4:surface:-3:-3:3:play:flow",
+        "longest_leg": 32.0030822753906,
+        "maximum_turn": 90.0004327049018,
+        "seed": 314159,
+        "shortest_leg": 32.0001068115234
+      },
+      {
+        "environment": "base.generator.modular_city",
+        "gates": 7,
+        "id": "proc:4:surface:-3:-2:1:play:flow",
+        "longest_leg": 64.0000610351563,
+        "maximum_turn": 89.9935629318924,
+        "seed": 314159,
+        "shortest_leg": 32.0005531311035
+      },
+      {
+        "environment": "sky",
+        "gates": 8,
+        "id": "proc:4:sky:-3:-2:1:play:flow",
+        "longest_leg": 15.9268379211426,
+        "maximum_turn": 44.4177665294907,
+        "seed": 314159,
+        "shortest_leg": 11.8548269271851
+      },
+      {
+        "environment": "maze",
+        "gates": 10,
+        "id": "proc:4:maze:-3:-2:2:play:flow",
+        "longest_leg": 32.0,
+        "maximum_turn": 90.0,
+        "seed": 314159,
+        "shortest_leg": 16.0
+      },
+      {
+        "environment": "base.generator.pine_valley",
+        "gates": 7,
+        "id": "proc:4:surface:-3:-1:0:play:flow",
+        "longest_leg": 49.6669692993164,
+        "maximum_turn": 30.0191753949959,
+        "seed": 314159,
+        "shortest_leg": 24.9878711700439
+      },
+      {
+        "environment": "base.generator.pine_valley",
+        "gates": 6,
+        "id": "proc:4:surface:-3:0:2:play:flow",
+        "longest_leg": 48.5874786376953,
+        "maximum_turn": 19.4230816719046,
+        "seed": 314159,
+        "shortest_leg": 21.6737747192383
+      },
+      {
+        "environment": "sky",
+        "gates": 11,
+        "id": "proc:4:sky:-3:2:0:play:flow",
+        "longest_leg": 15.2919702529907,
+        "maximum_turn": 45.2600065930931,
+        "seed": 314159,
+        "shortest_leg": 10.9072742462158
+      },
+      {
+        "environment": "sky",
+        "gates": 9,
+        "id": "proc:4:sky:-3:2:2:play:flow",
+        "longest_leg": 21.127477645874,
+        "maximum_turn": 43.2036223704501,
+        "seed": 314159,
+        "shortest_leg": 14.1339902877808
+      },
+      {
+        "environment": "base.generator.modular_city",
+        "gates": 12,
+        "id": "proc:4:surface:-3:3:0:play:flow",
+        "longest_leg": 64.00146484375,
+        "maximum_turn": 90.0311979444525,
+        "seed": 314159,
+        "shortest_leg": 32.0000877380371
+      },
+      {
+        "environment": "base.generator.pine_valley",
+        "gates": 7,
+        "id": "proc:4:surface:-2:-3:1:play:flow",
+        "longest_leg": 45.9570655822754,
+        "maximum_turn": 28.6043303380251,
+        "seed": 314159,
+        "shortest_leg": 14.771598815918
+      },
+      {
+        "environment": "base.generator.pine_valley",
+        "gates": 7,
+        "id": "proc:4:surface:-2:-2:1:play:flow",
+        "longest_leg": 44.9847526550293,
+        "maximum_turn": 25.8110183650957,
+        "seed": 314159,
+        "shortest_leg": 14.5017852783203
+      },
+      {
+        "environment": "maze",
+        "gates": 11,
+        "id": "proc:4:maze:-2:-2:0:play:flow",
+        "longest_leg": 48.0,
+        "maximum_turn": 90.0,
+        "seed": 314159,
+        "shortest_leg": 16.0
+      },
+      {
+        "environment": "base.generator.pine_valley",
+        "gates": 7,
+        "id": "proc:4:surface:-2:0:2:play:flow",
+        "longest_leg": 50.7393035888672,
+        "maximum_turn": 30.4861058989593,
+        "seed": 314159,
+        "shortest_leg": 17.6085357666016
+      },
+      {
+        "environment": "sky",
+        "gates": 8,
+        "id": "proc:4:sky:-2:0:0:play:flow",
+        "longest_leg": 13.0434036254883,
+        "maximum_turn": 45.3147811516505,
+        "seed": 314159,
+        "shortest_leg": 8.97003650665283
+      },
+      {
+        "environment": "sky",
+        "gates": 8,
+        "id": "proc:4:sky:-2:0:1:play:flow",
+        "longest_leg": 18.6469268798828,
+        "maximum_turn": 43.27242970185,
+        "seed": 314159,
+        "shortest_leg": 14.8442192077637
+      },
+      {
+        "environment": "base.generator.modular_city",
+        "gates": 10,
+        "id": "proc:4:surface:-2:1:0:play:flow",
+        "longest_leg": 64.0015640258789,
+        "maximum_turn": 90.089865629498,
+        "seed": 314159,
+        "shortest_leg": 32.0000305175781
+      },
+      {
+        "environment": "base.generator.modular_city",
+        "gates": 10,
+        "id": "proc:4:surface:-2:2:0:play:flow",
+        "longest_leg": 64.0069198608398,
+        "maximum_turn": 90.0548606580904,
+        "seed": 314159,
+        "shortest_leg": 32.000114440918
+      },
+      {
+        "environment": "sky",
+        "gates": 7,
+        "id": "proc:4:sky:-2:2:1:play:flow",
+        "longest_leg": 15.4302444458008,
+        "maximum_turn": 41.4706703251117,
+        "seed": 314159,
+        "shortest_leg": 11.5296583175659
+      },
+      {
+        "environment": "maze",
+        "gates": 15,
+        "id": "proc:4:maze:-2:2:0:play:flow",
+        "longest_leg": 32.0,
+        "maximum_turn": 90.0,
+        "seed": 314159,
+        "shortest_leg": 16.0
+      },
+      {
+        "environment": "maze",
+        "gates": 9,
+        "id": "proc:4:maze:-2:2:4:play:flow",
+        "longest_leg": 48.0,
+        "maximum_turn": 90.0,
+        "seed": 314159,
+        "shortest_leg": 16.0
+      },
+      {
+        "environment": "base.generator.modular_city",
+        "gates": 7,
+        "id": "proc:4:surface:-1:-3:2:play:flow",
+        "longest_leg": 64.0009078979492,
+        "maximum_turn": 90.0194605883641,
+        "seed": 314159,
+        "shortest_leg": 32.0002555847168
+      },
+      {
+        "environment": "sky",
+        "gates": 10,
+        "id": "proc:4:sky:-1:-3:1:play:flow",
+        "longest_leg": 13.6138477325439,
+        "maximum_turn": 56.5649860592524,
+        "seed": 314159,
+        "shortest_leg": 10.3599071502686
+      },
+      {
+        "environment": "base.generator.pine_valley",
+        "gates": 6,
+        "id": "proc:4:surface:-1:-2:0:play:flow",
+        "longest_leg": 49.8794898986816,
+        "maximum_turn": 26.4157999294816,
+        "seed": 314159,
+        "shortest_leg": 19.3848285675049
+      },
+      {
+        "environment": "base.generator.pine_valley",
+        "gates": 6,
+        "id": "proc:4:surface:-1:-2:2:play:flow",
+        "longest_leg": 53.5707397460938,
+        "maximum_turn": 45.4430809261769,
+        "seed": 314159,
+        "shortest_leg": 30.7056331634521
+      },
+      {
+        "environment": "sky",
+        "gates": 7,
+        "id": "proc:4:sky:-1:-2:1:play:flow",
+        "longest_leg": 25.3975448608398,
+        "maximum_turn": 44.6788533145014,
+        "seed": 314159,
+        "shortest_leg": 22.6127662658691
+      },
+      {
+        "environment": "sky",
+        "gates": 10,
+        "id": "proc:4:sky:-1:-2:3:play:flow",
+        "longest_leg": 15.7516078948975,
+        "maximum_turn": 47.3824712632722,
+        "seed": 314159,
+        "shortest_leg": 10.4733963012695
+      },
+      {
+        "environment": "maze",
+        "gates": 12,
+        "id": "proc:4:maze:-1:0:2:play:flow",
+        "longest_leg": 32.0,
+        "maximum_turn": 90.0,
+        "seed": 314159,
+        "shortest_leg": 16.0
+      },
+      {
+        "environment": "base.generator.modular_city",
+        "gates": 11,
+        "id": "proc:4:surface:-1:1:1:play:flow",
+        "longest_leg": 64.0044326782227,
+        "maximum_turn": 90.03572693761,
+        "seed": 314159,
+        "shortest_leg": 32.0003471374512
+      },
+      {
+        "environment": "maze",
+        "gates": 13,
+        "id": "proc:4:maze:-1:1:1:play:flow",
+        "longest_leg": 32.0,
+        "maximum_turn": 90.0,
+        "seed": 314159,
+        "shortest_leg": 16.0
+      },
+      {
+        "environment": "base.generator.modular_city",
+        "gates": 7,
+        "id": "proc:4:surface:-1:2:3:play:flow",
+        "longest_leg": 64.0020904541016,
+        "maximum_turn": 90.0118301145101,
+        "seed": 314159,
+        "shortest_leg": 32.0
+      },
+      {
+        "environment": "maze",
+        "gates": 7,
+        "id": "proc:4:maze:-1:3:1:play:flow",
+        "longest_leg": 32.0,
+        "maximum_turn": 90.0,
+        "seed": 314159,
+        "shortest_leg": 16.0
+      },
+      {
+        "environment": "sky",
+        "gates": 9,
+        "id": "proc:4:sky:0:-1:0:play:flow",
+        "longest_leg": 18.844856262207,
+        "maximum_turn": 47.9606355618726,
+        "seed": 314159,
+        "shortest_leg": 12.9730987548828
+      }
+    ],
+    "seeds": [
+      271828,
+      42,
+      314159
+    ]
+  },
+  "native_gameplay": {
+    "checks": 169,
+    "examples": {
+      "balloons": {
+        "checkpoints": [
+          [
+            -1698.0,
+            4.0,
+            -1868.0
+          ],
+          [
+            -1707.0,
+            4.0,
+            -1852.41149902344
+          ],
+          [
+            -1725.0,
+            4.0,
+            -1852.41149902344
+          ],
+          [
+            -1734.0,
+            4.0,
+            -1868.0
+          ],
+          [
+            -1725.0,
+            4.0,
+            -1883.58850097656
+          ],
+          [
+            -1707.0,
+            4.0,
+            -1883.58850097656
+          ]
+        ],
+        "gate_normals": [],
+        "id": "proc:4:surface:-3:-3:2:play",
+        "rules": {
+          "balloon_radius": 1.15,
+          "balloon_revision": 2,
+          "height_limit": 49.0,
+          "release_delay": 3.0,
+          "release_interval": 2.5,
+          "rise_speed": 1.8
+        }
+      },
+      "follow": {
+        "checkpoints": [],
+        "gate_normals": [],
+        "id": "proc:4:surface:-3:3:0:play",
+        "rules": {
+          "follow_distance": 60.0,
+          "height_tolerance": 4.0,
+          "path_radius": 12.0,
+          "radius_max": 22.0,
+          "radius_min": 5.0,
+          "view_angle": 22.0
+        }
+      },
+      "orbit": {
+        "checkpoints": [],
+        "gate_normals": [],
+        "id": "proc:4:surface:-3:-1:0:play",
+        "rules": {
+          "height_tolerance": 2.5,
+          "radius_max": 18.0,
+          "radius_min": 10.0,
+          "view_angle": 22.0
+        }
+      },
+      "race": {
+        "checkpoints": [
+          [
+            -2048.0,
+            6.2644157409668,
+            -1792.0
+          ],
+          [
+            -2112.0,
+            6.15095043182373,
+            -1792.0
+          ],
+          [
+            -2112.0,
+            6.27789163589478,
+            -1824.0
+          ],
+          [
+            -2112.0,
+            5.28450727462769,
+            -1856.0
+          ],
+          [
+            -2176.0,
+            6.20042276382446,
+            -1856.0
+          ],
+          [
+            -2208.0,
+            6.00290822982788,
+            -1856.0
+          ],
+          [
+            -2208.0,
+            5.55696487426758,
+            -1792.0
+          ]
+        ],
+        "gate_normals": [
+          [
+            -0.999998450279236,
+            -0.00177289266139269,
+            0.0
+          ],
+          [
+            -0.707108199596405,
+            0.00155138981062919,
+            -0.707103729248047
+          ],
+          [
+            0.0,
+            -0.0135327884927392,
+            -0.999908447265625
+          ],
+          [
+            -0.707191407680511,
+            -0.0118244607001543,
+            -0.706923305988312
+          ],
+          [
+            -0.999991714954376,
+            0.00406896509230137,
+            0.0
+          ],
+          [
+            -0.707078099250793,
+            -0.00929111801087856,
+            0.707074463367462
+          ],
+          [
+            0.0,
+            -0.00696769636124372,
+            0.999975800514221
+          ]
+        ],
+        "id": "proc:4:surface:-3:-3:0:play:flow",
+        "rules": {
+          "gate_half": 3.0,
+          "route_revision": 1
+        }
+      }
+    },
+    "failures": 0,
+    "geometry": [
+      {
+        "body_samples_per_gate": 25,
+        "clear": true,
+        "gates": 7,
+        "id": "proc:4:surface:-3:-3:0:play:flow",
+        "layer": "surface"
+      },
+      {
+        "body_samples_per_gate": 25,
+        "clear": true,
+        "gates": 6,
+        "id": "proc:4:surface:-3:-2:1:play:flow",
+        "layer": "surface_forest"
+      },
+      {
+        "body_samples_per_gate": 25,
+        "clear": true,
+        "gates": 13,
+        "id": "proc:4:maze:-3:-1:1:play:flow",
+        "layer": "maze"
+      },
+      {
+        "body_samples_per_gate": 25,
+        "clear": true,
+        "gates": 7,
+        "id": "proc:4:sky:-3:2:2:play:flow",
+        "layer": "sky"
+      },
+      {
+        "body_samples_per_gate": 25,
+        "clear": true,
+        "gates": 7,
+        "id": "proc:4:sky:-3:2:4:play:flow",
+        "layer": "sky"
+      },
+      {
+        "body_samples_per_gate": 25,
+        "clear": true,
+        "gates": 6,
+        "id": "proc:4:surface:-1:2:1:play:flow",
+        "layer": "surface_desert"
+      }
+    ],
+    "instance_layers": {
+      "maze": 3,
+      "sky": 3,
+      "surface": 12
+    },
+    "kind": "automated task state, transactions, native static collisions and UI; not human flight",
+    "sampled_instances": 19,
+    "seed": 271828
+  },
+  "native_field_tasks": {
+    "balloon_layers_with_clearance": 3,
+    "checks": 50,
+    "failures": 0,
+    "instances": 72,
+    "kind": "generated native collision, actual landing/interaction, balloon state/FX and world-space labels; not human flight",
+    "minimum_spacing_m": 48.0,
+    "physical_pads": 6,
+    "rays_per_physical_pad": 9,
+    "sampled_pads": 245,
+    "seeds": [
+      271828,
+      42,
+      314159
+    ]
+  },
+  "scope": "12 related logic suites, four source normal-window suites, nine final-bundle suites. Not all project tests, manual RC flight or all procedural seeds."
+}

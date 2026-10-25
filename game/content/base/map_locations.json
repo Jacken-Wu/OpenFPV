@@ -1,0 +1,15 @@
+[
+  {"id":"teleport.harbor","name":"锈港起降点","kind":"teleport","point":[0,1.2,16],"description":"起降平台传送点。维修终端和商店位于两侧，需自行飞抵。"},
+  {"id":"mission.relay","name":"中继维修终端","kind":"mission","point":[-18,1.3,12],"description":"靠近终端并按住 E 两秒维修；完成后解锁轻型套机与信用点。"},
+  {"id":"shop.harbor","name":"桨叶商店","kind":"shop","point":[18,1.3,12],"description":"飞抵商店附近后按 E 浏览商品。不能直接传送到商店。"},
+  {"id":"teleport.verdant","name":"青穹街区传送点","kind":"teleport","point":[64,1.2,0],"description":"街区道路上的独立传送点。"},
+  {"id":"teleport.sky","name":"浮岛起降点","kind":"teleport","point":[100,115,-68],"description":"浮岛着陆平台，海拔 115 m。"},
+  {"id":"landmark.sky","name":"浮岛观测站","kind":"landmark","point":[119,115,-94],"description":"观测站外侧。可先传送至浮岛起降点，再飞抵此处。"},
+  {"id":"landmark.entrance","name":"地下入口","kind":"landmark","point":[-96,4,-96],"description":"中央竖井入口。地下参考航线经此下降，不可直接穿过地面。"},
+  {"id":"landmark.underground","name":"地下维修层","kind":"landmark","point":[-96,-43,-112],"interior_bounds":[-125,-47,-125,58,43,58],"approach":[[-96,6,-96],[-96,-40,-96]],"description":"经中央竖井进入维修层；参考航线提供入口与井底航点，不自动避障。"},
+  {"id":"teleport.underground","name":"地下起降点","kind":"teleport","point":[-102,-43,-112],"interior_bounds":[-125,-47,-125,58,43,58],"approach":[[-96,6,-96],[-96,-40,-96]],"description":"地下平台上的独立传送点。与维修层目的地分别标记。"},
+  {"id":"teleport.canyon","name":"峡谷传送点","kind":"teleport","point":[240,42,0],"description":"峡谷上空的固定部署位置。"},
+  {"id":"mission.sky_photo","name":"观测站拍摄目标","kind":"mission","point":[130,122,-94],"description":"F3 领取浮岛拍摄委托后，在 15～65 m 距离将此目标对准画面中心 18° 范围，保持无遮挡，按 F12 拍照。此目标不能传送；可使用附近浮岛起降点。"},
+  {"id":"teleport.oldtown","name":"赤陶旧城起降点","kind":"teleport","point":[-64,1.2,320],"min_world_version":2,"description":"砖石旧城道路上的独立起降点。可沿屋脊、街巷和连廊自由探索。"},
+  {"id":"teleport.pine_valley","name":"松风山谷起降点","kind":"teleport","point":[640,72,0],"min_world_version":2,"description":"林地山谷上空的固定起降位置。下方保留一片无树净空，可俯瞰连续丘陵与松林。"}
+]

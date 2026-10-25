@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="PartDefinition" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/content/part_definition.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "base.frame.f_cine35"
+display_name = "影航3.5机架"
+kind = "frame"
+mass_per_component_kg = 0.115
+component_count = 1
+stats = {"arm": 0.1, "max_prop_inches": 3.6, "mount": "12x12", "system_mass": 0.15, "drag": 0.012}
+tuning = {"camera_mount_tilt_deg": {"min": 5.0, "max": 55.0, "default": 15.0, "step": 1.0, "unit": "deg"}}

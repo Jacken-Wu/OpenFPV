@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="BiomeDefinition" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scripts/content/biome_definition.gd" id="1"]
+
+[ext_resource type="AudioStream" path="res://audio/music/pine_valley.wav" id="music"]
+
+[resource]
+script = ExtResource("1")
+music = ExtResource("music")
+music_title = "松针间的溪流"
+id = "base.biome.pine_valley"
+display_name = "松风山谷"
+provider_id = "base.generator.pine_valley"
+tags = PackedStringArray("surface", "wild", "forest")
+region_bounds = AABB(384, -64, -512, 640, 192, 1024)
+priority = 5
+palette = PackedColorArray(0.36, 0.49, 0.28, 1, 0.47, 0.49, 0.39, 1, 0.22, 0.40, 0.28, 1)
+parameters = {"layer": "surface", "min_world_version": 2, "clearings": [Vector3(640, 0, 0)], "climate": Vector3(0.3, 0.75, 0.15), "lot_pool": [], "landmark_pool": [{"kind": "ruins", "chance": 0.5}, {"kind": "base_station", "chance": 0.38}, {"kind": "pavilion", "chance": 0.38}]}

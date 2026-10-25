@@ -1,0 +1,79 @@
+{
+	"collision_wait_frames": 116,
+	"discarded_jobs": 0,
+	"engine": "4.7.2-stable (official)",
+	"final_nodes": 1592.0,
+	"final_static_memory_mb": 71.5718116760254,
+	"frames": 2998,
+	"kind": "scripted streaming tour, not human flight or RC validation",
+	"max_ms": 29.048,
+	"measurement": "monotonic wall-clock frame intervals",
+	"p50_ms": 10.002,
+	"p95_ms": 10.184,
+	"p99_ms": 10.292,
+	"peak_nodes": 1836,
+	"peak_static_memory_mb": 72.3725080490112,
+	"physics_backend": "DEFAULT",
+	"renderer": "NVIDIA GeForce RTX 4060 Ti",
+	"resolution": "(1920, 1080)",
+	"route": [
+		[
+			0.0,
+			24.0,
+			0.0
+		],
+		[
+			-180.0,
+			30.0,
+			-160.0
+		],
+		[
+			100.0,
+			145.0,
+			-68.0
+		],
+		[
+			-96.0,
+			-25.0,
+			-96.0
+		],
+		[
+			280.0,
+			38.0,
+			160.0
+		],
+		[
+			-64.0,
+			30.0,
+			352.0
+		],
+		[
+			640.0,
+			72.0,
+			0.0
+		],
+		[
+			1200.0,
+			80.0,
+			128.0
+		],
+		[
+			-1200.0,
+			80.0,
+			-128.0
+		]
+	],
+	"seconds": 30.005826,
+	"seed": 271828,
+	"slow_frames": [
+		{
+			"active": 46,
+			"commit_ms": 0.942,
+			"ms": 29.048,
+			"pending": 4,
+			"point_index": 0,
+			"seconds": 0.110274
+		}
+	],
+	"world_version": 2
+}

@@ -12,6 +12,7 @@ output/*
 !output/proposal/
 # Editors and OS
 .vscode/
+.code/
 .idea/
 Thumbs.db
 .DS_Store

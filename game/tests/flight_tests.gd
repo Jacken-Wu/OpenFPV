@@ -21,7 +21,6 @@ func run() -> void:
 	root.add_child(drone)
 	drone.position = Vector3(0, 100, 0)
 	await wait_physics(3)
-	drone.armed = true
 	var hover := pow(drone.mass * 9.81 / (float(drone.spec.max_thrust) * 4.0), 1.0 / 1.55)
 	drone.motor_forces.fill(drone.mass * 9.81 / 4.0)
 	drone.controls = Vector4(0, 0, 0, hover)
@@ -35,26 +34,26 @@ func run() -> void:
 	check((drone.basis.inverse() * drone.angular_velocity).z < -0.1, "positive roll banks right")
 	drone.reset_drone(Vector3(0, 100, 0))
 	await wait_physics(3)
-	drone.armed = true
 	drone.controls = Vector4(0, 0.2, 0, hover)
 	await wait_physics(30)
 	check((drone.basis.inverse() * drone.angular_velocity).x < -0.1, "positive pitch tips forward")
 	drone.reset_drone(Vector3(0, 100, 0))
 	await wait_physics(3)
-	drone.armed = true
 	drone.controls = Vector4(0, 0, 0.2, hover)
 	await wait_physics(40)
 	check((drone.basis.inverse() * drone.angular_velocity).y < -0.1, "positive yaw turns right")
 	drone.reset_drone(Vector3(0, 100, 0))
 	await wait_physics(3)
 	drone.rotation.z = 0.3
-	drone.armed = true
 	drone.controls = Vector4(0, 0, 0, hover)
 	await wait_physics(60)
 	check(absf(drone.rotation.z - 0.3) < 0.04, "Acro neutral does not auto-level")
-	drone.armed = false
+	drone.freeze = true
+	drone.stop_control()
+	var paused_position := drone.position
 	await wait_physics(120)
-	check(drone.total_thrust < 0.001, "disarmed motors spool down")
+	check(drone.total_thrust == 0 and drone.position.is_equal_approx(paused_position), "pause stops control and freezes the body")
+	drone.freeze = false
 	var ground := WorldGeometry.create_box(Vector3(0, 0, 0), Vector3(20, 0.2, 20), Color.GRAY)
 	root.add_child(ground)
 	drone.reset_drone(Vector3(0, 2, 0))
@@ -67,6 +66,27 @@ func run() -> void:
 	drone.linear_velocity = Vector3(0, 0, -60)
 	await wait_physics(30)
 	check(drone.position.z > -8, "60 m/s approach does not tunnel through thin wall")
+	drone.freeze = true
+	drone.global_transform = Transform3D(Basis.from_euler(Vector3(0.6, 0.8, -0.5)), Vector3(4, 100, 7))
+	drone.linear_velocity = Vector3(8, 3, 2)
+	drone.angular_velocity = Vector3(2, 3, 4)
+	drone.rate_integral = Vector3.ONE
+	drone.motor_forces.fill(2.0)
+	var original_heading := Vector2(-drone.global_basis.z.x, -drone.global_basis.z.z).normalized()
+	drone.reset_attitude()
+	check(drone.global_position.is_equal_approx(Vector3(4, 100, 7)) and drone.global_basis.y.is_equal_approx(Vector3.UP), "in-place reset levels roll and pitch without relocating")
+	var reset_heading := Vector2(-drone.global_basis.z.x, -drone.global_basis.z.z).normalized()
+	check(reset_heading.is_equal_approx(original_heading), "in-place leveling preserves horizontal heading")
+	check(drone.linear_velocity == Vector3.ZERO and drone.angular_velocity == Vector3.ZERO and drone.rate_integral == Vector3.ZERO and drone.motor_forces[0] == 0, "attitude reset clears both velocities and controller history")
+	drone.shift_origin(Vector3(1024, 0, 0))
+	var shifted_position := drone.global_position
+	drone.freeze = false
+	await wait_physics(4)
+	check(drone.global_basis.y.is_equal_approx(Vector3.UP) and drone.angular_velocity.is_zero_approx() and not drone.reset_pending, "physics-step reset keeps the leveled attitude after unfreezing")
+	check(absf(drone.global_position.x - shifted_position.x) < 0.001 and absf(drone.global_position.z - shifted_position.z) < 0.001, "origin shifts also move a queued reset without teleporting back")
+	drone.rotation = Vector3(PI * 0.5, 1.0, 0.0)
+	drone.reset_attitude()
+	check(drone.global_basis.y.is_equal_approx(Vector3.UP) and drone.global_transform.is_finite(), "vertical nose attitude has a finite heading fallback")
 	ground.queue_free()
 	wall.queue_free()
 	var catalog := ContentCatalog.new()
@@ -80,7 +100,6 @@ func run() -> void:
 		await wait_physics(3)
 		drone.linear_velocity = Vector3.ZERO
 		drone.controls = Vector4(0, 0, 0, 1)
-		drone.armed = true
 		await wait_physics(36)
 		velocities.append(drone.linear_velocity.y)
 	print("Full-throttle 300ms vertical speeds: ", velocities)

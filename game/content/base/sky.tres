@@ -1,9 +1,13 @@
-[gd_resource type="Resource" script_class="BiomeDefinition" load_steps=2 format=3]
+[gd_resource type="Resource" script_class="BiomeDefinition" load_steps=3 format=3]
 
 [ext_resource type="Script" path="res://scripts/content/biome_definition.gd" id="1"]
 
+[ext_resource type="AudioStream" path="res://audio/music/sky.wav" id="music"]
+
 [resource]
 script = ExtResource("1")
+music = ExtResource("music")
+music_title = "云端轻航"
 id = "base.biome.sky_fixture"
 display_name = "浮岛观测站"
 provider_id = "base.generator.sky_island"
@@ -11,4 +15,4 @@ tags = PackedStringArray("volume", "sky")
 region_bounds = AABB(64, 80, -128, 96, 96, 96)
 priority = 20
 palette = PackedColorArray(0.28, 0.40, 0.40, 1, 0.39, 0.53, 0.35, 1, 0.83, 0.73, 0.48, 1)
-parameters = {"layer": "volume", "anchor": Vector3(112, 108, -80)}
+parameters = {"layer": "volume", "anchor": Vector3(112, 108, -80), "lot_pool": [], "landmark_pool": [{"kind": "sky_colonnade", "chance": 0.6}, {"kind": "ruins", "chance": 0.3}]}

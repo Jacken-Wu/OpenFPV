@@ -1,0 +1,407 @@
+{
+	"collision_wait_frames": 647,
+	"discarded_jobs": 30,
+	"engine": "4.7.2-stable (official)",
+	"final_nodes": 3381.0,
+	"final_static_memory_mb": 131.176309585571,
+	"frames": 11861,
+	"kind": "scripted streaming tour, not human flight or RC validation",
+	"max_ms": 265.267,
+	"measurement": "monotonic wall-clock frame intervals",
+	"p50_ms": 10.0,
+	"p95_ms": 10.312,
+	"p99_ms": 13.016,
+	"peak_nodes": 5128,
+	"peak_static_memory_mb": 131.16944694519,
+	"physics_backend": "DEFAULT",
+	"renderer": "NVIDIA GeForce RTX 4060 Ti",
+	"resolution": "(1920, 1080)",
+	"route": [
+		[
+			-192.0,
+			13.1999998092651,
+			264.0
+		],
+		[
+			256.0,
+			13.1999998092651,
+			-376.0
+		],
+		[
+			256.0,
+			13.1999998092651,
+			456.0
+		],
+		[
+			-1994.80065917969,
+			32.8437728881836,
+			1212.89086914063
+		],
+		[
+			-1792.0,
+			13.1999998092651,
+			1736.0
+		],
+		[
+			-1600.0,
+			13.1999998092651,
+			1864.0
+		],
+		[
+			-1344.0,
+			13.1999998092651,
+			1864.0
+		],
+		[
+			-1344.0,
+			13.1999998092651,
+			2120.0
+		],
+		[
+			-1648.0,
+			-83.4730834960938,
+			1728.0
+		],
+		[
+			-1776.0,
+			-83.4730834960938,
+			1712.0
+		],
+		[
+			4396.36474609375,
+			54.6670112609863,
+			-4306.7861328125
+		],
+		[
+			4539.0283203125,
+			43.5718307495117,
+			-4307.75146484375
+		],
+		[
+			4276.2578125,
+			7.31974983215332,
+			-3229.306640625
+		],
+		[
+			5029.9111328125,
+			41.2707862854004,
+			-4038.64965820313
+		],
+		[
+			4185.3125,
+			220.122467041016,
+			-4106.78173828125
+		],
+		[
+			20553.83984375,
+			50.2551498413086,
+			10357.9130859375
+		],
+		[
+			20416.0,
+			13.1999998092651,
+			10952.0
+		],
+		[
+			20672.0,
+			13.1999998092651,
+			11016.0
+		],
+		[
+			21056.0,
+			13.1999998092651,
+			10440.0
+		],
+		[
+			-20544.0,
+			13.1999998092651,
+			-10360.0
+		],
+		[
+			-20416.0,
+			13.1999998092651,
+			-9400.0
+		],
+		[
+			-20544.0,
+			13.1999998092651,
+			-9528.0
+		],
+		[
+			-19648.0,
+			13.1999998092651,
+			-10296.0
+		],
+		[
+			-19712.0,
+			13.1999998092651,
+			-10424.0
+		],
+		[
+			-19520.0,
+			13.1999998092651,
+			-9720.0
+		]
+	],
+	"seconds": 120.003435,
+	"seed": 271828,
+	"slow_frames": [
+		{
+			"active": 0,
+			"commit_ms": 0.001,
+			"ms": 27.875,
+			"pending": 4,
+			"point_index": 1,
+			"seconds": 3.03986
+		},
+		{
+			"active": 0,
+			"commit_ms": 0.002,
+			"ms": 62.078,
+			"pending": 4,
+			"point_index": 2,
+			"seconds": 6.075652
+		},
+		{
+			"active": 0,
+			"commit_ms": 0.002,
+			"ms": 126.957,
+			"pending": 4,
+			"point_index": 3,
+			"seconds": 9.142229
+		},
+		{
+			"active": 0,
+			"commit_ms": 0.017,
+			"ms": 27.464,
+			"pending": 4,
+			"point_index": 4,
+			"seconds": 12.044355
+		},
+		{
+			"active": 315,
+			"commit_ms": 0.002,
+			"ms": 59.037,
+			"pending": 4,
+			"point_index": 7,
+			"seconds": 21.080712
+		},
+		{
+			"active": 60,
+			"commit_ms": 0.002,
+			"ms": 25.457,
+			"pending": 4,
+			"point_index": 8,
+			"seconds": 24.048422
+		},
+		{
+			"active": 0,
+			"commit_ms": 0.002,
+			"ms": 60.388,
+			"pending": 4,
+			"point_index": 10,
+			"seconds": 30.086492
+		},
+		{
+			"active": 429,
+			"commit_ms": 0.021,
+			"ms": 44.587,
+			"pending": 4,
+			"point_index": 11,
+			"seconds": 33.072442
+		},
+		{
+			"active": 0,
+			"commit_ms": 0.003,
+			"ms": 42.986,
+			"pending": 4,
+			"point_index": 12,
+			"seconds": 36.072442
+		},
+		{
+			"active": 0,
+			"commit_ms": 0.002,
+			"ms": 79.667,
+			"pending": 4,
+			"point_index": 13,
+			"seconds": 39.110661
+		},
+		{
+			"active": 0,
+			"commit_ms": 0.018,
+			"ms": 118.146,
+			"pending": 4,
+			"point_index": 14,
+			"seconds": 42.150769
+		},
+		{
+			"active": 0,
+			"commit_ms": 0.042,
+			"ms": 145.489,
+			"pending": 4,
+			"point_index": 15,
+			"seconds": 45.179549
+		},
+		{
+			"active": 0,
+			"commit_ms": 0.02,
+			"ms": 49.901,
+			"pending": 4,
+			"point_index": 16,
+			"seconds": 48.085485
+		},
+		{
+			"active": 280,
+			"commit_ms": 0.002,
+			"ms": 26.071,
+			"pending": 4,
+			"point_index": 17,
+			"seconds": 51.063202
+		},
+		{
+			"active": 0,
+			"commit_ms": 0.002,
+			"ms": 57.342,
+			"pending": 4,
+			"point_index": 18,
+			"seconds": 54.096011
+		},
+		{
+			"active": 0,
+			"commit_ms": 0.002,
+			"ms": 123.232,
+			"pending": 4,
+			"point_index": 19,
+			"seconds": 57.16355
+		},
+		{
+			"active": 43,
+			"commit_ms": 0.038,
+			"ms": 265.267,
+			"pending": 4,
+			"point_index": 19,
+			"seconds": 57.675694
+		},
+		{
+			"active": 0,
+			"commit_ms": 0.001,
+			"ms": 158.999,
+			"pending": 4,
+			"point_index": 20,
+			"seconds": 60.201232
+		},
+		{
+			"active": 0,
+			"commit_ms": 0.002,
+			"ms": 63.104,
+			"pending": 4,
+			"point_index": 22,
+			"seconds": 66.108273
+		},
+		{
+			"active": 0,
+			"commit_ms": 0.001,
+			"ms": 115.617,
+			"pending": 4,
+			"point_index": 24,
+			"seconds": 72.163824
+		},
+		{
+			"active": 0,
+			"commit_ms": 0.002,
+			"ms": 56.704,
+			"pending": 4,
+			"point_index": 0,
+			"seconds": 75.106463
+		},
+		{
+			"active": 0,
+			"commit_ms": 0.002,
+			"ms": 60.759,
+			"pending": 4,
+			"point_index": 2,
+			"seconds": 81.113679
+		},
+		{
+			"active": 0,
+			"commit_ms": 0.002,
+			"ms": 109.0,
+			"pending": 4,
+			"point_index": 3,
+			"seconds": 84.163717
+		},
+		{
+			"active": 0,
+			"commit_ms": 0.015,
+			"ms": 25.327,
+			"pending": 4,
+			"point_index": 4,
+			"seconds": 87.081483
+		},
+		{
+			"active": 315,
+			"commit_ms": 0.002,
+			"ms": 25.97,
+			"pending": 4,
+			"point_index": 6,
+			"seconds": 93.085094
+		},
+		{
+			"active": 315,
+			"commit_ms": 0.001,
+			"ms": 52.537,
+			"pending": 4,
+			"point_index": 7,
+			"seconds": 96.113291
+		},
+		{
+			"active": 60,
+			"commit_ms": 0.002,
+			"ms": 26.469,
+			"pending": 4,
+			"point_index": 8,
+			"seconds": 99.088698
+		},
+		{
+			"active": 0,
+			"commit_ms": 0.002,
+			"ms": 58.469,
+			"pending": 4,
+			"point_index": 10,
+			"seconds": 105.123881
+		},
+		{
+			"active": 441,
+			"commit_ms": 0.002,
+			"ms": 38.035,
+			"pending": 4,
+			"point_index": 11,
+			"seconds": 108.105027
+		},
+		{
+			"active": 0,
+			"commit_ms": 0.002,
+			"ms": 41.276,
+			"pending": 4,
+			"point_index": 12,
+			"seconds": 111.109912
+		},
+		{
+			"active": 0,
+			"commit_ms": 0.024,
+			"ms": 84.695,
+			"pending": 4,
+			"point_index": 13,
+			"seconds": 114.155097
+		},
+		{
+			"active": 0,
+			"commit_ms": 0.058,
+			"ms": 126.814,
+			"pending": 4,
+			"point_index": 14,
+			"seconds": 117.198766
+		}
+	],
+	"world_version": 4
+}

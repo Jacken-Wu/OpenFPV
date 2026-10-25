@@ -1,0 +1,16 @@
+{
+	"balloon_layers_with_clearance": 3,
+	"checks": 47,
+	"failures": 0,
+	"instances": 72,
+	"kind": "generated native collision, actual landing/interaction, balloon state/FX and world-space labels; not human flight",
+	"minimum_spacing_m": 48.0,
+	"physical_pads": 6,
+	"rays_per_physical_pad": 9,
+	"sampled_pads": 245,
+	"seeds": [
+		271828,
+		42,
+		314159
+	]
+}

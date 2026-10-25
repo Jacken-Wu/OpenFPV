@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="ContentManifest" load_steps=21 format=3]
+[gd_resource type="Resource" script_class="ContentManifest" load_steps=90 format=3]
 
 [ext_resource type="Script" path="res://scripts/content/content_manifest.gd" id="1"]
 [ext_resource type="Resource" path="res://content/base/f5.tres" id="2"]
@@ -20,15 +20,94 @@
 [ext_resource type="Resource" path="res://content/base/underground.tres" id="18"]
 [ext_resource type="Resource" path="res://content/base/relay_reward.tres" id="19"]
 [ext_resource type="Resource" path="res://content/base/smooth_offer.tres" id="20"]
+[ext_resource type="Resource" path="res://content/base/relay_mission.tres" id="21"]
+[ext_resource type="Resource" path="res://content/base/sky_photo_mission.tres" id="22"]
+[ext_resource type="Resource" path="res://content/base/sky_photo_reward.tres" id="23"]
+[ext_resource type="Resource" path="res://content/base/oldtown.tres" id="24"]
+[ext_resource type="Resource" path="res://content/base/pine_valley.tres" id="25"]
+[ext_resource type="Resource" path="res://content/base/exploration_reward.tres" id="26"]
+[ext_resource type="Resource" path="res://content/base/survey_template.tres" id="27"]
+[ext_resource type="Resource" path="res://content/base/circuit_template.tres" id="28"]
+[ext_resource type="Resource" path="res://content/base/courier_template.tres" id="29"]
+[ext_resource type="Resource" path="res://content/base/relay_template.tres" id="30"]
+[ext_resource type="Resource" path="res://content/base/photo_template.tres" id="31"]
+[ext_resource type="Resource" path="res://content/base/light35_offer.tres" id="32"]
+
+[ext_resource type="Resource" path="res://content/base/f_freestyle5.tres" id="content012_101"]
+[ext_resource type="Resource" path="res://content/base/m_freestyle5.tres" id="content012_102"]
+[ext_resource type="Resource" path="res://content/base/p_freestyle5.tres" id="content012_103"]
+[ext_resource type="Resource" path="res://content/base/f_cruise6.tres" id="content012_104"]
+[ext_resource type="Resource" path="res://content/base/m_cruise6.tres" id="content012_105"]
+[ext_resource type="Resource" path="res://content/base/p_cruise6.tres" id="content012_106"]
+[ext_resource type="Resource" path="res://content/base/f_cine35.tres" id="content012_107"]
+[ext_resource type="Resource" path="res://content/base/m_cine35.tres" id="content012_108"]
+[ext_resource type="Resource" path="res://content/base/p_cine35.tres" id="content012_109"]
+[ext_resource type="Resource" path="res://content/base/freestyle5.tres" id="content012_110"]
+[ext_resource type="Resource" path="res://content/base/cruise6.tres" id="content012_111"]
+[ext_resource type="Resource" path="res://content/base/cine35.tres" id="content012_112"]
+[ext_resource type="Resource" path="res://content/base/map_freestyle5.tres" id="content012_113"]
+[ext_resource type="Resource" path="res://content/base/map_cruise6.tres" id="content012_114"]
+[ext_resource type="Resource" path="res://content/base/map_cine35.tres" id="content012_115"]
+[ext_resource type="Resource" path="res://content/base/map_m5_freestyle.tres" id="content012_116"]
+[ext_resource type="Resource" path="res://content/base/map_freestyle_general.tres" id="content012_117"]
+[ext_resource type="Resource" path="res://content/base/map_freestyle_smooth.tres" id="content012_118"]
+[ext_resource type="Resource" path="res://content/base/map_m5_cruise.tres" id="content012_119"]
+[ext_resource type="Resource" path="res://content/base/map_cruise_general.tres" id="content012_120"]
+[ext_resource type="Resource" path="res://content/base/map_cruise_smooth.tres" id="content012_121"]
+[ext_resource type="Resource" path="res://content/base/map_m35_cine.tres" id="content012_122"]
+[ext_resource type="Resource" path="res://content/base/map_cine_general.tres" id="content012_123"]
+[ext_resource type="Resource" path="res://content/base/freestyle5_kit_offer.tres" id="content012_124"]
+[ext_resource type="Resource" path="res://content/base/freestyle5_frame_offer.tres" id="content012_125"]
+[ext_resource type="Resource" path="res://content/base/freestyle5_motor_offer.tres" id="content012_126"]
+[ext_resource type="Resource" path="res://content/base/freestyle5_prop_offer.tres" id="content012_127"]
+[ext_resource type="Resource" path="res://content/base/cruise6_kit_offer.tres" id="content012_128"]
+[ext_resource type="Resource" path="res://content/base/cruise6_frame_offer.tres" id="content012_129"]
+[ext_resource type="Resource" path="res://content/base/cruise6_motor_offer.tres" id="content012_130"]
+[ext_resource type="Resource" path="res://content/base/cruise6_prop_offer.tres" id="content012_131"]
+[ext_resource type="Resource" path="res://content/base/cine35_kit_offer.tres" id="content012_132"]
+[ext_resource type="Resource" path="res://content/base/cine35_frame_offer.tres" id="content012_133"]
+[ext_resource type="Resource" path="res://content/base/cine35_motor_offer.tres" id="content012_134"]
+[ext_resource type="Resource" path="res://content/base/cine35_prop_offer.tres" id="content012_135"]
+[ext_resource type="Resource" path="res://content/base/challenge_reward.tres" id="content012_136"]
+[ext_resource type="Resource" path="res://content/base/cinematic_reward.tres" id="content012_137"]
+[ext_resource type="Resource" path="res://content/base/race_template.tres" id="content012_138"]
+[ext_resource type="Resource" path="res://content/base/balloons_template.tres" id="content012_139"]
+[ext_resource type="Resource" path="res://content/base/orbit_template.tres" id="content012_140"]
+[ext_resource type="Resource" path="res://content/base/follow_template.tres" id="content012_141"]
+[ext_resource type="Resource" path="res://content/base/achievement_first.tres" id="content012_142"]
+[ext_resource type="Resource" path="res://content/base/achievement_ten.tres" id="content012_143"]
+[ext_resource type="Resource" path="res://content/base/achievement_fifty.tres" id="content012_144"]
+[ext_resource type="Resource" path="res://content/base/achievement_portals3.tres" id="content012_145"]
+[ext_resource type="Resource" path="res://content/base/achievement_portals10.tres" id="content012_146"]
+[ext_resource type="Resource" path="res://content/base/achievement_biomes.tres" id="content012_147"]
+[ext_resource type="Resource" path="res://content/base/achievement_types.tres" id="content012_148"]
+[ext_resource type="Resource" path="res://content/base/achievement_kits.tres" id="content012_149"]
+
+[ext_resource type="Resource" path="res://content/base/alpine.tres" id="exp016_alpine"]
+[ext_resource type="Resource" path="res://content/base/snow_peak.tres" id="exp016_snow_peak"]
+[ext_resource type="Resource" path="res://content/base/snowfield.tres" id="exp016_snowfield"]
+[ext_resource type="Resource" path="res://content/base/ruined_city.tres" id="exp016_ruined_city"]
+[ext_resource type="Resource" path="res://content/base/monument.tres" id="exp016_monument"]
+[ext_resource type="Resource" path="res://content/base/ravine.tres" id="exp016_ravine"]
+[ext_resource type="Resource" path="res://content/base/gobi.tres" id="exp016_gobi"]
+[ext_resource type="Resource" path="res://content/base/volcano.tres" id="exp016_volcano"]
 
 [resource]
 script = ExtResource("1")
-content_version = "0.1.0"
-world_version = 1
+content_version = "0.22.0"
+world_version = 4
 initial_preset_id = "base.preset.explorer5"
-parts = Array[Resource]([ExtResource("2"), ExtResource("3"), ExtResource("4"), ExtResource("5"), ExtResource("6"), ExtResource("7"), ExtResource("8")])
-presets = Array[Resource]([ExtResource("9"), ExtResource("10")])
-propulsion_maps = Array[Resource]([ExtResource("11"), ExtResource("12"), ExtResource("13")])
-biomes = Array[Resource]([ExtResource("14"), ExtResource("15"), ExtResource("16"), ExtResource("17"), ExtResource("18")])
-rewards = Array[Resource]([ExtResource("19")])
-offers = Array[Resource]([ExtResource("20")])
+parts = Array[Resource]([ExtResource("2"), ExtResource("3"), ExtResource("4"), ExtResource("5"), ExtResource("6"), ExtResource("7"), ExtResource("8"), ExtResource("content012_101"), ExtResource("content012_102"), ExtResource("content012_103"), ExtResource("content012_104"), ExtResource("content012_105"), ExtResource("content012_106"), ExtResource("content012_107"), ExtResource("content012_108"), ExtResource("content012_109")])
+presets = Array[Resource]([ExtResource("9"), ExtResource("10"), ExtResource("content012_110"), ExtResource("content012_111"), ExtResource("content012_112")])
+propulsion_maps = Array[Resource]([ExtResource("11"), ExtResource("12"), ExtResource("13"), ExtResource("content012_113"), ExtResource("content012_114"), ExtResource("content012_115"), ExtResource("content012_116"), ExtResource("content012_117"), ExtResource("content012_118"), ExtResource("content012_119"), ExtResource("content012_120"), ExtResource("content012_121"), ExtResource("content012_122"), ExtResource("content012_123")])
+biomes = Array[Resource]([ExtResource("14"), ExtResource("15"), ExtResource("16"), ExtResource("17"), ExtResource("18"), ExtResource("24"), ExtResource("25"), ExtResource("exp016_alpine"), ExtResource("exp016_snow_peak"), ExtResource("exp016_snowfield"), ExtResource("exp016_ruined_city"), ExtResource("exp016_monument"), ExtResource("exp016_ravine"), ExtResource("exp016_gobi"), ExtResource("exp016_volcano")])
+rewards = Array[Resource]([ExtResource("19"), ExtResource("23"), ExtResource("26"), ExtResource("content012_136"), ExtResource("content012_137")])
+offers = Array[Resource]([ExtResource("20"), ExtResource("32"), ExtResource("content012_124"), ExtResource("content012_125"), ExtResource("content012_126"), ExtResource("content012_127"), ExtResource("content012_128"), ExtResource("content012_129"), ExtResource("content012_130"), ExtResource("content012_131"), ExtResource("content012_132"), ExtResource("content012_133"), ExtResource("content012_134"), ExtResource("content012_135")])
+missions = Array[Resource]([ExtResource("21"), ExtResource("22")])
+mission_templates = Array[Resource]([ExtResource("27"), ExtResource("28"), ExtResource("29"), ExtResource("30"), ExtResource("31")])
+
+generation_rules = {"surface_spacing": 768.0, "warp": 110.0, "sky_spacing": 1536.0, "sky_chance": 0.33, "maze_spacing": 1280.0, "maze_chance": 0.42}
+
+challenge_templates = Array[Resource]([ExtResource("content012_138"), ExtResource("content012_139"), ExtResource("content012_140"), ExtResource("content012_141")])
+
+achievements = Array[Resource]([ExtResource("content012_142"), ExtResource("content012_143"), ExtResource("content012_144"), ExtResource("content012_145"), ExtResource("content012_146"), ExtResource("content012_147"), ExtResource("content012_148"), ExtResource("content012_149")])

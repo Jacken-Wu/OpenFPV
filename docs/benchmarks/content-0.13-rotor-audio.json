@@ -1,0 +1,92 @@
+{
+  "content_version": "0.13.0",
+  "method": "Native Godot audio output-bus capture and deterministic loop FFT; nominal pitch spectrum is offline, not acoustic listening or system loopback.",
+  "previous_0112_waveform": {
+    "rms": 0.21607107965678254,
+    "maximum_fft_bin_share": 0.060553398443591394,
+    "dominant_frequency_at_nominal_maximum_pitch_hz": 396.175,
+    "offline_nominal_full_pitch_energy_above_1khz": 0.3545665146985246,
+    "offline_nominal_full_pitch_energy_above_2khz": 0.01830736976779354,
+    "sha256": "f61e70bcaf1c2aa8533df02ace88ce9d3bbc9d477368a1d781daa904c0914a0b"
+  },
+  "current_waveform": {
+    "rms": 0.21419544087997894,
+    "maximum_fft_bin_share": 0.05742677742891021,
+    "dominant_frequency_at_nominal_maximum_pitch_hz": 364.8,
+    "offline_nominal_full_pitch_energy_above_1khz": 0.10533867970362065,
+    "offline_nominal_full_pitch_energy_above_2khz": 0.0076073785587321896,
+    "sha256": "f9479134b0df4cdeca9337963e813c52bf74d8f8d6f0060a6bfe530e1095a439"
+  },
+  "source_native": {
+    "checks": 29,
+    "failures": 0,
+    "native_combined": {
+      "frames": 72192,
+      "peak": 0.877998828887939,
+      "rms": 0.199492100069121
+    },
+    "native_full_motor": {
+      "frames": 72192,
+      "peak": 0.672897100448608,
+      "rms": 0.166039968958748
+    },
+    "native_half_motor": {
+      "frames": 72704,
+      "peak": 0.336502492427826,
+      "rms": 0.0827700395489341
+    },
+    "native_music": {
+      "frames": 59904,
+      "peak": 0.437593042850494,
+      "rms": 0.105958376417038
+    },
+    "native_overload_probe": {
+      "frames": 24064,
+      "peak": 0.891259074211121,
+      "rms": 0.630311770547892
+    },
+    "waveform": {
+      "loop_seam": 0.002838134765625,
+      "one_revolution_correlation": 0.453333454954404,
+      "peak": 0.699951171875,
+      "rms": 0.214195440879979
+    }
+  },
+  "bundle_native": {
+    "checks": 29,
+    "failures": 0,
+    "native_combined": {
+      "frames": 71168,
+      "peak": 0.808454990386963,
+      "rms": 0.193833648767059
+    },
+    "native_full_motor": {
+      "frames": 72192,
+      "peak": 0.549416124820709,
+      "rms": 0.162522881305596
+    },
+    "native_half_motor": {
+      "frames": 71680,
+      "peak": 0.27474981546402,
+      "rms": 0.0809378091484265
+    },
+    "native_music": {
+      "frames": 60416,
+      "peak": 0.437593042850494,
+      "rms": 0.105835880304621
+    },
+    "native_overload_probe": {
+      "frames": 24064,
+      "peak": 0.891259074211121,
+      "rms": 0.630311788230755
+    },
+    "waveform": {
+      "loop_seam": 0.002838134765625,
+      "one_revolution_correlation": 0.453333454954404,
+      "peak": 0.699951171875,
+      "rms": 0.214195440879979
+    }
+  },
+  "bundle_waveform_sha256": "f9479134b0df4cdeca9337963e813c52bf74d8f8d6f0060a6bfe530e1095a439",
+  "subjective_acceptance": "The user reported a faint electrical sound in 0.12.1. This revision awaits actual listening; digital measurements cannot prove subjective elimination."
+}

@@ -13,7 +13,7 @@ func _initialize() -> void:
 
 func run() -> void:
 	var catalog := ContentCatalog.new()
-	var generator := WorldGenerator.new(catalog, 271828)
+	var generator := WorldGenerator.new(catalog, 271828, 2)
 	check(WorldGenerator.key_at(Vector3(-0.01, -64.01, 64)) == Vector3i(-1, -2, 1), "3D floor keys support negative coordinates")
 	var keys: Array[Vector3i] = [Vector3i(-2, -1, -2), Vector3i(1, 1, -2), Vector3i(-1, 0, -1), Vector3i(0, 0, 0), Vector3i(5, -1, 0)]
 	var hashes: Dictionary = {}
@@ -22,7 +22,7 @@ func run() -> void:
 	keys.reverse()
 	for key in keys:
 		check(hashes[key] == generator.semantic_hash(key), "loading order does not affect " + str(key))
-	var alternative := WorldGenerator.new(catalog, 314159)
+	var alternative := WorldGenerator.new(catalog, 314159, 2)
 	check(generator.semantic_hash(Vector3i(-2, 0, 0)) != alternative.semantic_hash(Vector3i(-2, 0, 0)), "seed changes generated city structure")
 	check(generator.biome_at(Vector3(-0.1, 0, 0)).id != generator.biome_at(Vector3(0.1, 0, 0)).id, "city style changes across defined region boundary")
 	var tile := generator.generate(Vector3i(-2, -1, -2))

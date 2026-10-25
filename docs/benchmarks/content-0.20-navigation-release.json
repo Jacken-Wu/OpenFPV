@@ -1,0 +1,243 @@
+{
+  "date_local": "2026-10-25 14:58",
+  "engine": "4.7.2.stable.official.ed1daf0bf",
+  "world_version": 4,
+  "content_version": "0.20.0",
+  "fingerprint": "08269f8110d41b7f12be12825fc8625da5f76bc4756109438f646cc1da33fdc6",
+  "source_targeted_suites": {
+    "navigation_preview": {
+      "checks": 63,
+      "log": ".local/navigation_preview020-final.log"
+    },
+    "acro_routes": {
+      "checks": 6,
+      "log": ".local/acro_routes020-final.log"
+    },
+    "flow_routes": {
+      "checks": 17,
+      "log": ".local/flow_routes020-final.log"
+    },
+    "refinement": {
+      "checks": 58,
+      "log": ".local/refinement020-final.log"
+    },
+    "gameplay": {
+      "checks": 160,
+      "log": ".local/gameplay020-final.log"
+    },
+    "regions": {
+      "checks": 45,
+      "log": ".local/regions020-final.log"
+    },
+    "map": {
+      "checks": 47,
+      "log": ".local/map020-final.log"
+    },
+    "playability": {
+      "checks": 51,
+      "log": ".local/playability020-final.log"
+    },
+    "race_guide": {
+      "checks": 15,
+      "log": ".local/race_guide020-final.log"
+    },
+    "mission_replay": {
+      "checks": 139,
+      "log": ".local/mission_replay020-final.log"
+    },
+    "actions": {
+      "checks": 44,
+      "log": ".local/actions020-final.log"
+    },
+    "content": {
+      "checks": 18,
+      "log": ".local/content020-final.log"
+    }
+  },
+  "source_window_suites": {
+    "navigation_preview": {
+      "checks": 67,
+      "log": ".local/navigation020-window-final.log"
+    },
+    "race_guide": {
+      "checks": 17,
+      "log": ".local/test-results/window020/race_guide.log"
+    },
+    "gameplay": {
+      "checks": 169,
+      "log": ".local/test-results/window020/gameplay.log"
+    },
+    "map": {
+      "checks": 53,
+      "log": ".local/test-results/window020/map.log"
+    },
+    "playability": {
+      "checks": 53,
+      "log": ".local/test-results/window020/playability.log"
+    }
+  },
+  "acro_sample": {
+    "routes": 40,
+    "close_vertical_pairs": 156,
+    "adjacent_frame_changes_at_least_50_degrees": 181,
+    "substantial_turns": 704,
+    "intermediate_nodes": 879
+  },
+  "navigation_windows": [
+    {
+      "requested": "(1280, 800)",
+      "visible": "(1440.0, 900.0)",
+      "window": "(1280, 800)"
+    },
+    {
+      "requested": "(1920, 1080)",
+      "visible": "(1440.0, 900.0)",
+      "window": "(1920, 1080)"
+    },
+    {
+      "requested": "(1280, 1024)",
+      "visible": "(1440.0, 900.0)",
+      "window": "(1280, 1024)"
+    }
+  ],
+  "image_dimensions": {
+    ".local/test-results/window020/navigation_preview/maze-lookahead.png": [
+      1280,
+      800
+    ],
+    ".local/test-results/window020/navigation_preview/top-target-1280x1024.png": [
+      1280,
+      800
+    ],
+    ".local/test-results/window020/navigation_preview/top-target-1280x800.png": [
+      1280,
+      800
+    ],
+    ".local/test-results/window020/navigation_preview/top-target-1920x1080.png": [
+      1728,
+      1080
+    ],
+    ".local/test-results/release020-tour/calibration.png": [
+      1280,
+      800
+    ],
+    ".local/test-results/release020-tour/map.png": [
+      1280,
+      800
+    ],
+    ".local/test-results/release020-tour/overview.png": [
+      1280,
+      800
+    ],
+    ".local/test-results/release020-tour/prototype.png": [
+      1280,
+      800
+    ],
+    ".local/test-results/release020-tour/tour_v4-surface--1-0-p0.png": [
+      1280,
+      800
+    ],
+    ".local/test-results/release020-tour/tour_v4-surface-0--1-p0.png": [
+      1280,
+      800
+    ],
+    ".local/test-results/release020-tour/tour_v4-surface-0-0-p0.png": [
+      1280,
+      800
+    ],
+    ".local/test-results/release020-tour/workshop.png": [
+      1280,
+      800
+    ]
+  },
+  "native_debug": {
+    "configuration": "Debug",
+    "debug": true,
+    "editor": false,
+    "template": true,
+    "user_data_dir": "C:/Users/Jacken/AppData/Roaming/Godot/app_userdata/OpenFPV · 重连边境"
+  },
+  "native_release": {
+    "configuration": "Release",
+    "debug": false,
+    "editor": false,
+    "template": true,
+    "user_data_dir": "C:/Users/Jacken/AppData/Roaming/OpenFPV/Release"
+  },
+  "distribution": {
+    "debugHasNoDistributionDocs": true,
+    "standalone": "D:\\files\\projects\\codex\\OpenFPV\\.local\\test-results\\distribution_639285078141752185\\standalone\\OpenFPV.exe",
+    "releaseEmbedded": true,
+    "ok": true,
+    "reports": [
+      {
+        "credits": 111,
+        "debug": true,
+        "directory": "C:/Users/Jacken/AppData/Roaming/Godot/app_userdata/OpenFPV · 重连边境",
+        "existing": false,
+        "ok": true,
+        "photo": "absent"
+      },
+      {
+        "credits": 222,
+        "debug": false,
+        "directory": "C:/Users/Jacken/AppData/Roaming/OpenFPV/Release",
+        "existing": false,
+        "ok": true,
+        "photo": "absent"
+      },
+      {
+        "credits": 111.0,
+        "debug": true,
+        "directory": "C:/Users/Jacken/AppData/Roaming/Godot/app_userdata/OpenFPV · 重连边境",
+        "existing": true,
+        "ok": true,
+        "photo": "111"
+      },
+      {
+        "credits": 222.0,
+        "debug": false,
+        "directory": "C:/Users/Jacken/AppData/Roaming/OpenFPV/Release",
+        "existing": true,
+        "ok": true,
+        "photo": "222"
+      }
+    ]
+  },
+  "native_release_window_tour": ".local/release020-tour.log",
+  "artifacts": {
+    "builds/Debug/OpenFPV.exe": {
+      "bytes": 103176704,
+      "sha256": "51498b72b3a237f882ebd7d1787f06a4bc1eaf0572daab93837adcfd3cfdc107"
+    },
+    "builds/Debug/OpenFPV.pck": {
+      "bytes": 5972308,
+      "sha256": "d1fabb7b0f6f4bc9cb5f6725289f061ac5164a050d30d4b10e8398e4568f9d99"
+    },
+    "builds/Release/OpenFPV.exe": {
+      "bytes": 115240800,
+      "sha256": "d22240b4355c09f51ee16ca8444eeb1bd98b0c14d25444a601f4b5d4ae5c9847"
+    }
+  },
+  "sources": {
+    "game/scripts/main.gd": "ecd1ab0b9a4f872a527c5bbaf7205a9083ba67d7ecd37e9c24760904620d561c",
+    "game/scripts/ui/navigation_hud.gd": "77321448647f46f70fcaf2b04975722ff037e99424a865653102c0bb16fcb37a",
+    "game/scripts/ui/navigation_route_preview.gd": "b65629a4970405e5b175902f8b87356789d330242d5abe73c84e1c10b501c9f6",
+    "game/scripts/world/acro_courses.gd": "d9acd2ef20aec81d933a669e25374d4bf615e47ee9314bc19ed50418c1deff81",
+    "game/scripts/world/biome_world.gd": "78e8204c67d26d94a2d80eeceb296ff6baf61ccc4f1ede2a105b13dc63f176cd",
+    "game/scripts/debug/build_channel_probe.gd": "e5133224ab7794205ecba6171292549317b353d798a33c7f0c73015d475b180f",
+    "game/project.godot": "dc005519e83502817fd50dedefb362913689738127c9979c7736a1317ffab7e4",
+    "game/export_presets.cfg": "db258e0128e654b29d562a411e371059288e09ae3fd6cbb70f3380836f0a6f6f",
+    "tools/Build.ps1": "3a32ea6ed5b39240d6b97e785cfc9ebe181324a39b3b5c88a0a69bc56ee96d48",
+    "tools/Setup-ExportTemplates.ps1": "b112c8cdcb49bd3ef8992f0f113780317309ba87d2f906bd2cf233a7c8621cd5",
+    "tools/Test-Distribution.ps1": "e77f86e4b4dfb2819cad14641b4819eb046121098f9d9e7591ba0f424f4757dc"
+  },
+  "limits": [
+    "Targeted suites only; not the full 34-suite entry.",
+    "Source normal-window suites and native Release window smoke/tour are distinct evidence.",
+    "Three physical window sizes retain the project aspect-preserving viewport/letterboxing.",
+    "Finite three-seed route sample; not every seed/biome proved.",
+    "No new 120-second performance run, human RC flight, or difficulty acceptance.",
+    "Older builds/OpenFPV-P1 is historical, not the new Release."
+  ]
+}

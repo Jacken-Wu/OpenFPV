@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="MissionDefinition" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/content/mission_definition.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "base.template.follow"
+display_name = "移动目标跟拍"
+description = "拍摄至少30秒，目标在视野内及50米内的时间分别达到80%；可继续拍摄追回比例。接近目标后才开始计时。"
+kind = "follow"
+reward_id = "base.reward.cinematic"
+mission_tag = "exploration"
+city_tag = "any"
+interaction_radius = 7.0
+max_speed = 100.0

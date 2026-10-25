@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="PropulsionMapDefinition" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/content/propulsion_map_definition.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "base.propulsion.map_m35_cine"
+motor_id = "base.motor.m35"
+propeller_id = "base.prop.p_cine35"
+max_thrust_n = 2.8
+response_s = 0.06
+torque_ratio_m = 0.014

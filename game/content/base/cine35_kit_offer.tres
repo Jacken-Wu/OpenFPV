@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="OfferDefinition" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/content/offer_definition.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "base.offer.cine35.kit"
+display_name = "影航3.5完整套机"
+description = "紧凑机架、柔和平顺响应，适合近景环绕与跟拍。"
+preset_id = "base.preset.cine35"
+price = 580
+city_tag = "industrial"

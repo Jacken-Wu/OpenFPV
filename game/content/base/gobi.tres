@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="BiomeDefinition" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scripts/content/biome_definition.gd" id="1"]
+[ext_resource type="AudioStream" path="res://audio/music/gobi.wav" id="music"]
+
+[resource]
+script = ExtResource("1")
+id = "base.biome.gobi"
+display_name = "砾风戈壁"
+provider_id = "base.generator.canyon"
+tags = PackedStringArray("surface", "desert", "gobi")
+region_bounds = AABB(0, -64, 0, 768, 384, 768)
+priority = 10
+palette = PackedColorArray(0.64314, 0.57255, 0.46667, 1, 0.76471, 0.69412, 0.55294, 1, 0.4, 0.75, 0.8, 1)
+parameters = {"feature_profile": "honeycomb_rocks", "layer": "surface", "climate": Vector3(0.5, 0.5, 0.5), "min_world_version": 4, "extension": true, "terrain_style": "gobi", "terrain_low": Color(0.64314, 0.57255, 0.46667, 1), "terrain_high": Color(0.76471, 0.69412, 0.55294, 1), "landmark_pool": [{"kind": "rock_arch", "chance": 0.8}, {"kind": "base_station", "chance": 0.6}, {"kind": "pipe_stack", "chance": 0.5}]}
+music = ExtResource("music")
+music_title = "砾石疾行"

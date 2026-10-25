@@ -1,0 +1,251 @@
+{
+  "content_version": "0.15.0",
+  "world_version": 4,
+  "fingerprint": "87945a6495adc21dfb57ae399af010740d46abc817513cbd3f824b37da453104",
+  "headless_suites": [
+    "challenge_feedback",
+    "gameplay",
+    "rotor_audio",
+    "hud_audio",
+    "audio",
+    "mission_replay",
+    "missions",
+    "actions",
+    "integration",
+    "content"
+  ],
+  "source_window_suites": [
+    "challenge_feedback",
+    "gameplay",
+    "rotor_audio"
+  ],
+  "bundle_window_suites": [
+    "challenge_feedback",
+    "gameplay",
+    "rotor_audio",
+    "mission_replay",
+    "actions",
+    "integration"
+  ],
+  "challenge_feedback": {
+    "checks": 26,
+    "edge_and_corner_sweeps": 32,
+    "failures": 0,
+    "gate_opening_margin_old_m": 0.325,
+    "native_gate_poses": 4,
+    "orbit_layers": [
+      "surface",
+      "sky",
+      "maze"
+    ],
+    "scope": "native collision sweeps, world transforms, orbit rules, durable cue events and native Effects playback; not human RC flight"
+  },
+  "gameplay": {
+    "checks": 169,
+    "examples": {
+      "balloons": {
+        "checkpoints": [
+          [
+            -1698.0,
+            4.0,
+            -1868.0
+          ],
+          [
+            -1707.0,
+            4.0,
+            -1852.41149902344
+          ],
+          [
+            -1725.0,
+            4.0,
+            -1852.41149902344
+          ],
+          [
+            -1734.0,
+            4.0,
+            -1868.0
+          ],
+          [
+            -1725.0,
+            4.0,
+            -1883.58850097656
+          ],
+          [
+            -1707.0,
+            4.0,
+            -1883.58850097656
+          ]
+        ],
+        "gate_normals": [],
+        "id": "proc:4:surface:-3:-3:2:play",
+        "rules": {
+          "balloon_radius": 1.15,
+          "balloon_revision": 2,
+          "height_limit": 49.0,
+          "release_delay": 3.0,
+          "release_interval": 2.5,
+          "rise_speed": 1.8
+        }
+      },
+      "follow": {
+        "checkpoints": [],
+        "gate_normals": [],
+        "id": "proc:4:surface:-3:3:0:play",
+        "rules": {
+          "follow_distance": 60.0,
+          "height_tolerance": 4.0,
+          "path_radius": 12.0,
+          "radius_max": 22.0,
+          "radius_min": 5.0,
+          "view_angle": 22.0
+        }
+      },
+      "orbit": {
+        "checkpoints": [],
+        "gate_normals": [],
+        "id": "proc:4:surface:-3:-1:0:play",
+        "rules": {
+          "height_tolerance": 6.0,
+          "radius_max": 28.0,
+          "radius_min": 6.0,
+          "view_angle": 55.0
+        }
+      },
+      "race": {
+        "checkpoints": [
+          [
+            -2048.0,
+            6.2644157409668,
+            -1792.0
+          ],
+          [
+            -2112.0,
+            6.15095043182373,
+            -1792.0
+          ],
+          [
+            -2112.0,
+            6.27789163589478,
+            -1824.0
+          ],
+          [
+            -2112.0,
+            5.28450727462769,
+            -1856.0
+          ],
+          [
+            -2176.0,
+            6.20042276382446,
+            -1856.0
+          ],
+          [
+            -2208.0,
+            6.00290822982788,
+            -1856.0
+          ],
+          [
+            -2208.0,
+            5.55696487426758,
+            -1792.0
+          ]
+        ],
+        "gate_normals": [
+          [
+            -0.999998450279236,
+            -0.00177289266139269,
+            0.0
+          ],
+          [
+            -0.707108199596405,
+            0.00155138981062919,
+            -0.707103729248047
+          ],
+          [
+            0.0,
+            -0.0135327884927392,
+            -0.999908447265625
+          ],
+          [
+            -0.707191407680511,
+            -0.0118244607001543,
+            -0.706923305988312
+          ],
+          [
+            -0.999991714954376,
+            0.00406896509230137,
+            0.0
+          ],
+          [
+            -0.707078099250793,
+            -0.00929111801087856,
+            0.707074463367462
+          ],
+          [
+            0.0,
+            -0.00696769636124372,
+            0.999975800514221
+          ]
+        ],
+        "id": "proc:4:surface:-3:-3:0:play:flow",
+        "rules": {
+          "gate_half": 3.0,
+          "route_revision": 1
+        }
+      }
+    },
+    "failures": 0,
+    "geometry": [
+      {
+        "body_samples_per_gate": 25,
+        "clear": true,
+        "gates": 7,
+        "id": "proc:4:surface:-3:-3:0:play:flow",
+        "layer": "surface"
+      },
+      {
+        "body_samples_per_gate": 25,
+        "clear": true,
+        "gates": 6,
+        "id": "proc:4:surface:-3:-2:1:play:flow",
+        "layer": "surface_forest"
+      },
+      {
+        "body_samples_per_gate": 25,
+        "clear": true,
+        "gates": 13,
+        "id": "proc:4:maze:-3:-1:1:play:flow",
+        "layer": "maze"
+      },
+      {
+        "body_samples_per_gate": 25,
+        "clear": true,
+        "gates": 7,
+        "id": "proc:4:sky:-3:2:2:play:flow",
+        "layer": "sky"
+      },
+      {
+        "body_samples_per_gate": 25,
+        "clear": true,
+        "gates": 7,
+        "id": "proc:4:sky:-3:2:4:play:flow",
+        "layer": "sky"
+      },
+      {
+        "body_samples_per_gate": 25,
+        "clear": true,
+        "gates": 6,
+        "id": "proc:4:surface:-1:2:1:play:flow",
+        "layer": "surface_desert"
+      }
+    ],
+    "instance_layers": {
+      "maze": 3,
+      "sky": 3,
+      "surface": 12
+    },
+    "kind": "automated task state, transactions, native static collisions and UI; not human flight",
+    "sampled_instances": 19,
+    "seed": 271828
+  },
+  "scope": "Scoped checks only. Four real gate poses, 32 body sweeps at edges/corners, three orbit layers with origin shifts, lenient orbit with interruptions, committed audio including failed-save retry. Not manual RC flight, all procedural seeds, full project regression or a new performance benchmark."
+}

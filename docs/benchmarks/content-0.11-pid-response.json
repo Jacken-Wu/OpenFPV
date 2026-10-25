@@ -1,0 +1,86 @@
+[
+	{
+		"axis": "roll",
+		"pi": {
+			"integrated_error": 0.586403560366791,
+			"reverse_peak": 1.0164201259613,
+			"tail": 0.0321517400443554
+		},
+		"pid": {
+			"integrated_error": 0.494970553366996,
+			"reverse_peak": 0.00105549406725913,
+			"tail": 0.00117745529860258
+		},
+		"preset": "base.preset.explorer5"
+	},
+	{
+		"axis": "pitch",
+		"pi": {
+			"integrated_error": 0.586403617317653,
+			"reverse_peak": 1.0164201259613,
+			"tail": 0.0321515798568726
+		},
+		"pid": {
+			"integrated_error": 0.494970484535952,
+			"reverse_peak": 0.00105564692057669,
+			"tail": 0.00117743341252208
+		},
+		"preset": "base.preset.explorer5"
+	},
+	{
+		"axis": "yaw",
+		"pi": {
+			"integrated_error": 0.820194884432324,
+			"reverse_peak": 0.226846158504486,
+			"tail": 0.0947820842266083
+		},
+		"pid": {
+			"integrated_error": 0.729910978698353,
+			"reverse_peak": 0.000565537135116756,
+			"tail": 0.00685711763799191
+		},
+		"preset": "base.preset.explorer5"
+	},
+	{
+		"axis": "roll",
+		"pi": {
+			"integrated_error": 0.507057093751306,
+			"reverse_peak": 0.730100274085999,
+			"tail": 0.013016845099628
+		},
+		"pid": {
+			"integrated_error": 0.492764822479512,
+			"reverse_peak": 0.00117954215966165,
+			"tail": 0.00306172552518547
+		},
+		"preset": "base.preset.light35"
+	},
+	{
+		"axis": "pitch",
+		"pi": {
+			"integrated_error": 0.507056934933644,
+			"reverse_peak": 0.730100274085999,
+			"tail": 0.0130167184397578
+		},
+		"pid": {
+			"integrated_error": 0.492764772960678,
+			"reverse_peak": 0.00117943598888814,
+			"tail": 0.00306190317496657
+		},
+		"preset": "base.preset.light35"
+	},
+	{
+		"axis": "yaw",
+		"pi": {
+			"integrated_error": 0.597163610601395,
+			"reverse_peak": 0.154125809669495,
+			"tail": 0.0086880549788475
+		},
+		"pid": {
+			"integrated_error": 0.587632803204421,
+			"reverse_peak": 0.000568074348848313,
+			"tail": 0.00691694486886263
+		},
+		"preset": "base.preset.light35"
+	}
+]

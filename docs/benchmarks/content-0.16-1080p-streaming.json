@@ -1,0 +1,98 @@
+{
+	"checks": 10,
+	"content_version": "0.16.0",
+	"failures": 0,
+	"frames": 11667,
+	"max_ms": 431.291,
+	"p50_ms": 10.005,
+	"p95_ms": 10.233,
+	"p99_ms": 10.333,
+	"peak_memory_mb": 116.664100646973,
+	"peak_nodes": 1760,
+	"renderer": "NVIDIA GeForce RTX 4060 Ti",
+	"resolution": "1920x1080",
+	"scope": "cold production streaming of eight extension biomes, repeated chunk loading; scripted camera, not human RC flight or stable-60fps acceptance",
+	"seconds": 120.002,
+	"worlds": {
+		"alpine": {
+			"active": 567,
+			"desired": 567,
+			"pending": 0,
+			"point": [
+				-8817.625,
+				94.4419479370117,
+				1854.40856933594
+			]
+		},
+		"gobi": {
+			"active": 567,
+			"desired": 567,
+			"pending": 0,
+			"point": [
+				-8628.4736328125,
+				53.1783142089844,
+				-8064.3203125
+			]
+		},
+		"monument": {
+			"active": 567,
+			"desired": 567,
+			"pending": 0,
+			"point": [
+				-8599.822265625,
+				38.0921669006348,
+				-7373.1826171875
+			]
+		},
+		"ravine": {
+			"active": 567,
+			"desired": 567,
+			"pending": 0,
+			"point": [
+				-8970.3759765625,
+				29.4457721710205,
+				-8747.775390625
+			]
+		},
+		"ruined_city": {
+			"active": 567,
+			"desired": 567,
+			"pending": 0,
+			"point": [
+				-8010.9404296875,
+				20.182071685791,
+				-4846.99609375
+			]
+		},
+		"snow_peak": {
+			"active": 567,
+			"desired": 567,
+			"pending": 0,
+			"point": [
+				-8074.87646484375,
+				142.802368164063,
+				8674.86328125
+			]
+		},
+		"snowfield": {
+			"active": 567,
+			"desired": 567,
+			"pending": 0,
+			"point": [
+				-6421.2529296875,
+				21.6255950927734,
+				4938.02294921875
+			]
+		},
+		"volcano": {
+			"active": 567,
+			"desired": 567,
+			"pending": 0,
+			"point": [
+				-8950.7158203125,
+				39.8861846923828,
+				-4151.896484375
+			]
+		}
+	}
+}

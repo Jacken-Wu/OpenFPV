@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="PartDefinition" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/content/part_definition.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "base.frame.f_cruise6"
+display_name = "远景6机架"
+kind = "frame"
+mass_per_component_kg = 0.145
+component_count = 1
+stats = {"arm": 0.17, "max_prop_inches": 6.2, "mount": "16x16", "system_mass": 0.21, "drag": 0.008}
+tuning = {"camera_mount_tilt_deg": {"min": 5.0, "max": 55.0, "default": 20.0, "step": 1.0, "unit": "deg"}}

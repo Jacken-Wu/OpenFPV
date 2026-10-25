@@ -1,0 +1,131 @@
+{
+  "content_version": "0.14.0",
+  "world_version": 4,
+  "method": "Native Godot Master bus, eight seconds at fixed full thrust; 20ms envelope and former 2s PCM / 2.4 pitch cadence. No acoustic/system-loopback or human listening claim.",
+  "previous_013_native": {
+    "checks": 30,
+    "failures": 0,
+    "native_combined": {
+      "frames": 71680,
+      "peak": 0.734315693378448,
+      "rms": 0.194168670292222
+    },
+    "native_full_envelope": {
+      "p05": 0.134264290332794,
+      "p95": 0.214770570397377,
+      "ratio": 1.59961051345101
+    },
+    "native_full_motor": {
+      "frames": 384512,
+      "peak": 0.596947312355042,
+      "rms": 0.167487623877604
+    },
+    "native_half_motor": {
+      "frames": 72192,
+      "peak": 0.298205554485321,
+      "rms": 0.0837487929197838
+    },
+    "native_music": {
+      "frames": 60416,
+      "peak": 0.500633716583252,
+      "rms": 0.103617137582846
+    },
+    "native_overload_probe": {
+      "frames": 24064,
+      "peak": 0.891259074211121,
+      "rms": 0.630311786581379
+    },
+    "waveform": {
+      "loop_seam": 0.002838134765625,
+      "one_revolution_correlation": 0.453333454954404,
+      "peak": 0.699951171875,
+      "rms": 0.214195440879979
+    }
+  },
+  "source_native": {
+    "checks": 31,
+    "failures": 0,
+    "native_combined": {
+      "frames": 72192,
+      "peak": 0.809009671211243,
+      "rms": 0.194329917256638
+    },
+    "native_full_envelope": {
+      "old_cadence_correlation": 0.008324735401182,
+      "p05": 0.140794306993485,
+      "p95": 0.194144263863564,
+      "ratio": 1.37892126471099
+    },
+    "native_full_motor": {
+      "frames": 384512,
+      "peak": 0.618613719940186,
+      "rms": 0.167362770472986
+    },
+    "native_half_motor": {
+      "frames": 72704,
+      "peak": 0.28717166185379,
+      "rms": 0.0823165964883866
+    },
+    "native_music": {
+      "frames": 60416,
+      "peak": 0.500633716583252,
+      "rms": 0.103767117240964
+    },
+    "native_overload_probe": {
+      "frames": 24064,
+      "peak": 0.891259074211121,
+      "rms": 0.63031179233526
+    },
+    "waveform": {
+      "loop_seam": 0.000946044921875,
+      "one_revolution_correlation": 0.276897480371699,
+      "peak": 0.699951171875,
+      "rms": 0.192647738633355
+    }
+  },
+  "bundle_native": {
+    "checks": 31,
+    "failures": 0,
+    "native_combined": {
+      "frames": 71680,
+      "peak": 0.813530206680298,
+      "rms": 0.192633130250936
+    },
+    "native_full_envelope": {
+      "old_cadence_correlation": 0.0601720088252103,
+      "p05": 0.138108864426613,
+      "p95": 0.193020761013031,
+      "ratio": 1.39759863940954
+    },
+    "native_full_motor": {
+      "frames": 384000,
+      "peak": 0.664577722549438,
+      "rms": 0.166625915204121
+    },
+    "native_half_motor": {
+      "frames": 72192,
+      "peak": 0.298114269971848,
+      "rms": 0.082361687874835
+    },
+    "native_music": {
+      "frames": 60416,
+      "peak": 0.500633716583252,
+      "rms": 0.104320947827842
+    },
+    "native_overload_probe": {
+      "frames": 24064,
+      "peak": 0.891259074211121,
+      "rms": 0.630101427958671
+    },
+    "waveform": {
+      "loop_seam": 0.000946044921875,
+      "one_revolution_correlation": 0.276897480371699,
+      "peak": 0.699951171875,
+      "rms": 0.192647738633355
+    }
+  },
+  "previous_013_old_cadence_correlation_offline": 0.8381898737626042,
+  "source_pcm_sha256": "4463e416486d39c16e814c9ed6f64960bc0778e7376dcd326cdf64aa8996df82",
+  "bundle_pcm_sha256": "4463e416486d39c16e814c9ed6f64960bc0778e7376dcd326cdf64aa8996df82",
+  "subjective_acceptance": "Waiting for user listening. The old short cadence is reduced; an eight-second PCM texture still loops and measurements do not prove every perceived tick is gone."
+}

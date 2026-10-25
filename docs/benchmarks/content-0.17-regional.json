@@ -1,0 +1,187 @@
+{
+  "content_version": "0.17.0",
+  "world_version": 4,
+  "engine": "4.7.2.stable.official.ed1daf0bf",
+  "local_time": "2026-10-24 21:53",
+  "content_fingerprint": "e840d31978f0fdf2a5d169a7437a0e1240b53064600fe1a4f1a3983fabb9a222",
+  "source_logic": [
+    {
+      "suite": "input",
+      "log": ".local/test-results/input.log",
+      "passed_assertions": 9
+    },
+    {
+      "suite": "radio",
+      "log": ".local/test-results/radio.log",
+      "passed_assertions": 40
+    },
+    {
+      "suite": "controls",
+      "log": ".local/test-results/controls.log",
+      "passed_assertions": 51
+    },
+    {
+      "suite": "hud_audio",
+      "log": ".local/test-results/hud_audio.log",
+      "passed_assertions": 52
+    },
+    {
+      "suite": "rotor_audio",
+      "log": ".local/test-results/rotor_audio.log",
+      "passed_assertions": 18
+    },
+    {
+      "suite": "field_tasks",
+      "log": ".local/test-results/field_tasks.log",
+      "passed_assertions": 46
+    },
+    {
+      "suite": "flow_routes",
+      "log": ".local/test-results/flow_routes.log",
+      "passed_assertions": 17
+    },
+    {
+      "suite": "regional_world",
+      "log": ".local/regional017final2.log",
+      "passed_assertions": 73
+    },
+    {
+      "suite": "expansion",
+      "log": ".local/test-results/expansion.log",
+      "passed_assertions": 86
+    },
+    {
+      "suite": "challenge_feedback",
+      "log": ".local/test-results/challenge_feedback.log",
+      "passed_assertions": 22
+    },
+    {
+      "suite": "mission_replay",
+      "log": ".local/test-results/mission_replay.log",
+      "passed_assertions": 139
+    },
+    {
+      "suite": "gameplay",
+      "log": ".local/test-results/gameplay.log",
+      "passed_assertions": 160
+    },
+    {
+      "suite": "handling",
+      "log": ".local/test-results/handling017.log",
+      "passed_assertions": 105
+    },
+    {
+      "suite": "audio",
+      "log": ".local/test-results/audio017.log",
+      "passed_assertions": 69
+    },
+    {
+      "suite": "entrance",
+      "log": ".local/test-results/entrance017.log",
+      "passed_assertions": 43
+    },
+    {
+      "suite": "actions",
+      "log": ".local/test-results/actions017.log",
+      "passed_assertions": 44
+    },
+    {
+      "suite": "tuning",
+      "log": ".local/test-results/tuning017.log",
+      "passed_assertions": 36
+    },
+    {
+      "suite": "map",
+      "log": ".local/test-results/map017.log",
+      "passed_assertions": 47
+    },
+    {
+      "suite": "missions",
+      "log": ".local/test-results/missions017.log",
+      "passed_assertions": 52
+    },
+    {
+      "suite": "content",
+      "log": ".local/test-results/content017.log",
+      "passed_assertions": 18
+    },
+    {
+      "suite": "world",
+      "log": ".local/test-results/world017.log",
+      "passed_assertions": 19
+    },
+    {
+      "suite": "scenery",
+      "log": ".local/test-results/scenery017.log",
+      "passed_assertions": 26
+    },
+    {
+      "suite": "regions",
+      "log": ".local/test-results/regions017.log",
+      "passed_assertions": 45
+    },
+    {
+      "suite": "discovery",
+      "log": ".local/test-results/discovery017.log",
+      "passed_assertions": 43
+    },
+    {
+      "suite": "playability",
+      "log": ".local/test-results/playability017.log",
+      "passed_assertions": 50
+    },
+    {
+      "suite": "developer",
+      "log": ".local/test-results/developer017.log",
+      "passed_assertions": 72
+    },
+    {
+      "suite": "exploration",
+      "log": ".local/test-results/exploration017.log",
+      "passed_assertions": 47
+    },
+    {
+      "suite": "flight",
+      "log": ".local/test-results/flight017.log",
+      "passed_assertions": 0
+    },
+    {
+      "suite": "integration",
+      "log": ".local/test-results/integration017.log",
+      "passed_assertions": 9
+    }
+  ],
+  "final_bundle_windows": [
+    {
+      "suite": "regional_world",
+      "log": ".local/test-results/bundle017/regional_world.log",
+      "passed_assertions": 75
+    },
+    {
+      "suite": "map",
+      "log": ".local/test-results/bundle017/map.log",
+      "passed_assertions": 53
+    },
+    {
+      "suite": "discovery",
+      "log": ".local/test-results/bundle017/discovery.log",
+      "passed_assertions": 49
+    },
+    {
+      "suite": "regional_visual",
+      "log": ".local/test-results/bundle017/regional_visual.log",
+      "passed_assertions": 50
+    },
+    {
+      "suite": "expansion_tour",
+      "log": ".local/test-results/bundle017/expansion_tour.log",
+      "passed_assertions": 10
+    }
+  ],
+  "seed_samples": [
+    31,
+    271828,
+    90917
+  ],
+  "scope": "Finite deterministic generation samples, real drone shape/physics and production chunk tests. Native scripted cameras and continuous streaming are not human RC testing or stable-60fps acceptance."
+}

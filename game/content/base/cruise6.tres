@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="DronePresetDefinition" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/content/drone_preset_definition.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "base.preset.cruise6"
+display_name = "远景6 / cruise6"
+frame_id = "base.frame.f_cruise6"
+motor_set_id = "base.motor.m_cruise6"
+propeller_set_id = "base.prop.p_cruise6"

@@ -1,0 +1,85 @@
+{
+  "version": "0.11.2",
+  "method": "Native Godot Master effect capture at Master=100%; all measured active buses=100% unless labeled half. Not system loopback or acoustic loudness. Frame windows vary with asynchronous playback.",
+  "source": {
+    "checks": 29,
+    "failures": 0,
+    "native_combined": {
+      "frames": 71680,
+      "peak": 0.793152689933777,
+      "rms": 0.210324136936999
+    },
+    "native_full_motor": {
+      "frames": 72192,
+      "peak": 0.658543467521667,
+      "rms": 0.180370689421218
+    },
+    "native_half_motor": {
+      "frames": 72192,
+      "peak": 0.32950496673584,
+      "rms": 0.0898926726434568
+    },
+    "native_music": {
+      "frames": 59904,
+      "peak": 0.437593042850494,
+      "rms": 0.10601762411694
+    },
+    "native_overload_probe": {
+      "frames": 24064,
+      "peak": 0.891259074211121,
+      "rms": 0.630311770547892
+    },
+    "waveform": {
+      "loop_seam": 0.00616455078125,
+      "one_revolution_correlation": 0.650691981396203,
+      "peak": 0.699951171875,
+      "rms": 0.216071079656783
+    }
+  },
+  "bundle": {
+    "checks": 29,
+    "failures": 0,
+    "native_combined": {
+      "frames": 71168,
+      "peak": 0.838427066802979,
+      "rms": 0.196253603110272
+    },
+    "native_full_motor": {
+      "frames": 71680,
+      "peak": 0.607780516147614,
+      "rms": 0.170678633582528
+    },
+    "native_half_motor": {
+      "frames": 72704,
+      "peak": 0.30375674366951,
+      "rms": 0.0850001196828728
+    },
+    "native_music": {
+      "frames": 60416,
+      "peak": 0.437593042850494,
+      "rms": 0.10589361823397
+    },
+    "native_overload_probe": {
+      "frames": 24064,
+      "peak": 0.891259074211121,
+      "rms": 0.630101417230021
+    },
+    "waveform": {
+      "loop_seam": 0.00616455078125,
+      "one_revolution_correlation": 0.650691981396203,
+      "peak": 0.699951171875,
+      "rms": 0.216071079656783
+    }
+  },
+  "nominal_gain_changes_db": {
+    "overall_pre_limiter": 8,
+    "motor_source": 7,
+    "music_source": 6,
+    "ceiling_dbfs": -1
+  },
+  "maximum_base_waveform_fft_bin_energy_share": 0.060553398443591394,
+  "previous_0111_offline_full_motor_rms_reference": 0.025923399493135883,
+  "source_waveform_sha256": "f61e70bcaf1c2aa8533df02ace88ce9d3bbc9d477368a1d781daa904c0914a0b",
+  "bundle_waveform_sha256": "f61e70bcaf1c2aa8533df02ace88ce9d3bbc9d477368a1d781daa904c0914a0b",
+  "subjective_acceptance": "User confirmed 0.11.1 eliminated electrical noise but rejected its airflow-only character. New rotor timbre and acoustic loudness await user listening."
+}

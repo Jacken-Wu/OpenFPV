@@ -1,0 +1,696 @@
+{
+  "date_local": "2026-10-25 17:07",
+  "content_version": "0.21.0",
+  "world_version": 4,
+  "fingerprint": "0b2b26833d04bd4a8a58dc280bc341804b27254dd34e197560508109601b2634",
+  "source_suites": {
+    "streaming": {
+      "log": ".local/streaming021-final.log",
+      "checks": 12
+    },
+    "navigation_preview": {
+      "log": ".local/navigation_preview021-final.log",
+      "checks": 69
+    },
+    "world": {
+      "log": ".local/world021-final.log",
+      "checks": 19
+    },
+    "regions": {
+      "log": ".local/regions021-final.log",
+      "checks": 45
+    },
+    "regional_world": {
+      "log": ".local/regional_world021-final.log",
+      "checks": 75
+    },
+    "refinement": {
+      "log": ".local/refinement021-final.log",
+      "checks": 58
+    },
+    "cave_seams": {
+      "log": ".local/cave_seams021-final.log",
+      "checks": 24
+    },
+    "entrance": {
+      "log": ".local/entrance021-final.log",
+      "checks": 43
+    },
+    "handling": {
+      "log": ".local/handling021-final.log",
+      "checks": 105
+    },
+    "integration": {
+      "log": ".local/integration021-final.log",
+      "checks": 9
+    },
+    "gameplay": {
+      "log": ".local/gameplay021-final.log",
+      "checks": 160
+    },
+    "discovery": {
+      "log": ".local/discovery021-final.log",
+      "checks": 43
+    },
+    "exploration": {
+      "log": ".local/exploration021-final.log",
+      "checks": 47
+    },
+    "mission_replay": {
+      "log": ".local/mission_replay021-final.log",
+      "checks": 139
+    },
+    "map": {
+      "log": ".local/map021-final.log",
+      "checks": 47
+    },
+    "playability": {
+      "log": ".local/playability021-final.log",
+      "checks": 51
+    },
+    "missions": {
+      "log": ".local/missions021-final.log",
+      "checks": 52
+    },
+    "content": {
+      "log": ".local/content021-final.log",
+      "checks": 18
+    }
+  },
+  "normal_window_suites": {
+    "navigation_preview": {
+      "log": ".local/navigation_preview021-window.log",
+      "checks": 76
+    },
+    "streaming": {
+      "log": ".local/streaming021-window.log",
+      "checks": 12
+    },
+    "refinement_visual": {
+      "log": ".local/refinement_visual021-window.log",
+      "checks": 46
+    },
+    "gameplay": {
+      "log": ".local/gameplay021-window.log",
+      "checks": 169
+    },
+    "playability": {
+      "log": ".local/playability021-window.log",
+      "checks": 53
+    }
+  },
+  "native": {
+    "Debug": {
+      "configuration": "Debug",
+      "debug": true,
+      "editor": false,
+      "template": true,
+      "user_data_dir": "C:/Users/Jacken/AppData/Roaming/Godot/app_userdata/OpenFPV · 重连边境"
+    },
+    "Release": {
+      "configuration": "Release",
+      "debug": false,
+      "editor": false,
+      "template": true,
+      "user_data_dir": "C:/Users/Jacken/AppData/Roaming/OpenFPV/Release"
+    }
+  },
+  "distribution": {
+    "reports": [
+      {
+        "credits": 111,
+        "debug": true,
+        "directory": "C:/Users/Jacken/AppData/Roaming/Godot/app_userdata/OpenFPV · 重连边境",
+        "existing": false,
+        "ok": true,
+        "photo": "absent"
+      },
+      {
+        "credits": 222,
+        "debug": false,
+        "directory": "C:/Users/Jacken/AppData/Roaming/OpenFPV/Release",
+        "existing": false,
+        "ok": true,
+        "photo": "absent"
+      },
+      {
+        "credits": 111.0,
+        "debug": true,
+        "directory": "C:/Users/Jacken/AppData/Roaming/Godot/app_userdata/OpenFPV · 重连边境",
+        "existing": true,
+        "ok": true,
+        "photo": "111"
+      },
+      {
+        "credits": 222.0,
+        "debug": false,
+        "directory": "C:/Users/Jacken/AppData/Roaming/OpenFPV/Release",
+        "existing": true,
+        "ok": true,
+        "photo": "222"
+      }
+    ],
+    "ok": true,
+    "standalone": "D:\\files\\projects\\codex\\OpenFPV\\.local\\test-results\\distribution_639285157741018629\\standalone\\OpenFPV.exe",
+    "releaseEmbedded": true,
+    "debugHasNoDistributionDocs": true
+  },
+  "native_release_window_tour": ".local/release021-tour.log",
+  "icon": {
+    "original_svg": "game/assets/openfpv.svg",
+    "ico_sizes": [
+      16,
+      24,
+      32,
+      48,
+      64,
+      128,
+      256
+    ],
+    "windows_extracted_preview": ".local/release021-exe-icon.png",
+    "verification": "Build reads all seven native RT_ICON resources and checks byte equality to source ICO; Windows ExtractAssociatedIcon also returns the new artwork. Icon is written to private native templates before PCK is appended."
+  },
+  "git": {
+    "code_ignored": true,
+    "tracked_code_files": []
+  },
+  "render_diagnostics": {
+    "maximized_pose_replay": {
+      "before": {
+        "events_over_2_percent": 0,
+        "maximum": 0.0,
+        "poses": [
+          {
+            "changed_pixels_ratio": 0.0,
+            "pose": 0
+          },
+          {
+            "changed_pixels_ratio": 0.0,
+            "pose": 1
+          },
+          {
+            "changed_pixels_ratio": 0.0,
+            "pose": 2
+          },
+          {
+            "changed_pixels_ratio": 0.0,
+            "pose": 3
+          },
+          {
+            "changed_pixels_ratio": 0.0,
+            "pose": 4
+          },
+          {
+            "changed_pixels_ratio": 0.0,
+            "pose": 5
+          },
+          {
+            "changed_pixels_ratio": 0.0,
+            "pose": 6
+          },
+          {
+            "changed_pixels_ratio": 0.0,
+            "pose": 7
+          },
+          {
+            "changed_pixels_ratio": 0.0,
+            "pose": 8
+          },
+          {
+            "changed_pixels_ratio": 0.0,
+            "pose": 9
+          },
+          {
+            "changed_pixels_ratio": 0.0,
+            "pose": 10
+          },
+          {
+            "changed_pixels_ratio": 0.0,
+            "pose": 11
+          },
+          {
+            "changed_pixels_ratio": 0.0,
+            "pose": 12
+          },
+          {
+            "changed_pixels_ratio": 0.0,
+            "pose": 13
+          },
+          {
+            "changed_pixels_ratio": 0.0,
+            "pose": 14
+          },
+          {
+            "changed_pixels_ratio": 0.0,
+            "pose": 15
+          },
+          {
+            "changed_pixels_ratio": 0.0,
+            "pose": 16
+          },
+          {
+            "changed_pixels_ratio": 0.0,
+            "pose": 17
+          },
+          {
+            "changed_pixels_ratio": 0.0,
+            "pose": 18
+          },
+          {
+            "changed_pixels_ratio": 0.0,
+            "pose": 19
+          },
+          {
+            "changed_pixels_ratio": 0.0,
+            "pose": 20
+          },
+          {
+            "changed_pixels_ratio": 0.0,
+            "pose": 21
+          },
+          {
+            "changed_pixels_ratio": 0.0,
+            "pose": 22
+          },
+          {
+            "changed_pixels_ratio": 0.0,
+            "pose": 23
+          },
+          {
+            "changed_pixels_ratio": 0.0,
+            "pose": 24
+          },
+          {
+            "changed_pixels_ratio": 0.0,
+            "pose": 25
+          },
+          {
+            "changed_pixels_ratio": 0.0,
+            "pose": 26
+          },
+          {
+            "changed_pixels_ratio": 0.0,
+            "pose": 27
+          },
+          {
+            "changed_pixels_ratio": 0.0,
+            "pose": 28
+          },
+          {
+            "changed_pixels_ratio": 0.0,
+            "pose": 29
+          },
+          {
+            "changed_pixels_ratio": 0.0,
+            "pose": 30
+          },
+          {
+            "changed_pixels_ratio": 0.0,
+            "pose": 31
+          },
+          {
+            "changed_pixels_ratio": 0.0,
+            "pose": 32
+          },
+          {
+            "changed_pixels_ratio": 0.0,
+            "pose": 33
+          },
+          {
+            "changed_pixels_ratio": 0.0,
+            "pose": 34
+          },
+          {
+            "changed_pixels_ratio": 0.0,
+            "pose": 35
+          },
+          {
+            "changed_pixels_ratio": 0.0,
+            "pose": 36
+          },
+          {
+            "changed_pixels_ratio": 0.0,
+            "pose": 37
+          },
+          {
+            "changed_pixels_ratio": 0.0,
+            "pose": 38
+          },
+          {
+            "changed_pixels_ratio": 0.0,
+            "pose": 39
+          },
+          {
+            "changed_pixels_ratio": 0.0,
+            "pose": 40
+          },
+          {
+            "changed_pixels_ratio": 0.0,
+            "pose": 41
+          },
+          {
+            "changed_pixels_ratio": 0.0,
+            "pose": 42
+          },
+          {
+            "changed_pixels_ratio": 0.0,
+            "pose": 43
+          },
+          {
+            "changed_pixels_ratio": 0.0,
+            "pose": 44
+          },
+          {
+            "changed_pixels_ratio": 0.0,
+            "pose": 45
+          },
+          {
+            "changed_pixels_ratio": 0.0,
+            "pose": 46
+          },
+          {
+            "changed_pixels_ratio": 0.0,
+            "pose": 47
+          }
+        ],
+        "window": "(2560, 1351)"
+      },
+      "after": {
+        "events_over_2_percent": 0,
+        "maximum": 0.0,
+        "poses": [
+          {
+            "changed_pixels_ratio": 0.0,
+            "pose": 0
+          },
+          {
+            "changed_pixels_ratio": 0.0,
+            "pose": 1
+          },
+          {
+            "changed_pixels_ratio": 0.0,
+            "pose": 2
+          },
+          {
+            "changed_pixels_ratio": 0.0,
+            "pose": 3
+          },
+          {
+            "changed_pixels_ratio": 0.0,
+            "pose": 4
+          },
+          {
+            "changed_pixels_ratio": 0.0,
+            "pose": 5
+          },
+          {
+            "changed_pixels_ratio": 0.0,
+            "pose": 6
+          },
+          {
+            "changed_pixels_ratio": 0.0,
+            "pose": 7
+          },
+          {
+            "changed_pixels_ratio": 0.0,
+            "pose": 8
+          },
+          {
+            "changed_pixels_ratio": 0.0,
+            "pose": 9
+          },
+          {
+            "changed_pixels_ratio": 0.0,
+            "pose": 10
+          },
+          {
+            "changed_pixels_ratio": 0.0,
+            "pose": 11
+          },
+          {
+            "changed_pixels_ratio": 0.0,
+            "pose": 12
+          },
+          {
+            "changed_pixels_ratio": 0.0,
+            "pose": 13
+          },
+          {
+            "changed_pixels_ratio": 0.0,
+            "pose": 14
+          },
+          {
+            "changed_pixels_ratio": 0.0,
+            "pose": 15
+          },
+          {
+            "changed_pixels_ratio": 0.0,
+            "pose": 16
+          },
+          {
+            "changed_pixels_ratio": 0.0,
+            "pose": 17
+          },
+          {
+            "changed_pixels_ratio": 0.0,
+            "pose": 18
+          },
+          {
+            "changed_pixels_ratio": 0.0,
+            "pose": 19
+          },
+          {
+            "changed_pixels_ratio": 0.0,
+            "pose": 20
+          },
+          {
+            "changed_pixels_ratio": 0.0,
+            "pose": 21
+          },
+          {
+            "changed_pixels_ratio": 0.0,
+            "pose": 22
+          },
+          {
+            "changed_pixels_ratio": 0.0,
+            "pose": 23
+          },
+          {
+            "changed_pixels_ratio": 0.0,
+            "pose": 24
+          },
+          {
+            "changed_pixels_ratio": 0.0,
+            "pose": 25
+          },
+          {
+            "changed_pixels_ratio": 0.0,
+            "pose": 26
+          },
+          {
+            "changed_pixels_ratio": 0.0,
+            "pose": 27
+          },
+          {
+            "changed_pixels_ratio": 0.0,
+            "pose": 28
+          },
+          {
+            "changed_pixels_ratio": 0.0,
+            "pose": 29
+          },
+          {
+            "changed_pixels_ratio": 0.0,
+            "pose": 30
+          },
+          {
+            "changed_pixels_ratio": 0.0,
+            "pose": 31
+          },
+          {
+            "changed_pixels_ratio": 0.0,
+            "pose": 32
+          },
+          {
+            "changed_pixels_ratio": 0.0,
+            "pose": 33
+          },
+          {
+            "changed_pixels_ratio": 0.0,
+            "pose": 34
+          },
+          {
+            "changed_pixels_ratio": 0.0,
+            "pose": 35
+          },
+          {
+            "changed_pixels_ratio": 0.0,
+            "pose": 36
+          },
+          {
+            "changed_pixels_ratio": 0.0,
+            "pose": 37
+          },
+          {
+            "changed_pixels_ratio": 0.0,
+            "pose": 38
+          },
+          {
+            "changed_pixels_ratio": 0.0,
+            "pose": 39
+          },
+          {
+            "changed_pixels_ratio": 0.0,
+            "pose": 40
+          },
+          {
+            "changed_pixels_ratio": 0.0,
+            "pose": 41
+          },
+          {
+            "changed_pixels_ratio": 0.0,
+            "pose": 42
+          },
+          {
+            "changed_pixels_ratio": 0.0,
+            "pose": 43
+          },
+          {
+            "changed_pixels_ratio": 0.0,
+            "pose": 44
+          },
+          {
+            "changed_pixels_ratio": 0.0,
+            "pose": 45
+          },
+          {
+            "changed_pixels_ratio": 0.0,
+            "pose": 46
+          },
+          {
+            "changed_pixels_ratio": 0.0,
+            "pose": 47
+          }
+        ],
+        "window": "(2560, 1351)"
+      }
+    },
+    "first_person_low_city_micro_yaw": {
+      "before": [
+        {
+          "kind": "oldtown",
+          "maximum_changed_pixel_ratio": 0.00220833333333333,
+          "micro_yaw": 0.0005,
+          "point": [
+            2752.0,
+            2.59999990463257,
+            -2048.0
+          ],
+          "poses": 24
+        },
+        {
+          "kind": "garden",
+          "maximum_changed_pixel_ratio": 0.0,
+          "micro_yaw": 0.0005,
+          "point": [
+            3264.0,
+            2.59999990463257,
+            2752.0
+          ],
+          "poses": 24
+        },
+        {
+          "kind": "industrial",
+          "maximum_changed_pixel_ratio": 0.0,
+          "micro_yaw": 0.0005,
+          "point": [
+            1024.0,
+            2.59999990463257,
+            1984.0
+          ],
+          "poses": 24
+        }
+      ],
+      "after": [
+        {
+          "kind": "oldtown",
+          "maximum_changed_pixel_ratio": 0.00216666666666667,
+          "micro_yaw": 0.0005,
+          "point": [
+            2752.0,
+            2.59999990463257,
+            -2048.0
+          ],
+          "poses": 24
+        },
+        {
+          "kind": "garden",
+          "maximum_changed_pixel_ratio": 0.0,
+          "micro_yaw": 0.0005,
+          "point": [
+            3264.0,
+            2.59999990463257,
+            2752.0
+          ],
+          "poses": 24
+        },
+        {
+          "kind": "industrial",
+          "maximum_changed_pixel_ratio": 0.0,
+          "micro_yaw": 0.0005,
+          "point": [
+            1024.0,
+            2.59999990463257,
+            1984.0
+          ],
+          "poses": 24
+        }
+      ]
+    },
+    "scope": "No large transient black patch reproduced in either old or new samples. These diagnostics do not establish the user-reported artifact root cause or prove it fixed everywhere. Earlier camera-only diagnostic images included own-model occlusion and are not final evidence."
+  },
+  "artifacts": {
+    "builds/Debug/OpenFPV.exe": {
+      "bytes": 103247360,
+      "sha256": "11d8c3935af51ec796a44383bac3a91cd1d53276affc1a2d996607f29dc0df4b"
+    },
+    "builds/Debug/OpenFPV.pck": {
+      "bytes": 6105884,
+      "sha256": "9456bca7f6aecb1fe144a7aa102f4f48e4c1eecb0d2a6f880cdcd236c220128f"
+    },
+    "builds/Release/OpenFPV.exe": {
+      "bytes": 115445032,
+      "sha256": "6bfd763c59873de54ee7ae2f9677f51989496df67e6ac114d4ef5c0aed4e6966"
+    }
+  },
+  "sources": {
+    ".gitignore": "0638387ee7a2e040fb33430a7c05ca50f6743d08ac1e8b841305398a8a443410",
+    "game/scripts/main.gd": "aee0bf53f1bd9930cfd30e0c77974f799f215e4fc4a93ccc5e527a78ed584b7a",
+    "game/scripts/ui/navigation_hud.gd": "863c1a699733c0ac2815aa61bf234e0699d22d9b536b206eda40a825a0c9fd7e",
+    "game/scripts/world/biome_world.gd": "67b60a07a35672d76055cbdf456d78e4fd3e8dc7a3189f97e2fea276dbfe785f",
+    "game/scripts/world/world_streamer.gd": "192c6ba3818771c7ad00e65a047534f73215ea6699c187760e244115996391b8",
+    "game/scripts/world/world_geometry.gd": "9a331b9468bed07af022c0176cdfeb832457f56d68a3025410f6ede2107a9186",
+    "game/scripts/world/world_materials.gd": "c00987aa4bedd43f4fe34eb91be26c031fc21303ed574316844cecbf51a8ffc0",
+    "game/project.godot": "e6b6624d7e997d2f83a7bf334ce709cff7adce9204a541146463ac2cd04d6579",
+    "game/export_presets.cfg": "56c4d6ae13ca373e0e87dc2383d3f40c65b66bdd04e1f8f6c600dc8b51e5e1d6",
+    "game/assets/openfpv.svg": "41cd95f7c2e4a5db25ab420eaea797e59f7d292c4c2e50dda23b22bf48ca3bdd",
+    "game/assets/openfpv.ico": "dd9b83d8591b4060c65bf6068b2269bfb04e69a79c8705211fd71c870c6ec793",
+    "game/assets/openfpv.png": "ee0bcd7a07c23457ba8c61020f1e96867c558fb53881391f0cef7f2166118412",
+    "tools/Build.ps1": "1bf1be5d1356670ef3f8149d999cf54f43f44b50dfe033c8a6551fa4d79b77e8",
+    "tools/Setup-ExportTemplates.ps1": "ff78bc320f5e76c4406f325678176c6731bd69992fffaaea07e26276e793f9cc",
+    "tools/Prepare-ExportIcon.ps1": "d7ccc3b4b9c7da913b700db2ff33b0a42f8a0bdfbb4538bf5ed2ac6ffc44f182",
+    "tools/windows_icon.cs": "80534aa04752e4ee9ab576009516c05a4880b6446b7eb43d2dd29376cdd97f1d",
+    "tools/render_icon.gd": "a49e916b8b70ff0705a44f37c4e88c7667bd231bab9b0eed8324028ec436e0e2",
+    "tools/Bench-Streaming.ps1": "2bea8fffe428b039c2d375b76c9a204eeb8c8202df627212330f3b51017fac08",
+    "game/tests/streaming_tests.gd": "f28b0bf71f25cc663c1d2b32d02882b1787f289362fe124ecad26e6306b60148",
+    "game/tests/streaming_tour_tests.gd": "270cd6ee4d127f6e0bb819c49d43a9223452378abe37127306414a045e95942e",
+    "game/tests/navigation_preview_tests.gd": "0e18765af6335f714073c0740973e0b06c14ecadea1e483b68ab2912e6f94ba1",
+    "tools/Test.ps1": "9abffcdc4e9f2b494fb7dbb5b2122a6b2cee103df131dc661dd4fc3f345f1cdc"
+  },
+  "limits": [
+    "18 related headless suites and 5 normal-window suites; not all35 groups.",
+    "No new eight-biome 120-second tour; each performance comparison is one 60-second continuous route.",
+    "Headless dummy MultiMesh transform readback is not treated as GPU evidence; normal-window bounds checks cover rotated/scaled instances.",
+    "Human RC feel and the original first-person city flash still need user confirmation."
+  ]
+}

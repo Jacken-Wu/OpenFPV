@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="AchievementDefinition" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/content/achievement_definition.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "base.achievement.ten"
+display_name = "熟练飞手"
+description = "完成10份任务。"
+metric = "missions"
+target = 10

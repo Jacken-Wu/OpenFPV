@@ -1,0 +1,22 @@
+{
+  "content_version": "0.12.1",
+  "world_version": 4,
+  "engine": "4.7.2.stable.official.ed1daf0bf",
+  "kind": "scoped mission state, reward persistence and native UI checks; not human flight",
+  "seed": 271828,
+  "generated_kinds": 9,
+  "fixed_legacy_tasks": 2,
+  "playthroughs_per_task": 3,
+  "replay_headless_checks": 136,
+  "replay_source_window_checks": 139,
+  "replay_bundle_window_checks": 139,
+  "related_headless_suites": 11,
+  "source_window_suites": {"mission_replay": 139, "missions": 60, "map": 50, "gameplay": 162},
+  "bundle_window_suites": {"mission_replay": 139, "missions": 60, "map": 50, "gameplay": 162},
+  "failures": 0,
+  "entry_range_m": 70,
+  "entry_backgrounds": {"available": "164b46ef", "active": "72501bef", "completed": "35465eef"},
+  "source_bundle_fingerprint": "c510b5d16dcd37f54c6b8333f5f044e1c1257727884e0b45e0dfcbea7961f630",
+  "full_suite_repeated": false,
+  "performance_benchmark_repeated": false
+}

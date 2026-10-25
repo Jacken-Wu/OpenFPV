@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="MissionDefinition" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/content/mission_definition.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "base.template.race"
+display_name = "立体穿门航线"
+description = "按顺序、正确方向穿过起点、航路门和终点；无倒计时，已过门保存。"
+kind = "race"
+reward_id = "base.reward.challenge"
+mission_tag = "exploration"
+city_tag = "any"
+interaction_radius = 7.0
+max_speed = 100.0

@@ -8,4 +8,4 @@ id = "base.reward.relay"
 mission_tag = "maintenance.relay"
 city_tag = "industrial"
 grants = PackedStringArray("base.preset.light35", "base.frame.f35", "base.motor.m35", "base.prop.p35_general")
-credits = 200
+credits = 60

@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="OfferDefinition" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/content/offer_definition.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "base.offer.cine35.frame"
+display_name = "影航3.5机架"
+description = "3.5寸定位，12x12电机孔位；紧凑机架、柔和平顺响应，适合近景环绕与跟拍。"
+part_id = "base.frame.f_cine35"
+price = 240
+city_tag = "industrial"

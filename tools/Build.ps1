@@ -1,44 +1,55 @@
-param([string]$GodotPath = '')
+param([string]$GodotPath = '', [ValidateSet('Debug', 'Release')][string]$Configuration = 'Debug')
 $ErrorActionPreference = 'Stop'
 . "$PSScriptRoot/common.ps1"
 $engine = Resolve-Godot $GodotPath
 $workspace = Split-Path $PSScriptRoot -Parent
 $project = Join-Path $workspace 'game'
-$bundle = Join-Path $workspace 'builds/OpenFPV-P1'
+$bundle = Join-Path $workspace "builds/$Configuration"
 $logs = Join-Path $workspace '.local'
 New-Item -ItemType Directory -Force $bundle, $logs | Out-Null
-$pack = Join-Path $bundle 'OpenFPV.pck'
-$output = & $engine --headless --path $project --export-pack Windows $pack 2>&1 | Out-String
-$output | Set-Content -LiteralPath (Join-Path $logs 'build.log') -Encoding utf8
-if ($LASTEXITCODE -ne 0 -or $output -match '(?m)SCRIPT ERROR:|^ERROR:' -or -not (Test-Path -LiteralPath $pack)) {
-    throw 'Resource-pack build failed; see .local/build.log'
+& (Join-Path $PSScriptRoot 'Setup-ExportTemplates.ps1')
+$legal = Join-Path $project 'legal'
+New-Item -ItemType Directory -Force $legal | Out-Null
+Copy-Item -LiteralPath (Join-Path $workspace 'LICENSE') -Destination (Join-Path $legal 'openfpv-license.txt') -Force
+$output = & $engine --headless --path $project --script res://tests/write_engine_notices.gd --quit-after 120 -- "--output=$(Join-Path $legal 'godot-notices.txt')" 2>&1 | Out-String
+if ($LASTEXITCODE -ne 0 -or -not $output.Contains('ENGINE_NOTICES_OK')) { throw 'Embedded engine notices could not be written' }
+$runner = Join-Path $bundle 'OpenFPV.exe'
+$option = if ($Configuration -eq 'Release') { '--export-release' } else { '--export-debug' }
+$output = & $engine --headless --path $project $option "Windows $Configuration" $runner 2>&1 | Out-String
+$output | Set-Content -LiteralPath (Join-Path $logs "build-$Configuration.log") -Encoding utf8
+if ($LASTEXITCODE -ne 0 -or $output -match '(?m)SCRIPT ERROR:|^ERROR:' -or -not (Test-Path -LiteralPath $runner)) { throw "Native $Configuration export failed; see .local/build-$Configuration.log" }
+$iconSizes = [OpenFPVBuild.WindowsIcon]::Verify($runner, (Join-Path $project 'assets/openfpv.ico'))
+if ($iconSizes -ne 7) { throw 'Exported executable is missing the seven OpenFPV icon sizes.' }
+if ($Configuration -eq 'Release') {
+    $externalPack = Join-Path $bundle 'OpenFPV.pck'
+    if (Test-Path -LiteralPath $externalPack) { Remove-Item -LiteralPath $externalPack }
 }
-# A local portable runner uses the verified installed engine. Standard release export
-# remains separate and requires matching Godot export templates.
-$runner = $engine -replace '_console\.exe$', '.exe'
-Copy-Item -LiteralPath $runner -Destination (Join-Path $bundle 'OpenFPV.exe') -Force
-@'
-@echo off
-start "" "%~dp0OpenFPV.exe" --main-pack "%~dp0OpenFPV.pck"
-'@ | Set-Content -LiteralPath (Join-Path $bundle 'Play.cmd') -Encoding ascii
-$notices = Join-Path $bundle 'GODOT-NOTICES.txt'
-$output = & $engine --headless --path $project --script res://tests/write_engine_notices.gd --quit-after 120 -- "--output=$notices" 2>&1 | Out-String
-if ($LASTEXITCODE -ne 0 -or -not $output.Contains('ENGINE_NOTICES_OK')) { throw 'Engine notices could not be written' }
-$output = & $engine --headless --main-pack $pack --quit-after 1800 -- --smoke 2>&1 | Out-String
-$output | Set-Content -LiteralPath (Join-Path $logs 'bundle-smoke.log') -Encoding utf8
-if ($LASTEXITCODE -ne 0 -or $output -match '(?m)SCRIPT ERROR:|^ERROR:' -or -not $output.Contains('SMOKE_OK')) { throw 'Packaged-game smoke failed' }
+$infoLog = Join-Path $logs "build-info-$Configuration.log"
+$null = & $runner --headless --log-file $infoLog -- --build-info 2>&1 | Out-String
+$infoBody = Get-Content -LiteralPath $infoLog -Raw
+$infoLine = [regex]::Match($infoBody, '(?m)^BUILD_INFO (.+)$').Groups[1].Value
+if (-not $infoLine) { throw 'Exported executable did not report its build configuration.' }
+$info = $infoLine | ConvertFrom-Json
+if ($info.configuration -ne $Configuration -or $info.editor -or -not $info.template) { throw 'Expected native template configuration does not match the exported executable.' }
+if (-not $info.licenses.ok -or $info.licenses.project_sha256 -ne (Get-FileHash -LiteralPath (Join-Path $workspace 'LICENSE') -Algorithm SHA256).Hash.ToLowerInvariant() -or $info.licenses.engine_sha256 -ne (Get-FileHash -LiteralPath (Join-Path $legal 'godot-notices.txt') -Algorithm SHA256).Hash.ToLowerInvariant()) { throw 'Exported executable is missing complete embedded licenses.' }
+$infoLine | Set-Content -LiteralPath (Join-Path $logs "build-info-$Configuration.json") -Encoding utf8
+$smokeLog = Join-Path $logs "smoke-$Configuration.log"
+$null = & $runner --headless --log-file $smokeLog --quit-after 15000 -- --smoke 2>&1 | Out-String
+$output = Get-Content -LiteralPath $smokeLog -Raw
+if ($LASTEXITCODE -ne 0 -or $output -match '(?m)SCRIPT ERROR:|^ERROR:' -or -not $output.Contains('SMOKE_OK')) { throw "$Configuration executable smoke failed" }
 $packedFingerprint = [regex]::Match($output, 'CONTENT_FINGERPRINT (\w+)').Groups[1].Value
-$output = & $engine --headless --path $project --quit-after 1800 -- --smoke 2>&1 | Out-String
+$output = & $engine --headless --path $project --quit-after 15000 -- --smoke 2>&1 | Out-String
+$output | Set-Content -LiteralPath (Join-Path $logs "source-smoke-$Configuration.log") -Encoding utf8
 if ($LASTEXITCODE -ne 0 -or $output -match '(?m)SCRIPT ERROR:|^ERROR:' -or -not $output.Contains('SMOKE_OK')) { throw 'Source-game smoke failed' }
 $sourceFingerprint = [regex]::Match($output, 'CONTENT_FINGERPRINT (\w+)').Groups[1].Value
-if (-not $sourceFingerprint -or $sourceFingerprint -ne $packedFingerprint) { throw 'Source and packaged content fingerprints differ' }
-@'
-OpenFPV P1 - local portable prototype
-
-Double-click Play.cmd, or OpenFPV.exe. F1: help; F2: RC calibration; P: resume.
-The pack uses the installed Godot editor-capable binary as its local runtime.
-It is larger than a standard release export. Matching export templates are not installed.
-Generated scenes/textures need no external assets. Project source license is not selected yet.
-Godot and bundled component notices are in GODOT-NOTICES.txt.
-'@ | Set-Content -LiteralPath (Join-Path $bundle 'README.txt') -Encoding utf8
-Write-Host "Bundle ready: $bundle"
+if (-not $sourceFingerprint -or $sourceFingerprint -ne $packedFingerprint) { throw 'Source and exported content fingerprints differ' }
+# Remove only the documents generated by previous builds, inside this bundle.
+foreach ($name in @('README.md','README.txt','LICENSE','GODOT-NOTICES.txt','docs')) {
+    $obsolete = [IO.Path]::GetFullPath((Join-Path $bundle $name))
+    $bundleRoot = [IO.Path]::GetFullPath($bundle).TrimEnd('\') + '\'
+    if (-not $obsolete.StartsWith($bundleRoot, [StringComparison]::OrdinalIgnoreCase)) { throw 'Unsafe bundle cleanup path' }
+    if (Test-Path -LiteralPath $obsolete) { Remove-Item -LiteralPath $obsolete -Recurse -Force }
+}
+if ($Configuration -eq 'Release' -and @(Get-ChildItem -LiteralPath $bundle -Force | Where-Object Name -ne 'OpenFPV.exe').Count -gt 0) { throw 'Release output must contain only OpenFPV.exe.' }
+Write-Host "$Configuration ready: $runner"
+Write-Host "User data: $($info.user_data_dir)"

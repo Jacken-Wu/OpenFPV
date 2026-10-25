@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="BiomeDefinition" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scripts/content/biome_definition.gd" id="1"]
+
+[ext_resource type="AudioStream" path="res://audio/music/oldtown.wav" id="music"]
+
+[resource]
+script = ExtResource("1")
+music = ExtResource("music")
+music_title = "赤陶巷弄"
+id = "base.biome.oldtown"
+display_name = "赤陶旧城"
+provider_id = "base.generator.modular_city"
+tags = PackedStringArray("surface", "city", "oldtown")
+region_bounds = AABB(-256, -64, 256, 384, 192, 256)
+priority = 10
+palette = PackedColorArray(0.65, 0.38, 0.26, 1, 0.57, 0.29, 0.19, 1, 0.32, 0.53, 0.48, 1)
+parameters = {"building_min": 7, "building_max": 17, "layer": "surface", "architecture": "oldtown", "min_world_version": 2, "climate": Vector3(0.8, 0.35, 0.8), "lot_pool": ["courtyard", "pavilion", "park", "bus_stop", "open_house", "playground", "billboard"], "landmark_pool": [{"kind": "construction", "chance": 0.7}, {"kind": "courtyard", "chance": 0.6}, {"kind": "aqueduct", "chance": 0.28}]}

@@ -1,0 +1,165 @@
+{
+  "date_local": "2026-10-25 16:59",
+  "kind": "isolated normal-window scripted continuous crossing; not human RC flight or stable FPS acceptance",
+  "engine": "4.7.2.stable.official.ed1daf0bf",
+  "before_content": "0.20.0",
+  "after_content": "0.21.0",
+  "source_tool": "tools/Bench-Streaming.ps1",
+  "source_fixture": "game/tests/streaming_tour_tests.gd",
+  "baseline_pack_sha256": "d1fabb7b0f6f4bc9cb5f6725289f061ac5164a050d30d4b10e8398e4568f9d99",
+  "before": {
+    "camera": "mounted FPV camera; turn whole drone, not camera through own model",
+    "collision_wait_frames": 0,
+    "frames": 5925,
+    "initial": [
+      -192.0,
+      66.1999969482422,
+      256.0
+    ],
+    "max_ms": 351.195,
+    "over25": 6,
+    "p50": 10.0,
+    "p95": 10.831,
+    "p99": 12.571,
+    "peak_commit_ms": 16.512,
+    "renderer": "NVIDIA GeForce RTX 4060 Ti",
+    "route": "initial + (38*t, 0, 100*sin(0.13*t))",
+    "seconds": 60.00986,
+    "speed": 38,
+    "stalls": [
+      {
+        "active": 504,
+        "commit_ms": 0.001,
+        "interactions_ms": 325.216,
+        "main_ms": 326.046,
+        "ms": 337.785,
+        "pending": 4,
+        "s": 15.504093
+      },
+      {
+        "active": 567,
+        "commit_ms": 0.002,
+        "interactions_ms": 0.053,
+        "main_ms": 0.63,
+        "ms": 28.98,
+        "pending": 0,
+        "s": 28.403301
+      },
+      {
+        "active": 504,
+        "commit_ms": 0.001,
+        "interactions_ms": 0.265,
+        "main_ms": 0.885,
+        "ms": 36.007,
+        "pending": 4,
+        "s": 40.465516
+      },
+      {
+        "active": 504,
+        "commit_ms": 0.001,
+        "interactions_ms": 20.513,
+        "main_ms": 21.147,
+        "ms": 32.798,
+        "pending": 4,
+        "s": 42.143283
+      },
+      {
+        "active": 518,
+        "commit_ms": 16.512,
+        "interactions_ms": 0.067,
+        "main_ms": 0.684,
+        "ms": 25.625,
+        "pending": 4,
+        "s": 42.36625
+      },
+      {
+        "active": 504,
+        "commit_ms": 0.001,
+        "interactions_ms": 339.11,
+        "main_ms": 340.549,
+        "ms": 351.195,
+        "pending": 4,
+        "s": 55.938591
+      }
+    ],
+    "window": "(2560, 1351)"
+  },
+  "after": {
+    "camera": "mounted FPV camera; turn whole drone, not camera through own model",
+    "collision_wait_frames": 0,
+    "frames": 5997,
+    "initial": [
+      -192.0,
+      66.1999969482422,
+      256.0
+    ],
+    "max_ms": 40.798,
+    "over25": 6,
+    "p50": 10.002,
+    "p95": 10.236,
+    "p99": 10.791,
+    "peak_commit_ms": 1.898,
+    "renderer": "NVIDIA GeForce RTX 4060 Ti",
+    "route": "initial + (38*t, 0, 100*sin(0.13*t))",
+    "seconds": 60.009169,
+    "speed": 38,
+    "stalls": [
+      {
+        "active": 504,
+        "commit_ms": 0.001,
+        "interactions_ms": 0.078,
+        "main_ms": 0.998,
+        "ms": 27.267,
+        "pending": 4,
+        "s": 45.508808
+      },
+      {
+        "active": 504,
+        "commit_ms": 0.002,
+        "interactions_ms": 0.195,
+        "main_ms": 0.697,
+        "ms": 26.584,
+        "pending": 4,
+        "s": 47.189002
+      },
+      {
+        "active": 504,
+        "commit_ms": 0.001,
+        "interactions_ms": 0.079,
+        "main_ms": 0.621,
+        "ms": 40.798,
+        "pending": 4,
+        "s": 48.373804
+      },
+      {
+        "active": 504,
+        "commit_ms": 0.002,
+        "interactions_ms": 0.088,
+        "main_ms": 0.657,
+        "ms": 32.05,
+        "pending": 4,
+        "s": 50.566496
+      },
+      {
+        "active": 504,
+        "commit_ms": 0.002,
+        "interactions_ms": 0.089,
+        "main_ms": 1.236,
+        "ms": 28.228,
+        "pending": 4,
+        "s": 52.243652
+      },
+      {
+        "active": 504,
+        "commit_ms": 0.001,
+        "interactions_ms": 0.166,
+        "main_ms": 0.678,
+        "ms": 31.482,
+        "pending": 4,
+        "s": 57.299167
+      }
+    ],
+    "window": "(2560, 1351)"
+  },
+  "scope": "Same mounted FPV camera and drone attitude; maximized 2560x1351 window, seed271828, 38m/s, 60s per run, no screenshots during timing, no concurrent Godot runs. Includes real world/mission queries, streaming, retirement and floating origin. Does not prove all routes/biomes free of stalls."
+}

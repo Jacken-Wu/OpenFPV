@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="OfferDefinition" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/content/offer_definition.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "base.offer.cruise6.frame"
+display_name = "远景6机架"
+description = "6寸定位，16x16电机孔位；大桨和较长机臂，操控沉稳，适合远景探索与平顺运镜。"
+part_id = "base.frame.f_cruise6"
+price = 190
+city_tag = "industrial"

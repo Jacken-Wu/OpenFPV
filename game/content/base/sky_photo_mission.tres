@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="MissionDefinition" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/content/mission_definition.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "base.mission.sky_photo"
+display_name = "浮岛观测站写真"
+description = "为浮岛观测站拍摄一张清晰照片。可先传送到浮岛起降点，再飞至站外取景；相机距观测站 15～65 m，将建筑中心对准画面中央 18° 范围，保持无遮挡，按 F12 拍照。两种视角均可，无倒计时，暂停也可拍摄。"
+kind = "photo"
+location_id = "mission.sky_photo"
+reward_id = "base.reward.sky_photo"
+mission_tag = "photography.landmark"
+city_tag = "sky"
+target_point = Vector3(130, 122, -94)
+target_bounds = AABB(122.4, 113.9, -101.1, 15.2, 16.2, 14.2)

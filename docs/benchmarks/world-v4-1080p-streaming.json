@@ -1,0 +1,375 @@
+{
+	"collision_wait_frames": 730,
+	"discarded_jobs": 0,
+	"engine": "4.7.2-stable (official)",
+	"final_nodes": 1165.0,
+	"final_static_memory_mb": 86.9001789093018,
+	"frames": 11966,
+	"kind": "scripted streaming tour, not human flight or RC validation",
+	"max_ms": 71.243,
+	"measurement": "monotonic wall-clock frame intervals",
+	"p50_ms": 10.003,
+	"p95_ms": 10.184,
+	"p99_ms": 10.294,
+	"peak_nodes": 3517,
+	"peak_static_memory_mb": 94.0090036392212,
+	"physics_backend": "DEFAULT",
+	"renderer": "NVIDIA GeForce RTX 4060 Ti",
+	"resolution": "(1920, 1080)",
+	"route": [
+		[
+			-192.0,
+			13.1999998092651,
+			264.0
+		],
+		[
+			256.0,
+			13.1999998092651,
+			-376.0
+		],
+		[
+			256.0,
+			13.1999998092651,
+			456.0
+		],
+		[
+			-1994.80065917969,
+			32.8437728881836,
+			1212.89086914063
+		],
+		[
+			-1792.0,
+			13.1999998092651,
+			1736.0
+		],
+		[
+			-1600.0,
+			13.1999998092651,
+			1864.0
+		],
+		[
+			-1344.0,
+			13.1999998092651,
+			1864.0
+		],
+		[
+			-1344.0,
+			13.1999998092651,
+			2120.0
+		],
+		[
+			-1648.0,
+			-83.4730834960938,
+			1728.0
+		],
+		[
+			-1776.0,
+			-83.4730834960938,
+			1712.0
+		],
+		[
+			4396.36474609375,
+			54.6670112609863,
+			-4306.7861328125
+		],
+		[
+			4539.0283203125,
+			43.5718307495117,
+			-4307.75146484375
+		],
+		[
+			4276.2578125,
+			7.31974983215332,
+			-3229.306640625
+		],
+		[
+			5029.9111328125,
+			41.2707862854004,
+			-4038.64965820313
+		],
+		[
+			4185.3125,
+			220.122467041016,
+			-4106.78173828125
+		],
+		[
+			20553.83984375,
+			50.2551498413086,
+			10357.9130859375
+		],
+		[
+			20416.0,
+			13.1999998092651,
+			10952.0
+		],
+		[
+			20672.0,
+			13.1999998092651,
+			11016.0
+		],
+		[
+			21056.0,
+			13.1999998092651,
+			10440.0
+		],
+		[
+			-20544.0,
+			13.1999998092651,
+			-10360.0
+		],
+		[
+			-20416.0,
+			13.1999998092651,
+			-9400.0
+		],
+		[
+			-20544.0,
+			13.1999998092651,
+			-9528.0
+		],
+		[
+			-19648.0,
+			13.1999998092651,
+			-10296.0
+		],
+		[
+			-19712.0,
+			13.1999998092651,
+			-10424.0
+		],
+		[
+			-19520.0,
+			13.1999998092651,
+			-9720.0
+		]
+	],
+	"seconds": 120.005405,
+	"seed": 271828,
+	"slow_frames": [
+		{
+			"active": 45,
+			"commit_ms": 1.173,
+			"ms": 28.388,
+			"pending": 4,
+			"point_index": 0,
+			"seconds": 0.132667
+		},
+		{
+			"active": 0,
+			"commit_ms": 0.001,
+			"ms": 47.739,
+			"pending": 4,
+			"point_index": 1,
+			"seconds": 3.061877
+		},
+		{
+			"active": 0,
+			"commit_ms": 0.001,
+			"ms": 29.073,
+			"pending": 4,
+			"point_index": 2,
+			"seconds": 6.04494
+		},
+		{
+			"active": 0,
+			"commit_ms": 0.001,
+			"ms": 40.439,
+			"pending": 4,
+			"point_index": 3,
+			"seconds": 9.057667
+		},
+		{
+			"active": 2,
+			"commit_ms": 49.419,
+			"ms": 61.482,
+			"pending": 4,
+			"point_index": 3,
+			"seconds": 9.168757
+		},
+		{
+			"active": 19,
+			"commit_ms": 21.057,
+			"ms": 25.4,
+			"pending": 4,
+			"point_index": 3,
+			"seconds": 9.402952
+		},
+		{
+			"active": 0,
+			"commit_ms": 0.001,
+			"ms": 46.749,
+			"pending": 4,
+			"point_index": 4,
+			"seconds": 12.065623
+		},
+		{
+			"active": 147,
+			"commit_ms": 0.003,
+			"ms": 32.807,
+			"pending": 4,
+			"point_index": 6,
+			"seconds": 18.054886
+		},
+		{
+			"active": 147,
+			"commit_ms": 0.001,
+			"ms": 28.24,
+			"pending": 4,
+			"point_index": 7,
+			"seconds": 21.051742
+		},
+		{
+			"active": 0,
+			"commit_ms": 0.001,
+			"ms": 71.243,
+			"pending": 4,
+			"point_index": 10,
+			"seconds": 30.099462
+		},
+		{
+			"active": 0,
+			"commit_ms": 0.002,
+			"ms": 33.816,
+			"pending": 4,
+			"point_index": 12,
+			"seconds": 36.065329
+		},
+		{
+			"active": 0,
+			"commit_ms": 0.001,
+			"ms": 31.128,
+			"pending": 4,
+			"point_index": 14,
+			"seconds": 42.065686
+		},
+		{
+			"active": 0,
+			"commit_ms": 0.001,
+			"ms": 56.451,
+			"pending": 4,
+			"point_index": 15,
+			"seconds": 45.092552
+		},
+		{
+			"active": 0,
+			"commit_ms": 0.002,
+			"ms": 38.527,
+			"pending": 4,
+			"point_index": 16,
+			"seconds": 48.076248
+		},
+		{
+			"active": 0,
+			"commit_ms": 0.002,
+			"ms": 41.325,
+			"pending": 4,
+			"point_index": 18,
+			"seconds": 54.082167
+		},
+		{
+			"active": 0,
+			"commit_ms": 0.001,
+			"ms": 62.616,
+			"pending": 4,
+			"point_index": 19,
+			"seconds": 57.105011
+		},
+		{
+			"active": 0,
+			"commit_ms": 0.002,
+			"ms": 37.001,
+			"pending": 4,
+			"point_index": 20,
+			"seconds": 60.081081
+		},
+		{
+			"active": 0,
+			"commit_ms": 0.001,
+			"ms": 43.815,
+			"pending": 4,
+			"point_index": 22,
+			"seconds": 66.090981
+		},
+		{
+			"active": 0,
+			"commit_ms": 0.002,
+			"ms": 38.596,
+			"pending": 4,
+			"point_index": 24,
+			"seconds": 72.088899
+		},
+		{
+			"active": 0,
+			"commit_ms": 0.002,
+			"ms": 65.656,
+			"pending": 4,
+			"point_index": 0,
+			"seconds": 75.117605
+		},
+		{
+			"active": 0,
+			"commit_ms": 0.001,
+			"ms": 38.614,
+			"pending": 4,
+			"point_index": 1,
+			"seconds": 78.092163
+		},
+		{
+			"active": 0,
+			"commit_ms": 0.001,
+			"ms": 50.081,
+			"pending": 4,
+			"point_index": 3,
+			"seconds": 84.106699
+		},
+		{
+			"active": 0,
+			"commit_ms": 0.001,
+			"ms": 32.571,
+			"pending": 4,
+			"point_index": 4,
+			"seconds": 87.090746
+		},
+		{
+			"active": 147,
+			"commit_ms": 0.001,
+			"ms": 31.491,
+			"pending": 4,
+			"point_index": 6,
+			"seconds": 93.092786
+		},
+		{
+			"active": 147,
+			"commit_ms": 0.002,
+			"ms": 32.522,
+			"pending": 4,
+			"point_index": 7,
+			"seconds": 96.095357
+		},
+		{
+			"active": 10,
+			"commit_ms": 0.002,
+			"ms": 25.107,
+			"pending": 4,
+			"point_index": 8,
+			"seconds": 99.089667
+		},
+		{
+			"active": 0,
+			"commit_ms": 0.002,
+			"ms": 68.275,
+			"pending": 4,
+			"point_index": 10,
+			"seconds": 105.13591
+		},
+		{
+			"active": 0,
+			"commit_ms": 0.001,
+			"ms": 29.193,
+			"pending": 4,
+			"point_index": 12,
+			"seconds": 111.100036
+		}
+	],
+	"world_version": 4
+}

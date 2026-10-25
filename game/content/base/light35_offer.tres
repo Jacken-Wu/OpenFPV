@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="OfferDefinition" load_steps=2 format=3]
+[ext_resource type="Script" path="res://scripts/content/offer_definition.gd" id="1"]
+[resource]
+script = ExtResource("1")
+id = "base.offer.light35"
+display_name = "轻型 3.5 寸套机（含完整配件）"
+preset_id = "base.preset.light35"
+price = 300
+city_tag = "industrial"

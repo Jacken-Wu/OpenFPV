@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="MissionDefinition" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/content/mission_definition.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "base.template.orbit"
+display_name = "平面环绕运镜"
+description = "在引导圈附近环绕观测目标360°，镜头朝向目标即可；高度和距离允许变化，暂时偏离只暂停累计，走回头路不重复计数。"
+kind = "orbit"
+reward_id = "base.reward.cinematic"
+mission_tag = "exploration"
+city_tag = "any"
+interaction_radius = 7.0
+max_speed = 100.0

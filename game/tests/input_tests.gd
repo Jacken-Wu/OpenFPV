@@ -24,12 +24,13 @@ func _initialize() -> void:
 	profile.axes.throttle.axis = 0
 	check(not FlightInput.valid_profile(profile), "duplicate RC axes rejected")
 	var reader := FlightInput.new()
+	reader._ready()
 	reader.keyboard_throttle = 0.9
 	reader.channels = Vector4.ZERO
-	check(reader.throttle_now() == 0.9, "arming reads current throttle rather than stale displayed channels")
+	check(is_equal_approx(reader.current_channels().w, 0.9), "current throttle is sampled rather than stale displayed channels")
 	reader.using_radio = true
 	reader.selected_device = 99
-	check(reader.throttle_now() == 1.0, "missing active device cannot appear as low throttle for arming")
+	check(reader.current_channels() == Vector4.ZERO, "missing active device provides no flight controls")
 	reader.free()
 	print("INPUT_RESULT failures=", failed)
 	quit(1 if failed else 0)

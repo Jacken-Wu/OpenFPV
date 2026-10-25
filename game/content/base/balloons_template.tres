@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="MissionDefinition" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/content/mission_definition.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "base.template.balloons"
+display_name = "空中扎气球"
+description = "直接操控机体撞破全部气球，顺序不限；击中结果保存，无倒计时。"
+kind = "balloons"
+reward_id = "base.reward.challenge"
+mission_tag = "exploration"
+city_tag = "any"
+interaction_radius = 7.0
+max_speed = 100.0

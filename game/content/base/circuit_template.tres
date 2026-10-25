@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="MissionDefinition" load_steps=2 format=3]
+[ext_resource type="Script" path="res://scripts/content/mission_definition.gd" id="1"]
+[resource]
+script = ExtResource("1")
+id = "base.template.circuit"
+display_name = "航线巡检"
+description = "跟随导航按顺序飞过三个巡检航点，每点进入 3 米范围即可。不设倒计时；已通过的航点自动保存。"
+kind = "circuit"
+reward_id = "base.reward.exploration"
+mission_tag = "exploration"
+city_tag = "any"
+interaction_radius = 3.0
+max_speed = 35.0

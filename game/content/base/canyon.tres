@@ -1,9 +1,13 @@
-[gd_resource type="Resource" script_class="BiomeDefinition" load_steps=2 format=3]
+[gd_resource type="Resource" script_class="BiomeDefinition" load_steps=3 format=3]
 
 [ext_resource type="Script" path="res://scripts/content/biome_definition.gd" id="1"]
 
+[ext_resource type="AudioStream" path="res://audio/music/canyon.wav" id="music"]
+
 [resource]
 script = ExtResource("1")
+music = ExtResource("music")
+music_title = "峡谷回声"
 id = "base.biome.canyon"
 display_name = "风蚀峡谷"
 provider_id = "base.generator.canyon"
@@ -11,4 +15,4 @@ tags = PackedStringArray("surface", "wild")
 region_bounds = AABB(-1000000, -256, -1000000, 2000000, 512, 2000000)
 priority = -100
 palette = PackedColorArray(0.46, 0.35, 0.25, 1, 0.62, 0.48, 0.31, 1, 0.31, 0.45, 0.43, 1)
-parameters = {"layer": "surface"}
+parameters = {"layer": "surface", "climate": Vector3(0.8, 0.2, 0.15), "lot_pool": [], "landmark_pool": [{"kind": "pyramid", "chance": 0.28}, {"kind": "aqueduct", "chance": 0.32}, {"kind": "ruins", "chance": 0.45}, {"kind": "base_station", "chance": 0.3}]}

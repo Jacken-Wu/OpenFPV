@@ -1,0 +1,298 @@
+{
+  "content_version": "0.16.0",
+  "world_version": 4,
+  "content_fingerprint": "834726958b2fc81ca2a5526f72290fe91ceea3bb1282f93855661d56df55ff94",
+  "engine": "4.7.2.stable.official.ed1daf0bf",
+  "logic_suites": {
+    "input": "passed",
+    "radio": "passed",
+    "controls": 51,
+    "hud_audio": 52,
+    "rotor_audio": 18,
+    "field_tasks": 46,
+    "flow_routes": 17,
+    "expansion": 86,
+    "challenge_feedback": 22,
+    "mission_replay": 139,
+    "gameplay": 160,
+    "handling": 105,
+    "audio": 69,
+    "entrance": 43,
+    "actions": "passed",
+    "tuning": "passed",
+    "map": 44,
+    "missions": 52,
+    "content": "passed",
+    "world": "passed",
+    "scenery": 26,
+    "regions": 45,
+    "discovery": 43,
+    "playability": 50,
+    "developer": 72,
+    "exploration": 47,
+    "flight": "passed",
+    "integration": "passed"
+  },
+  "source_window": {
+    "expansion": 115,
+    "gameplay": 169
+  },
+  "bundle_window": {
+    "expansion_tour": 10,
+    "expansion": 115,
+    "gameplay": 169,
+    "mission_replay": 143,
+    "audio": 73,
+    "developer": 81,
+    "follow_live": 5
+  },
+  "expansion": {
+    "biomes": {
+      "alpine": {
+        "height_range": [
+          6.89933400780925,
+          165.00591289414
+        ],
+        "key": [
+          -12,
+          2
+        ],
+        "landmarks": [
+          "rock_arch",
+          "pipe_stack"
+        ],
+        "tasks": 2,
+        "terrain_meshes": 9
+      },
+      "gobi": {
+        "height_range": [
+          17.1361893311529,
+          40.9992571883799
+        ],
+        "key": [
+          -12,
+          -11
+        ],
+        "landmarks": [
+          "rock_arch",
+          "base_station"
+        ],
+        "tasks": 5,
+        "terrain_meshes": 9
+      },
+      "monument": {
+        "height_range": [
+          19.6110826590655,
+          29.9953524949165
+        ],
+        "key": [
+          -12,
+          -10
+        ],
+        "landmarks": [
+          "mega_ruins",
+          "mega_ruins",
+          "aqueduct"
+        ],
+        "tasks": 4,
+        "terrain_meshes": 9
+      },
+      "ravine": {
+        "height_range": [
+          16.3779236982356,
+          84.773002852064
+        ],
+        "key": [
+          -12,
+          -12
+        ],
+        "landmarks": [
+          "rock_arch"
+        ],
+        "tasks": 5,
+        "terrain_meshes": 9
+      },
+      "ruined_city": {
+        "height_range": [
+          2.55440477278991,
+          17.192116860236
+        ],
+        "key": [
+          -11,
+          -7
+        ],
+        "landmarks": [
+          "broken_blocks",
+          "broken_blocks",
+          "broken_blocks",
+          "broken_blocks",
+          "open_house",
+          "open_house",
+          "open_house",
+          "pipe_stack"
+        ],
+        "tasks": 5,
+        "terrain_meshes": 9
+      },
+      "snow_peak": {
+        "height_range": [
+          5.09618577543556,
+          191.861046213598
+        ],
+        "key": [
+          -11,
+          11
+        ],
+        "landmarks": [
+          "ice_arch"
+        ],
+        "tasks": 4,
+        "terrain_meshes": 9
+      },
+      "snowfield": {
+        "height_range": [
+          9.13314251369948,
+          16.8728475922282
+        ],
+        "key": [
+          -9,
+          6
+        ],
+        "landmarks": [
+          "ice_arch",
+          "open_house"
+        ],
+        "tasks": 5,
+        "terrain_meshes": 9
+      },
+      "volcano": {
+        "height_range": [
+          19.3477192845397,
+          166.246877775254
+        ],
+        "key": [
+          -12,
+          -6
+        ],
+        "landmarks": [
+          "lava_arch"
+        ],
+        "tasks": 2,
+        "terrain_meshes": 9
+      }
+    },
+    "checks": 115,
+    "failures": 0,
+    "follow_speed_mps": [
+      6.87116205692291,
+      13.597252368927
+    ]
+  },
+  "production_streaming": {
+    "checks": 10,
+    "content_version": "0.16.0",
+    "failures": 0,
+    "frames": 11667,
+    "max_ms": 431.291,
+    "p50_ms": 10.005,
+    "p95_ms": 10.233,
+    "p99_ms": 10.333,
+    "peak_memory_mb": 116.664100646973,
+    "peak_nodes": 1760,
+    "renderer": "NVIDIA GeForce RTX 4060 Ti",
+    "resolution": "1920x1080",
+    "scope": "cold production streaming of eight extension biomes, repeated chunk loading; scripted camera, not human RC flight or stable-60fps acceptance",
+    "seconds": 120.002,
+    "worlds": {
+      "alpine": {
+        "active": 567,
+        "desired": 567,
+        "pending": 0,
+        "point": [
+          -8817.625,
+          94.4419479370117,
+          1854.40856933594
+        ]
+      },
+      "gobi": {
+        "active": 567,
+        "desired": 567,
+        "pending": 0,
+        "point": [
+          -8628.4736328125,
+          53.1783142089844,
+          -8064.3203125
+        ]
+      },
+      "monument": {
+        "active": 567,
+        "desired": 567,
+        "pending": 0,
+        "point": [
+          -8599.822265625,
+          38.0921669006348,
+          -7373.1826171875
+        ]
+      },
+      "ravine": {
+        "active": 567,
+        "desired": 567,
+        "pending": 0,
+        "point": [
+          -8970.3759765625,
+          29.4457721710205,
+          -8747.775390625
+        ]
+      },
+      "ruined_city": {
+        "active": 567,
+        "desired": 567,
+        "pending": 0,
+        "point": [
+          -8010.9404296875,
+          20.182071685791,
+          -4846.99609375
+        ]
+      },
+      "snow_peak": {
+        "active": 567,
+        "desired": 567,
+        "pending": 0,
+        "point": [
+          -8074.87646484375,
+          142.802368164063,
+          8674.86328125
+        ]
+      },
+      "snowfield": {
+        "active": 567,
+        "desired": 567,
+        "pending": 0,
+        "point": [
+          -6421.2529296875,
+          21.6255950927734,
+          4938.02294921875
+        ]
+      },
+      "volcano": {
+        "active": 567,
+        "desired": 567,
+        "pending": 0,
+        "point": [
+          -8950.7158203125,
+          39.8861846923828,
+          -4151.896484375
+        ]
+      }
+    }
+  },
+  "live_follow": {
+    "checks": 5,
+    "failures": 0,
+    "frames": 2970,
+    "scope": "scripted target-relative motion, actual Main camera and physics occlusion, persisted reward; not human RC flight",
+    "seconds": 30.018231,
+    "visible_clear_frames": 2970
+  },
+  "scope": "All 28 logic groups passed in batches; two final source windows and seven final bundle windows. Actual rendered/physical geometry, native audio bus output and scripted 1080p tour. Isolated saves only. Not human RC flight, subjective music acceptance or all procedural seeds."
+}

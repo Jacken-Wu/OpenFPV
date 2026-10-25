@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="OfferDefinition" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/content/offer_definition.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "base.offer.freestyle5.frame"
+display_name = "花飞5机架"
+description = "5寸定位，16x16电机孔位；响应敏捷、推重比较高，适合穿门与花式路线。"
+part_id = "base.frame.f_freestyle5"
+price = 150
+city_tag = "industrial"

@@ -1,0 +1,224 @@
+{
+  "version": "0.19.0",
+  "world_version": 4,
+  "date": "2026-10-25T03:03:52",
+  "engine": "4.7.2.stable.official.ed1daf0bf",
+  "content_fingerprint": "4806758cb4036a97d5ca186487889aae1ca928a30ecee5f17b11c4c6ef236096",
+  "pack_sha256": "866b1d6d6a1b7dd58766876451f5421bf975fb022cbed255b084071ae5f982ea",
+  "logical": [
+    {
+      "suite": "cave_seams",
+      "checks": 24,
+      "failures": 0,
+      "log": ".local/cave_seams019-final.log"
+    },
+    {
+      "suite": "race_guide",
+      "checks": 15,
+      "failures": 0,
+      "log": ".local/race_guide019-final.log"
+    },
+    {
+      "suite": "regional_world",
+      "checks": 75,
+      "failures": 0,
+      "log": ".local/regional_world019-final.log"
+    },
+    {
+      "suite": "refinement",
+      "checks": 58,
+      "failures": 0,
+      "log": ".local/refinement019-final.log"
+    },
+    {
+      "suite": "flow_routes",
+      "checks": 17,
+      "failures": 0,
+      "log": ".local/flow_routes019-final.log"
+    },
+    {
+      "suite": "entrance",
+      "checks": 43,
+      "failures": 0,
+      "log": ".local/entrance019-final.log"
+    },
+    {
+      "suite": "gameplay",
+      "checks": 160,
+      "failures": 0,
+      "log": ".local/gameplay019-final.log"
+    },
+    {
+      "suite": "challenge_feedback",
+      "checks": 22,
+      "failures": 0,
+      "log": ".local/challenge_feedback019-final.log"
+    },
+    {
+      "suite": "mission_replay",
+      "checks": 139,
+      "failures": 0,
+      "log": ".local/mission_replay019-final.log"
+    },
+    {
+      "suite": "content",
+      "checks": null,
+      "failures": 0,
+      "log": ".local/content019-final.log"
+    }
+  ],
+  "native_final_pack": [
+    {
+      "suite": "race_guide",
+      "checks": 17,
+      "failures": 0,
+      "log": ".local/test-results/bundle019/race_guide.log"
+    },
+    {
+      "suite": "cave_seams",
+      "checks": 24,
+      "failures": 0,
+      "log": ".local/test-results/bundle019/cave_seams.log"
+    },
+    {
+      "suite": "regional_visual",
+      "checks": 49,
+      "failures": 0,
+      "log": ".local/test-results/bundle019/regional_visual.log"
+    },
+    {
+      "suite": "refinement",
+      "checks": 58,
+      "failures": 0,
+      "log": ".local/test-results/bundle019/refinement.log"
+    },
+    {
+      "suite": "gameplay",
+      "checks": 169,
+      "failures": 0,
+      "log": ".local/test-results/bundle019/gameplay.log"
+    }
+  ],
+  "cave_baseline": {
+    "pack": ".local/baseline018.pck",
+    "log": ".local/cave_seams019-before2.log",
+    "failed_checks": 5,
+    "probes": 3498
+  },
+  "cave_fixed": {
+    "failed_checks": 0,
+    "probes": 2346,
+    "terrains": [
+      "alpine",
+      "snow_peak",
+      "ravine",
+      "volcano"
+    ],
+    "entrances": 8,
+    "sphere_fallback_radius_m": 0.08,
+    "traversal_body_m": [
+      0.6,
+      0.2,
+      0.6
+    ]
+  },
+  "distribution": {
+    "license": "MIT",
+    "copyright": "2026 Jacken-Wu and OpenFPV contributors",
+    "readme_and_license_match_source": true,
+    "readme_links_resolve_in_source_and_bundle": true,
+    "readme_last_section_is_build": true
+  },
+  "scope": "Ten relevant logical suites and five final-pack normal-window suites, not all32 suites or a new120-second performance benchmark. Isolated player profiles.",
+  "limitations": [
+    "Finite seed/view samples, not a proof for every procedural world.",
+    "User RC flight and guide readability still need confirmation.",
+    "Standard template export was documented, not executed; current portable pack was built and tested. Cold loading stalls from0.18 are not claimed solved."
+  ],
+  "source_sha256": {
+    "game/scripts/audio/audio_mixer.gd": "47858782e50f55c4621b02876e82e79089c187e5dfef64877ead33e32d24bdae",
+    "game/scripts/audio/audio_settings.gd": "1d53a9df1e79851e89ce588c21ac9dab681a6602529ec27af0179c2f23eb5a94",
+    "game/scripts/audio/biome_music.gd": "db6a7dc488c35ffc84ecca7ac6a506f2fba97997ace59bf04e162178c0bf19d4",
+    "game/scripts/audio/event_audio.gd": "24c311362c10242e5893466973465c4a46ae640efb17c3a045749e2e17896236",
+    "game/scripts/audio/flight_audio.gd": "c4d9697bba8e1f63cada2e27980017975bb2e5d8cdbd7a7ea2e899c309529696",
+    "game/scripts/content/achievement_definition.gd": "d57f6467d60942ef33f95f773ebcb5cba812410e6bb9de6061d65f2db8adde38",
+    "game/scripts/content/biome_definition.gd": "5c589fa07ddf41251db932dec912b0a1b1d710484d11bd322ec1937b1d1aef97",
+    "game/scripts/content/catalog.gd": "1ba2a11aec663619bdaa62c24cf060ebe8e2f6eb17981e3b53f24649e132d69f",
+    "game/scripts/content/content_manifest.gd": "d31386c16eccc2ebeb3ef56b432b248a7ec34e5672ffc59566ba7f1a38480d0a",
+    "game/scripts/content/drone_preset_definition.gd": "7327ea08431fbcc2e8f2849faf4a4d7c2e7e2b79ac8fd6c6f9779de4052b5d59",
+    "game/scripts/content/mission_definition.gd": "f95f8898e966c44466fe19751a7dcec557a42afb7d535125635ed5d53376ab76",
+    "game/scripts/content/offer_definition.gd": "1f739cd0e877c27b8628d09642822c1beb5e0d67de218fd0c1de03ce2a8d9ac0",
+    "game/scripts/content/part_definition.gd": "111f589c29c5e9bcf4ffb9dc0f217065b5031a85f792cbe72595cc55d3e652dd",
+    "game/scripts/content/propulsion_map_definition.gd": "473582e6731ad17f6b129830037b5d3db58ea49d399d47a6bd9c72262b5e368a",
+    "game/scripts/content/reward_definition.gd": "663113a4a10b3621d20128ac945a34e2121714c123e6c47b0643edebcd097d00",
+    "game/scripts/debug/developer_commands.gd": "77d97a2a1bade42355e8f2a5897e64143f777283ea521a0077dde91c64ebfa47",
+    "game/scripts/equipment/assembler.gd": "1283cc45b72ed5f28eb53b678af9cb07ce472254a5c2ca4001ced49ffacd9d86",
+    "game/scripts/flight/drone.gd": "b931d8d6da8e203ed5cfd585e3ec90664243a1e5b6b9c03e9a7a1aef09558d22",
+    "game/scripts/flight/flight_input.gd": "827081b91e3ce2e903ab492c006bf8f2e9876b9e59056fd5bd9b0ce7f1ded6a2",
+    "game/scripts/flight/flight_tuning.gd": "e4d24634b7b59659d4369eec15cff6529533bdb67d22772d8292e2626c76c8ae",
+    "game/scripts/flight/radio_capture.gd": "d571437644c76bb920f42080410e2ca297457b9b2c974b27accd2a35abbdb569",
+    "game/scripts/flight/radio_profiles.gd": "436c9e655156781d7dad1140abcd49aeb4452f893c8889863081b0b800200860",
+    "game/scripts/main.gd": "e95a364fe9853b94f4fb6669c783ea13145f01edf686a02f084b423d6e61e917",
+    "game/scripts/progress/achievement_book.gd": "7c6a137f32db93ce9c4f31404fac5c24a46b4578f362b7dd3bf77163daf3e427",
+    "game/scripts/progress/flight_challenge_rules.gd": "0b13c975a9f5b84bd3c5ddda11a69c7da01402040aae280b968c4052672ad779",
+    "game/scripts/progress/mission_controller.gd": "14e73f7e9f436b1ac64d48333aaa6f3f9dd0ba31162b6451e7bccf73f29a63bc",
+    "game/scripts/progress/photo_objective.gd": "36f760a5e2594c63bdf67d58b0b8ed92ca03863334dd6670cc1c93cb70a0b8f5",
+    "game/scripts/progress/progress_store.gd": "e2319a393707bbfa6b39b8df015265c00a75cd339015273adafcdd5fbbe95a92",
+    "game/scripts/progress/regional_challenge_rules.gd": "805cce9e11cf4fe5dd74a15312a38e0cae8ee31f4e92bfbff000563155a813de",
+    "game/scripts/progress/save_library.gd": "58b287df42c2957778d76e10c99ef5b1fc48326186da735f8cbb55e0a689f1fb",
+    "game/scripts/ui/achievements_menu.gd": "58c786585fb1a45d64bcd0cfa2011aec12d86581c8f327d117aadb2fe71f9833",
+    "game/scripts/ui/audio_menu.gd": "78006df091cee2baf28b05f0b0ed480b83605e5474c098115bf970080388cef6",
+    "game/scripts/ui/developer_console.gd": "e6fa8fe51741874cccd33a36cfca6393fcff80245b689da66b03ef8aa41c649a",
+    "game/scripts/ui/flight_effects.gd": "1f6272e6ee74279b2f82a96b8e639574eb8501fb9082c395300b5c7868a36586",
+    "game/scripts/ui/input_display.gd": "d87b30b39724df341fb6445cc5195f0c0b0e922a8ae627c1b955a2aa1b128eb7",
+    "game/scripts/ui/input_display_menu.gd": "9e66c1246000cf376d435f22226c205aff33deaea96e43ec96efc40f414d40ea",
+    "game/scripts/ui/map_canvas.gd": "72e169a7980c41ea7eacaa9bef0303b5d716c74e78b54c1f4d492bb1243d612a",
+    "game/scripts/ui/mission_board.gd": "59b933cb9dc1aa838fbe811935dc996723853c61dd50c15f1ce4624f708b1f51",
+    "game/scripts/ui/mission_challenge_view.gd": "a8265ccbebdf5174f9f311a30ae6ee184353ff0ef92d83527d94e88313a188e0",
+    "game/scripts/ui/mission_pop_effects.gd": "4974d60a83ea44bcf2e367d3e00b188a49a257a0462b71ee23cd00d3acadebbc",
+    "game/scripts/ui/navigation_hud.gd": "995502e1c91b0cd3b05fbd0b0e8a57596d9989e7d7445c8f090c71c1c5edb694",
+    "game/scripts/ui/pause_menu.gd": "e034b1ce3dfc45de80a27277dcf162bcf5be527a9f203a38e2bb31755a80ea96",
+    "game/scripts/ui/photo_notice.gd": "6166214a8efb4ff8b8dfbdc902438ac1fd4e960ca5e8782dfc5e599e9d30b0dc",
+    "game/scripts/ui/race_route_guide.gd": "faf6296a1bd2abbbb16f410aa12ba6b2cbd2775ca37a8060a0a860206d8a3605",
+    "game/scripts/ui/radio_calibration.gd": "21ebfe0aa01322a9978ce02e23792d1f4a17db1206c676705d173dab63f92cef",
+    "game/scripts/ui/radio_menu.gd": "a137b9a48bcab7835f72214816c634d9fef5ef0e0af12cb10be54cf63fff22a9",
+    "game/scripts/ui/rate_curve.gd": "16c7fedfbc9fc4b6305991c70ba318683049b916c1740273fd2faa40d7eea374",
+    "game/scripts/ui/region_map.gd": "77a2e434b4d2cb6369366a18d1018f41cd31de670f19108078efe06a55aa9c9c",
+    "game/scripts/ui/save_menu.gd": "fcc4b8a944a01b33897518a6105642ce3b79a11868aacd802139068882b7df2a",
+    "game/scripts/ui/ui_style.gd": "d047836f9982b8e98702f5c6e9215349975d9e14381e9e8d6707db8fad632441",
+    "game/scripts/ui/unlock_notifications.gd": "70a23f9fbe7d0f9a340fc460702dee1ac5cdfa6a5d473ed12559ef49303b615b",
+    "game/scripts/ui/workshop.gd": "fe7aabdb5a64afa9f1afcb0ef7b8070816df88c30504f465b889749ab21d959a",
+    "game/scripts/world/architecture.gd": "67ddcb138d75ab9d7997a80c17912feb610ca791c7450ea58a2d60d9f9c63461",
+    "game/scripts/world/biome_field.gd": "075fb5fed04e68b6ba89970897a059a8fdb95680355ca2b0529c6456cf97a2c3",
+    "game/scripts/world/biome_landmarks.gd": "45cd1d79c7dff0a5a7a0a348a4a1b986968d9f8dd7669bee4ba5657c27d84533",
+    "game/scripts/world/biome_locator.gd": "65cd47d07f7e06af98ae6abfc4a4dc6898f792106644ec04c6a270a44a7a3649",
+    "game/scripts/world/biome_structures.gd": "4824af4e2685dba9cc0a57dab151e708800ae383d4ef7d2a688d9f3fa0632897",
+    "game/scripts/world/biome_surface_provider.gd": "a0cd798e034646d7e1704af2912cd6607277d5d036483e280709291c29937108",
+    "game/scripts/world/biome_terrain.gd": "4286abb423b81eeb4c1467fb51a2e7b7949b3d1697b29de4a814a6ab9e4faf21",
+    "game/scripts/world/biome_world.gd": "d0ed6fc25141b56803288ac4b6a95bf2163adb0448cb869db03b88c8f396ee2a",
+    "game/scripts/world/cave_networks.gd": "677d779d2833bc56e1f652d761d467daa318291aeb03b62b5a4906fb5a4447d7",
+    "game/scripts/world/cave_passages.gd": "62746818cab913a2c1099448c3b44b89484f31c79de478678b8f552466e9b045",
+    "game/scripts/world/feature_geometry.gd": "5403d421cf724106b73b6b7cfb6db904fc806e27aa9cf270144e81457702978b",
+    "game/scripts/world/flow_courses.gd": "c13ad9d70a4f4b3a2b55c07dbacf7432ebe7f241ce0ef8fd172e0b72926b98cd",
+    "game/scripts/world/follow_courses.gd": "9d7cbfa52f4e198cac03282e7d3facff6718958371ace35ba5f2b6fe4919f39a",
+    "game/scripts/world/legacy_world_provider.gd": "1998902165d860c9d289c8f6c26ad060d17f0e17e81bfaff8f8b6777bf6b5ea6",
+    "game/scripts/world/map_location.gd": "c3f3e5a2b283be01270af3ab2047ab3a8bcb54d95098b3236c207783c31ead81",
+    "game/scripts/world/map_navigation.gd": "6b6ce43e89d0dd35a8aa13184fd8a3a9890d046cb466320eb03c126bec28e6c0",
+    "game/scripts/world/mission_courses.gd": "1f9c530fcf36091d523a25d1810bd961d36f01ac80ec3ce00836612e0112d811",
+    "game/scripts/world/mission_sites.gd": "8fdaa263ee5416c65e1d74e7e1781ed34d1c98eef9155934f73982b838d64d0c",
+    "game/scripts/world/open_structures.gd": "b2e77ea8995495fb2f86b10b6d572ae74ba1997e8b4e3da63c38f872d5295ac6",
+    "game/scripts/world/precision_courses.gd": "94ac6a1c44450f890b72f106b3509e0e0a1f8880be32de71d54e217ccd788b09",
+    "game/scripts/world/regional_features.gd": "80a0de6946e775fc362ce10c1fdbb266bd5edc09da3fba7bed83e423cde7cc5f",
+    "game/scripts/world/regional_sites.gd": "7269d2731d5d7af45e227961f94edd075a660c80667d066518688c1ac9d1469e",
+    "game/scripts/world/regional_terrain_sampler.gd": "8001e36afabe3c01e725f591a7da430c418a827ca611e74f8152f2937f26c92e",
+    "game/scripts/world/regional_world.gd": "d5b3a39afbea540a64d47d21fcb0b6775fc54fdcf92ce0d873c6e35111c13adf",
+    "game/scripts/world/regional_world_provider.gd": "2e243b75ae38acda91a52f84d245e2d88c9bac59b90c281f4140009cb527a043",
+    "game/scripts/world/terrain_sampler.gd": "8d293999a6b1d10082dbc17336cdd8fe21b61690c8cbe741cf8482b0d18a839f",
+    "game/scripts/world/world_exploration.gd": "ee815662cffc37c4b2b953fa4ae55d0f32bdb6aa463de2243428d128d1debba9",
+    "game/scripts/world/world_generator.gd": "cb784ff2a606850afa6854d3e1f01faf2e1cbbc95b3e6337c1a8051b0dbcb411",
+    "game/scripts/world/world_geometry.gd": "108f20f5b077e719cb83376263c477c3c599aa22e240e14ff692706186b8305a",
+    "game/scripts/world/world_materials.gd": "24206f72dd4b9d10aa6327940e17f465b1dd3ff03e77fbd197f3c10f3a7afb12",
+    "game/scripts/world/world_provider.gd": "2fdf872d0535af4646a35827b4c580f68de3091c47ddeb24bd6dd6494c6e186c",
+    "game/scripts/world/world_streamer.gd": "38b3174c14db89ef76a20cf0ff9f021f87209cd5bc282dc8698f41d0ea60726d"
+  }
+}

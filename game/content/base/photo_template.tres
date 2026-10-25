@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="MissionDefinition" load_steps=2 format=3]
+[ext_resource type="Script" path="res://scripts/content/mission_definition.gd" id="1"]
+[resource]
+script = ExtResource("1")
+id = "base.template.photo"
+display_name = "信标摄影"
+description = "在信标 10～45 米距离取景，画面中心偏角不超过 18° 且无遮挡，按 F12 保存照片。可暂停取景。"
+kind = "photo"
+reward_id = "base.reward.exploration"
+mission_tag = "exploration"
+city_tag = "any"
+min_distance = 10.0
+max_distance = 45.0

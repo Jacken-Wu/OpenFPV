@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="MissionDefinition" load_steps=2 format=3]
+[ext_resource type="Script" path="res://scripts/content/mission_definition.gd" id="1"]
+[resource]
+script = ExtResource("1")
+id = "base.template.relay"
+display_name = "信标校准"
+description = "抵达信标 4 米以内，以低于 5.4 km/h 的速度按住 E 两秒，完成信标校准。"
+kind = "hold_interact"
+reward_id = "base.reward.exploration"
+mission_tag = "exploration"
+city_tag = "any"
+interaction_radius = 4.0

@@ -1,0 +1,25 @@
+{
+  "scope": "Rotor waveform only; objective spectrum does not certify subjective listening quality.",
+  "source_before": ".local/test-results/bundle011/developer/rotor-base.wav",
+  "source_after": ".local/test-results/hud-audio/rotor-base.wav",
+  "before": {
+    "peak": 0.5225830078125,
+    "rms": 0.2652313745517865,
+    "maximum_single_bin_energy_share": 0.7051174421223328,
+    "full_throttle_energy_above_2000hz": 7.3979476947696e-05,
+    "full_throttle_energy_above_4000hz": 1.143857038007971e-09,
+    "loop_seam": 0.040008544921875,
+    "base_sample_rate": 22050,
+    "full_throttle_pitch": 3.55
+  },
+  "after": {
+    "peak": 0.699951171875,
+    "rms": 0.18089268161601949,
+    "maximum_single_bin_energy_share": 0.01678088684164662,
+    "full_throttle_energy_above_2000hz": 0.01226937370633862,
+    "full_throttle_energy_above_4000hz": 0.00027635270578082023,
+    "loop_seam": 0.016265869140625,
+    "base_sample_rate": 22050,
+    "full_throttle_pitch": 2.25
+  }
+}
