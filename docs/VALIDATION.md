@@ -1,5 +1,9 @@
 # P1 验证记录
 
+## 0.22标签目标检查（2026-10-25）
+
+本轮只调整README、目录跟踪与版本标签。output忽略规则取消proposal例外，整个目录用git rm --cached移出跟踪，本地文件保留；检查README指定句子已删除、Git索引不含output/.codex、忽略规则有效及提交格式。0.22标签应指向这些变更完成后的提交，推送仅显式包含main与refs/tags/0.22，不推送其他本地标签，不创建GitHub Release。没有运行代码改动，不重复游戏检查。
+
 ## README与Git跟踪整理（2026-10-25）
 
 本轮仅重写README和调整Git跟踪规则，不改变运行代码。检查README本地文件/章节链接、Markdown代码块及实际构建脚本路径；.codex使用git rm --cached移出索引，本地memory/changelog保留，git check-ignore确认排除。同步main采用普通提交，不改写历史，不创建tag或Release；不重复游戏逻辑和画面检查。

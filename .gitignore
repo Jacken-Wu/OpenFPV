@@ -8,9 +8,8 @@ tmp/
 *.log
 *.tmp
 *.bak
-# Keep editable research, exclude generated PDFs.
-output/*
-!output/proposal/
+# Local research and generated documents
+output/
 # Editors and OS
 .vscode/
 .code/
