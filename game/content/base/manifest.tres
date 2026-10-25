@@ -94,7 +94,7 @@
 
 [resource]
 script = ExtResource("1")
-content_version = "0.22.0"
+content_version = "0.24.0"
 world_version = 4
 initial_preset_id = "base.preset.explorer5"
 parts = Array[Resource]([ExtResource("2"), ExtResource("3"), ExtResource("4"), ExtResource("5"), ExtResource("6"), ExtResource("7"), ExtResource("8"), ExtResource("content012_101"), ExtResource("content012_102"), ExtResource("content012_103"), ExtResource("content012_104"), ExtResource("content012_105"), ExtResource("content012_106"), ExtResource("content012_107"), ExtResource("content012_108"), ExtResource("content012_109")])

@@ -1,5 +1,42 @@
 # P1 验证记录
 
+## 0.24用户验收与源码标签（2026-10-26）
+
+用户反馈“这个版本不错”，明确授权将当前源码提交并推送到main，创建并推送`0.24`标签；二者以同一提交为目标。记录当前航线体验认可，不扩展为全机型、全速度或持续RC飞行验证。本次整理沿用下方已有的0.24测试及构建证据，没有新增游戏逻辑或重新运行验证。
+
+## 内容0.24：关键门、空间转向与随动姿态（2026-10-25 23:40）
+
+Godot4.7.2.stable.official.ed1daf0bf，内容0.24.0、世界4。源码/原生Debug/Release内容指纹一致：`7571ebb6e9edad74b273bc1c1e3900c591a8f0a7fc959617b6ff0b82484b4abf`。测试结果、逐路线统计、源文件/成品/日志SHA256见[本轮证据](benchmarks/content-0.24-spatial-routes.json)。所有进度与奖励验证使用隔离档。
+
+- 11相关headless组零失败：spatial_routes26、gameplay160、flow_routes17、refinement58、race_guide17、continuous_routes32、mission_replay139、regions45、content、challenge_feedback22、acro_routes6。三正常窗口组零失败：spatial_routes30、race_guide19、refinement58；Mobile/Vulkan、RTX4060Ti。最终日志`.local/*-024-final.log`及`*-024-final-window.log`，未把早期解析或自交框碰撞失败计入通过。
+- 四种子271828/42/314159/1919810、[-3,0]²地表/天空共82条公开竞速中，76条采用关键门布局，其余6条保留基础环境路线。转换线路的门数1273→721，减少43.4%；抽样中原0.23密集曲线全部得到稀疏布局。180米纯直线严格为起终点两门，144米左右的宽缓圆弧不超过四门。
+- 76条中38条重设计中心线、38条受建筑等限制保留原曲线并改门；重设计的38条有31条对参考平面的最大偏离超过2米。全部样本中38条满足该非共面阈值、67条含曲率>1/12m的紧弯、49条有相对默认世界up至少25度的门框倾斜。倾斜但仍在单一平面的回环不被误计为非共面；统计只描述有限样本，不能代表整个世界。
+- 同一半径8米、朝世界下方的弯，在机体倒扣时按正向拉杆处理，机体保持正置时为紧负俯仰；任意整体旋转后结果不变。新设计以机体上方向计算参考负俯仰曲率和滚转衔接；狭窄历史通路的原几何不被追认证明满足新机动指标。45度滚转框的实际开口边角正向可计数，框外和反向拒绝。
+- 四类空间机动通过真实旋转门框的0.4米球体逐段物理扫掠；refinement验证城市、废城、巨构的完整曲线/实际开口，gameplay对地表、森林、沙漠、天空与地下生成实体验证。新框额外避让其他竞速曲线，自交处删除会阻碍另一分支的框。稀疏门之间的弦线不作为必须飞过的路线，旧布局继续保留原断言。
+- 当前门高亮与实体姿态一致，引导线逐点对应真实曲线，箭头十字翼随flight_ups滚转；阶段推进、菜单/照片隐藏、原点平移及完成移除通过。四类空间机动及真实城市阶段前后截图已查看，位于`.local/test-results/spatial-routes/`。半回环预览另换观察角度，避免投影重叠掩盖空间形状。
+- 冷重建复现门位、门向与完整随动姿态，生成不修改共享内容。0.23活动任务重启保留原曲线/门向/阶段，完成后重玩spatial布局不重复发首次奖励。原acro v1及smooth曲线专项作为历史契约继续通过；旧smooth生产曲线的检查由新版实际公开路线的refinement/gameplay接替。
+- 最终原生Debug/Release构建、图标/许可、源码及成品启动与指纹一致检查通过。Test-Distribution四进程存档/照片隔离及Release单exe独立运行通过；Debug需配套PCK，Release目录仅OpenFPV.exe。本轮没有推送、修改标签或发布GitHub Release。
+
+没有运行完整38组入口、新的性能巡检或持续人工飞行。几何与推荐姿态检查不保证任意速度/机型都能按参考曲线飞行；实际RC的急缓节奏、横滚/倒飞提示和自由走线体验仍待用户确认。已领取的历史任务仍使用原布局。
+
+## 内容0.23：连续立体穿门航线（2026-10-25 22:25）
+
+Godot4.7.2.stable.official.ed1daf0bf，内容0.23.0、世界4。源码/原生Debug/Release内容指纹一致：`6a95dd48b87c3e3473c8598bcaeb704d84a1bdc7419d96068d18b075c1e0376f`。实际测试结果、源码/成品/日志SHA256与抽样路线见[本轮证据](benchmarks/content-0.23-continuous-routes.json)。所有进度写入使用隔离测试档。
+
+- 七相关headless组全部零失败：continuous_routes34、flow_routes17、acro_routes6、gameplay160、regions45、mission_replay139及content。三正常窗口组零失败：continuous_routes38、race_guide18、refinement58，实际使用Mobile/Vulkan与RTX4060Ti；日志`.local/*-023-final.log`和`*-023-final-window.log`。未将早期空箭头网格ERROR或天空地区归属失败的结果计作通过。
+- 种子271828/42/314159/1919810、每个种子的[-3,0]²地表/天空抽样共82条公开竞速，71条采用连续曲线，11条因净空/曲率/地区边界等约束保留基础环境路线；不再公开旧acro叠门折线。样本包含大回环、水平环绕、S弯、宽弧下降与破S。验证门中心与曲线采样一致、法线匹配切线、曲线正向过门/逆向拒绝、门距/数量有界及天空航点地区归属不变。有限样本不能代表全种子世界。
+- 四种无障碍机动均对真实门框执行0.4米球体逐段物理扫掠；另以实际生成的完整城市/自然地形回环与浮岛破S逐段扫掠，生产实体通过。refinement同时检查城市、废城、巨构的完整曲线、门间连线和开口。曲率专项中直立下降转弯在14m/s参考速度下最大向下弯曲加速度约4.896m/s²，小于9.81；短距离突然从平飞压入竖直下降的候选被拒绝。这不是任意速度/机型下的飞行动力学保证。
+- 冷重建复现门位、门向及完整曲线，生成不修改共享内容；历史v1 acro活动任务重读原门位/门向/阶段，新旧路线首次奖励共享。引导线直接与任务曲线数据逐点核对，阶段提交、遮挡、菜单/照片、原点平移及完成移除通过。四种机动示意与真实城市起点/过第一门截图已查看，保存在`.local/test-results/continuous-routes/`。
+- 最终重新构建原生Debug和Release，图标、内嵌许可、实际源码/成品启动与指纹检查通过；Test-Distribution四进程数据隔离和Release单exe独立运行通过。Debug保留配套PCK，Release目录仅OpenFPV.exe。没有推送、移动标签或发布GitHub Release。
+
+本轮不是完整37组回归，也未做新的性能巡检或持续人工飞行。真实遥控器连续穿门、不同速度的下降余量、机动难度与手感仍待用户体验；已领取旧路线保留原布局和进度，新领取/重玩公开路线使用新规则。
+
+## 0.22双渠道重新构建（2026-10-25 19:29）
+
+使用Godot4.7.2.stable.official.ed1daf0bf，基于提交b2d0d889efad39798b5cfa3f01be7031042deb90，分别执行tools/Build.ps1的Debug和Release构建。两个原生模板导出、七尺寸图标、内嵌许可全文哈希、打包程序与源码启动及内容指纹一致性检查均通过。输出为builds/Debug/OpenFPV.exe（需同目录OpenFPV.pck）和builds/Release/OpenFPV.exe。
+
+tools/Test-Distribution.ps1 -SkipBuild通过：四次真实进程检查存档与照片的Debug/Release隔离；Release复制至空目录独立运行成功；两渠道无外部发行文档，Release目录仅exe。证据为.local/build-Debug.log、build-Release.log、smoke-Debug.log、smoke-Release.log和distribution-result.json；本次成品摘要见.local/rebuild-0.22.json。未重复全量逻辑、画面、遥控器或性能测试；没有修改运行代码、移动0.22标签或发布GitHub Release。
+
 ## 0.22标签目标检查（2026-10-25）
 
 本轮只调整README、目录跟踪与版本标签。output忽略规则取消proposal例外，整个目录用git rm --cached移出跟踪，本地文件保留；检查README指定句子已删除、Git索引不含output/.codex、忽略规则有效及提交格式。0.22标签应指向这些变更完成后的提交，推送仅显式包含main与refs/tags/0.22，不推送其他本地标签，不创建GitHub Release。没有运行代码改动，不重复游戏检查。

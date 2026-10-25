@@ -20,8 +20,8 @@ func run() -> void:
 			for z in range(-3, 1):
 				for kind: String in ["surface", "sky"]:
 					var plan := world.plan(kind, Vector2i(x, z))
-					for task: MissionDefinition in plan.get("missions", []):
-						if task.kind != "race" or not task.challenge.has("acro_revision"): continue
+					for task: MissionDefinition in plan.get("legacy_missions", []):
+						if task.kind != "race" or task.challenge.get("acro_revision", 0) != 1: continue
 						routes += 1
 						local_routes += 1
 						var old := world.mission(task.id.trim_suffix(":acro"))

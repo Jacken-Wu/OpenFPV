@@ -119,7 +119,7 @@ func run() -> void:
 		check(entry == null or entry.id != race.id, "accepted race cannot be reaccepted at a legacy gate")
 	var center := race.checkpoints[0]
 	var normal := race.gate_normals[0]
-	var side := FlightChallengeRules.gate_basis(normal).x
+	var side := FlightChallengeRules.gate_basis_for(race, 0).x
 	check(FlightChallengeRules.passes_gate(race, 0, center - normal, center + normal), "correct signed crossing passes actual gate")
 	check(not FlightChallengeRules.passes_gate(race, 0, center + normal, center - normal), "reverse gate crossing does not count")
 	check(not FlightChallengeRules.passes_gate(race, 0, center - normal + side * 4, center + normal + side * 4), "passing outside the frame cannot count")
@@ -382,6 +382,7 @@ func geometry(plans: Array[Dictionary], catalog: ContentCatalog) -> void:
 		var points := PackedVector3Array()
 		for mission: MissionDefinition in routes:
 			points.append_array(mission.checkpoints)
+			if mission.challenge.has("spatial_revision"): points.append_array(mission.challenge.flight_path)
 		var bounds := AABB(points[0], Vector3.ZERO)
 		for point in points:
 			bounds = bounds.expand(point)
@@ -404,7 +405,7 @@ func geometry(plans: Array[Dictionary], catalog: ContentCatalog) -> void:
 			body.size = Vector3(0.4, 0.3, 0.4)
 			for index in mission.checkpoints.size():
 				var center := mission.checkpoints[index] - origin
-				var basis := FlightChallengeRules.gate_basis(mission.gate_normals[index])
+				var basis := FlightChallengeRules.gate_basis_for(mission, index)
 				var half := float(mission.challenge.gate_half) - 0.35
 				for a: float in [-1, -0.5, 0, 0.5, 1]:
 					for b: float in [-1, -0.5, 0, 0.5, 1]:
@@ -415,11 +416,19 @@ func geometry(plans: Array[Dictionary], catalog: ContentCatalog) -> void:
 						if not hit.is_empty():
 							print("COURSE_BLOCKED ", mission.id, " gate=", index, " offset=", Vector2(a, b), " center=", mission.checkpoints[index])
 							clear = false
-				if index > 0:
+				if index > 0 and not mission.challenge.has("spatial_revision"):
 					var hit := space.intersect_ray(PhysicsRayQueryParameters3D.create(mission.checkpoints[index - 1] - origin, center))
 					if not hit.is_empty():
 						print("COURSE_LEG_BLOCKED ", mission.id, " gate=", index)
 						clear = false
+			if mission.challenge.has("spatial_revision"):
+				var path: PackedVector3Array = mission.challenge.flight_path
+				for index in range(1, path.size()):
+					var query := PhysicsShapeQueryParameters3D.new()
+					query.shape = body
+					query.transform.origin = path[index - 1] - origin
+					query.motion = path[index] - path[index - 1]
+					if space.cast_motion(query)[0] < 1: print("SPATIAL_CURVE_BLOCKED ", mission.id, " ", index); clear = false
 			check(clear, "actual generated collisions preserve gate apertures and route legs " + key + " " + mission.id)
 			geometry_cases.append({"id": mission.id, "layer": key, "gates": mission.checkpoints.size(), "body_samples_per_gate": 25, "clear": clear})
 		host.queue_free()

@@ -67,25 +67,28 @@ func courses() -> void:
 			check(task.challenge.get("precision_revision", 0) == 1, kind + " new public challenge uses building-dependent precision layout")
 			if task.challenge.get("precision_revision", 0) == 0: continue
 			count += 1
-			var old := world.mission(task.id.trim_suffix(":acro") if task.id.ends_with(":acro") else task.id.trim_suffix(":precision"))
+			var old := world.mission(task.id.trim_suffix(":spatial") if task.id.ends_with(":spatial") else task.id.trim_suffix(":smooth") if task.id.ends_with(":smooth") else task.id.trim_suffix(":acro") if task.id.ends_with(":acro") else task.id.trim_suffix(":precision"))
 			check(old != null and old.transaction_id() == task.transaction_id(), "old layout resolves with the same one-time reward identity")
 			var longest := 0.0
 			for index in range(1, task.checkpoints.size()): longest = maxf(longest, task.checkpoints[index - 1].distance_to(task.checkpoints[index]))
 			if task.kind == "race" and task.challenge.get("acro_revision", 0) > 0:
-				check(task.checkpoints.size() > old.checkpoints.size() and task.checkpoints.size() <= AcroCourses.MAX_GATES, kind + " new race adds bounded close manoeuvres instead of requiring long trips")
+				check(task.checkpoints.size() >= (2 if task.challenge.has("spatial_revision") else 7) and task.checkpoints.size() <= ContinuousCourses.MAX_GATES and task.challenge.has("flight_path"), kind + " new race uses bounded continuous manoeuvres")
 			else:
 				check(longest >= 100, kind + " regional route still retains its requested long legs")
 			for index in task.checkpoints.size():
 				var p := task.checkpoints[index]
 				if task.kind == "race" or task.challenge.mode == "clean":
-					if index > 0: targets.append({"a": task.checkpoints[index - 1], "b": p})
+					if index > 0 and not task.challenge.has("spatial_revision"): targets.append({"a": task.checkpoints[index - 1], "b": p})
 				else:
 					targets.append({"a": p + Vector3.UP, "b": p})
 				if task.kind == "race":
-					var basis := FlightChallengeRules.gate_basis(task.gate_normals[index])
+					var basis := FlightChallengeRules.gate_basis_for(task, index)
 					var half := float(task.challenge.gate_half) - 0.5
 					for x: float in [-half, 0, half]:
 						for y: float in [-half, 0, half]: targets.append({"a": p + basis * Vector3(x, y, -0.5), "b": p + basis * Vector3(x, y, 0.5)})
+			if task.kind == "race" and task.challenge.has("flight_path"):
+				var path: PackedVector3Array = task.challenge.flight_path
+				for index in range(1, path.size()): targets.append({"a": path[index - 1], "b": path[index]})
 		check(count > 0, kind + " supplies upgraded challenges")
 		for target in targets:
 			var steps := ceili(Vector3(target.a).distance_to(target.b) / 32) + 1

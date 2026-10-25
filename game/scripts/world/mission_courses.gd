@@ -139,8 +139,8 @@ static func _race(plan: Dictionary, mission: MissionDefinition, ground: Vector3,
 	mission.target_point = mission.checkpoints[0]
 	mission.description += "\n共%d门，黄色箭头为通过方向；进入门框附近不计数，需穿过开口平面。" % mission.checkpoints.size()
 
-static func gate(objects: Array, id: String, center: Vector3, normal: Vector3, half: float = 3.4) -> void:
-	var basis := FlightChallengeRules.gate_basis(normal)
+static func gate(objects: Array, id: String, center: Vector3, normal: Vector3, half: float = 3.4, up_hint: Vector3 = Vector3.ZERO) -> void:
+	var basis := FlightChallengeRules.gate_basis(normal, up_hint)
 	for side: float in [-1, 1]:
 		for horizontal in [false, true]:
 			var edge := half + FlightChallengeRules.GATE_EDGE_OFFSET

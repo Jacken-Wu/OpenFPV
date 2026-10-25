@@ -7,8 +7,15 @@ const GATE_BAR_WIDTH := 0.45
 static func gate_opening_half(mission: MissionDefinition) -> float:
 	return float(mission.challenge.get("gate_half", 3.4)) + GATE_EDGE_OFFSET - GATE_BAR_WIDTH * 0.5
 
-static func gate_basis(normal: Vector3) -> Basis:
+static func gate_basis(normal: Vector3, up_hint: Vector3 = Vector3.ZERO) -> Basis:
+	if up_hint.is_finite() and not up_hint.is_zero_approx():
+		var up := up_hint - normal * up_hint.dot(normal)
+		if up.length_squared() > 0.0001: return Basis.looking_at(normal, up.normalized())
 	return Basis.looking_at(normal, Vector3.FORWARD if absf(normal.dot(Vector3.UP)) > 0.95 else Vector3.UP)
+
+static func gate_basis_for(mission: MissionDefinition, index: int) -> Basis:
+	var ups: PackedVector3Array = mission.challenge.get("gate_ups", PackedVector3Array())
+	return gate_basis(mission.gate_normals[index], ups[index] if ups.size() == mission.gate_normals.size() else Vector3.ZERO)
 
 static func passes_gate(mission: MissionDefinition, stage: int, from: Vector3, to: Vector3) -> bool:
 	if stage >= mission.checkpoints.size() or stage >= mission.gate_normals.size() or not from.is_finite() or not to.is_finite():
@@ -20,7 +27,7 @@ static func passes_gate(mission: MissionDefinition, stage: int, from: Vector3, t
 	if a >= 0 or b < 0 or b - a <= 0.00000001:
 		return false
 	var crossing := from.lerp(to, -a / (b - a)) - center
-	var local := gate_basis(normal).inverse() * crossing
+	var local := gate_basis_for(mission, stage).inverse() * crossing
 	# The body already has physical collision. Shrinking the centre crossing
 	# again excluded a 32.5cm strip inside the actual opening on every side.
 	var half := gate_opening_half(mission) + 0.01

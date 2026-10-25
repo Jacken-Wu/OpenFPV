@@ -57,7 +57,19 @@ func run() -> void:
 	for child in guide.find_children("*", "CollisionObject3D", true, false): physical = physical or child != null
 	check(not physical, "reference line has no physical collision")
 	var line: MeshInstance3D = guide.get_child(0)
-	check(not line.mesh.material.no_depth_test and line.mesh.material.albedo_color == Color("ffe090"), "current segment is gold and obeys depth occlusion")
+	var line_material: StandardMaterial3D = line.mesh.surface_get_material(0)
+	check(not line_material.no_depth_test and line_material.albedo_color == Color("ffe090"), "current segment is gold and obeys depth occlusion")
+	var curve_matches: bool = task.challenge.has("flight_path")
+	for segment: Dictionary in guide.segments:
+		if segment.gate == 0: continue
+		var indices: PackedInt32Array = task.challenge.gate_path_indices
+		var curve: PackedVector3Array = task.challenge.flight_path
+		var begin: int = indices[segment.gate - 1]
+		curve_matches = curve_matches and segment.path.size() == indices[segment.gate] - begin + 1
+		for index in segment.path.size(): curve_matches = curve_matches and (segment.path[index] + task.acceptance_point()).distance_to(curve[begin + index]) < 0.002
+	check(curve_matches, "visible guide follows the validated flight curve through every gate")
+	var highlight: Node3D = view.actors[task.id].root.get_node("CurrentGate")
+	check(highlight.basis.is_equal_approx(FlightChallengeRules.gate_basis_for(task, 0)), "current gate highlight matches the physical banked frame")
 	var camera := Camera3D.new()
 	game.add_child(camera)
 	camera.global_position = point - task.gate_normals[0] * 22 + Vector3.UP * 9 - origin

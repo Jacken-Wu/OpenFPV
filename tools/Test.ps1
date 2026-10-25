@@ -18,9 +18,9 @@ function Invoke-EngineCheck([string]$Name, [string[]]$EngineArgs, [string]$Marke
 }
 
 Invoke-EngineCheck 'import' @('--headless', '--path', $project, '--editor', '--import') ''
-foreach ($suite in @('input', 'radio', 'controls', 'hud_audio', 'rotor_audio', 'field_tasks', 'flow_routes', 'acro_routes', 'navigation_preview', 'refinement', 'cave_seams', 'race_guide', 'regional_world', 'expansion', 'challenge_feedback', 'mission_replay', 'gameplay', 'handling', 'audio', 'entrance', 'actions', 'tuning', 'map', 'missions', 'content', 'world', 'streaming', 'scenery', 'regions', 'discovery', 'playability', 'developer', 'exploration', 'flight', 'integration', 'about')) {
+foreach ($suite in @('input', 'radio', 'controls', 'hud_audio', 'rotor_audio', 'field_tasks', 'flow_routes', 'acro_routes', 'continuous_routes', 'spatial_routes', 'navigation_preview', 'refinement', 'cave_seams', 'race_guide', 'regional_world', 'expansion', 'challenge_feedback', 'mission_replay', 'gameplay', 'handling', 'audio', 'entrance', 'actions', 'tuning', 'map', 'missions', 'content', 'world', 'streaming', 'scenery', 'regions', 'discovery', 'playability', 'developer', 'exploration', 'flight', 'integration', 'about')) {
     $marker = if ($suite -eq 'flight') { 'FLIGHT_TESTS: 0 failure(s)' } elseif ($suite -eq 'regional_world') { 'REGIONAL_RESULT failures=0' } else { "$($suite.ToUpper())_RESULT failures=0" }
-    $quitFrames = if ($suite -in @('refinement', 'regional_world', 'cave_seams', 'race_guide', 'acro_routes', 'navigation_preview', 'streaming')) { '150000' } elseif ($suite -in @('handling', 'playability', 'gameplay', 'mission_replay', 'field_tasks', 'expansion')) { '15000' } else { '5000' }
+    $quitFrames = if ($suite -in @('refinement', 'regional_world', 'cave_seams', 'race_guide', 'acro_routes', 'continuous_routes', 'spatial_routes', 'navigation_preview', 'streaming')) { '150000' } elseif ($suite -in @('handling', 'playability', 'gameplay', 'mission_replay', 'field_tasks', 'expansion')) { '15000' } else { '5000' }
     Invoke-EngineCheck $suite @('--headless', '--path', $project, '--script', "res://tests/${suite}_tests.gd", '--quit-after', $quitFrames, '--', '--test-session') $marker
 }
 Invoke-EngineCheck 'smoke' @('--headless', '--path', $project, '--quit-after', '1800', '--', '--smoke') 'SMOKE_OK'
@@ -30,6 +30,8 @@ if ($Window) {
 	Invoke-EngineCheck 'streaming-window' @('--path', $project, '--script', 'res://tests/streaming_tests.gd', '--quit-after', '150000', '--', '--test-session') 'STREAMING_RESULT failures=0'
     Invoke-EngineCheck 'navigation-preview-window' @('--path', $project, '--script', 'res://tests/navigation_preview_tests.gd', '--quit-after', '150000', '--', '--test-session', "--capture-dir=$logs/navigation-preview") 'NAVIGATION_PREVIEW_RESULT failures=0'
     Invoke-EngineCheck 'race-guide-window' @('--path', $project, '--script', 'res://tests/race_guide_tests.gd', '--quit-after', '150000', '--', '--test-session', "--capture-dir=$logs/race-guide") 'RACE_GUIDE_RESULT failures=0'
+    Invoke-EngineCheck 'continuous-routes-window' @('--path', $project, '--script', 'res://tests/continuous_routes_tests.gd', '--quit-after', '150000', '--', '--test-session') 'CONTINUOUS_ROUTES_RESULT failures=0'
+    Invoke-EngineCheck 'spatial-routes-window' @('--path', $project, '--script', 'res://tests/spatial_routes_tests.gd', '--quit-after', '150000', '--', '--test-session') 'SPATIAL_ROUTES_RESULT failures=0'
     Invoke-EngineCheck 'refinement-visual-window' @('--path', $project, '--script', 'res://tests/refinement_visual_tests.gd', '--quit-after', '40000', '--', '--test-session', "--capture-dir=$logs/refinement-visual") 'REFINEMENT_VISUAL_RESULT failures=0'
     Invoke-EngineCheck 'regional-visual-window' @('--path', $project, '--script', 'res://tests/regional_visual_tests.gd', '--quit-after', '40000', '--', '--test-session', "--capture-dir=$logs/regional-visual") 'REGIONAL_VISUAL_RESULT failures=0'
 

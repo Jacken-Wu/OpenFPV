@@ -32,7 +32,7 @@ func run() -> void:
 					for mission: MissionDefinition in plan.missions:
 						if mission.kind != "race":
 							continue
-						var previous_id := mission.id.trim_suffix(":acro")
+						var previous_id := mission.id.trim_suffix(":spatial").trim_suffix(":smooth").trim_suffix(":acro")
 						if not previous_id.trim_suffix(":precision").ends_with(":flow"):
 							report.fallbacks.append(mission.id)
 							continue
@@ -42,19 +42,20 @@ func run() -> void:
 						var maximum := 0.0
 						var max_turn := 0.0
 						var acro: bool = mission.challenge.get("acro_revision", 0) > 0
+						var spatial: bool = mission.challenge.has("spatial_revision")
 						for index in mission.checkpoints.size():
 							if index == 0:
 								continue
 							var incoming := (mission.checkpoints[index] - mission.checkpoints[index - 1]).normalized()
-							valid = valid and incoming.dot(mission.gate_normals[index]) >= (0.34 if acro else 0.70)
+							valid = valid and (spatial or incoming.dot(mission.gate_normals[index]) >= (0.34 if acro else 0.70))
 							var distance := mission.checkpoints[index].distance_to(mission.checkpoints[index - 1])
 							minimum = minf(minimum, distance)
 							maximum = maxf(maximum, distance)
 							if index < mission.checkpoints.size() - 1:
 								var outgoing := (mission.checkpoints[index + 1] - mission.checkpoints[index]).normalized()
 								max_turn = maxf(max_turn, rad_to_deg(acos(clampf(incoming.dot(outgoing), -1, 1))))
-								valid = valid and outgoing.dot(mission.gate_normals[index]) >= (0.34 if acro else 0.70)
-						valid = valid and max_turn <= (132.1 if acro else 91) and minimum >= 8
+								valid = valid and (spatial or outgoing.dot(mission.gate_normals[index]) >= (0.34 if acro else 0.70))
+						valid = valid and (spatial or max_turn <= (132.1 if acro else 91)) and minimum >= 8
 						var legacy := world.mission(previous_id if acro else mission.id.trim_suffix(":precision") if mission.id.ends_with(":precision") else mission.id.trim_suffix(":flow"))
 						valid = valid and legacy != null and not legacy.legacy_objects.is_empty() and legacy.acceptance_point().is_equal_approx(mission.acceptance_point())
 						valid = valid and world.mission(mission.id).checkpoints == mission.checkpoints

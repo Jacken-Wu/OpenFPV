@@ -1,10 +1,15 @@
 class_name AcroCourses
 extends RefCounted
-## Versioned close manoeuvres preserve the existing, already checked district route.
+## Reproduce v1 exactly for active saves, then publish a continuous replacement.
 const MAX_GATES := 36
 const MAX_TURN := 132.0
 
 static func populate(plan: Dictionary, field: BiomeField, entrances: Array[Dictionary]) -> void:
+	_populate_legacy(plan, field, entrances)
+	ContinuousCourses.populate(plan, field, entrances)
+	SpatialCourses.populate(plan, field, entrances)
+
+static func _populate_legacy(plan: Dictionary, field: BiomeField, entrances: Array[Dictionary]) -> void:
 	if plan.kind not in ["surface", "sky"]: return
 	var rng := field.rng_for(plan.key, 71339)
 	var city: bool = plan.kind == "surface" and plan.biomes[0].provider_id == "base.generator.modular_city"

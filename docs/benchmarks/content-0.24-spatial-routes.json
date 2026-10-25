@@ -1,0 +1,1446 @@
+{
+  "generated_at": "2026-10-25 23:40:23 +08:00",
+  "engine": "4.7.2.stable.official.ed1daf0bf",
+  "content_version": "0.24.0",
+  "world_version": 4,
+  "content_fingerprint": "7571ebb6e9edad74b273bc1c1e3900c591a8f0a7fc959617b6ff0b82484b4abf",
+  "summary": {
+    "sampled_public_courses": 82,
+    "spatial_layouts": 76,
+    "redesigned_curves": 38,
+    "retained_curves": 38,
+    "redesigned_nonplanar_over_2m": 31,
+    "gate_reduction_percent": 43.4,
+    "remaining_dense": 0
+  },
+  "checks": [
+    {
+      "suite": "spatial_routes",
+      "mode": "headless",
+      "result": "SPATIAL_ROUTES_RESULT failures=0 checks=26 routes=76 gates=721/1273 nonplanar=38 sharp=67 banked=49",
+      "log": ".local/spatial_routes-024-final.log",
+      "sha256": "a3ee6927f1ba399f155068064d139f951d21c57384743974a9c29265281bfd17"
+    },
+    {
+      "suite": "gameplay",
+      "mode": "headless",
+      "result": "GAMEPLAY_RESULT failures=0 checks=160",
+      "log": ".local/gameplay-024-final.log",
+      "sha256": "1420c89020e13f39c8117dbcdc9c60f0e3de83c2ed8bdf085a48dbd41db6f073"
+    },
+    {
+      "suite": "flow_routes",
+      "mode": "headless",
+      "result": "FLOW_ROUTES_RESULT failures=0 checks=17 routes=111 shapes=106",
+      "log": ".local/flow_routes-024-final.log",
+      "sha256": "8ea152279bf74eaf9eebe0d52a8dc30cd3e833802f4d80b4c68bf88f94689217"
+    },
+    {
+      "suite": "refinement",
+      "mode": "headless",
+      "result": "REFINEMENT_RESULT failures=0 checks=58",
+      "log": ".local/refinement-024-final.log",
+      "sha256": "2fed3c2b4d28a9c2f9d715d5791b05a92ec57bada5f0d2c2f99b6e1fb7667b00"
+    },
+    {
+      "suite": "race_guide",
+      "mode": "headless",
+      "result": "RACE_GUIDE_RESULT failures=0 checks=17",
+      "log": ".local/race_guide-024-final.log",
+      "sha256": "ec12f8f4e5b538e51833546da81003572323ef3db82643e030e04e1893ab94f4"
+    },
+    {
+      "suite": "continuous_routes",
+      "mode": "headless",
+      "result": "CONTINUOUS_ROUTES_RESULT failures=0 checks=32 routes=71 features={ \"s_bend\": 311, \"rounded_turn\": 230, \"wide_descent\": 18, \"split_s\": 5, \"horizontal_orbit\": 1, \"pull_loop\": 5 } fallbacks=0",
+      "log": ".local/continuous_routes-024-final.log",
+      "sha256": "a2436f3422a869eb1fe4ac21d5cfbf3f65b20adde91249d283f631fd19e002bc"
+    },
+    {
+      "suite": "mission_replay",
+      "mode": "headless",
+      "result": "MISSION_REPLAY_RESULT failures=0 checks=139",
+      "log": ".local/mission_replay-024-final.log",
+      "sha256": "56721942cb0a322ab07df3ac8a6792bb1a8bf4341ed624a780df4161499a4666"
+    },
+    {
+      "suite": "regions",
+      "mode": "headless",
+      "result": "REGIONS_RESULT failures=0 checks=45",
+      "log": ".local/regions-024-final.log",
+      "sha256": "84b7f2fcafb2e967d311230ac5ea16615b473082751359adf3fc0f327617a78c"
+    },
+    {
+      "suite": "content",
+      "mode": "headless",
+      "result": "CONTENT_RESULT failures=0",
+      "log": ".local/content-024-final.log",
+      "sha256": "07f0d82b40db5700e74a62e6f76e495ca56fe4588820102d3c24e55968916891"
+    },
+    {
+      "suite": "challenge_feedback",
+      "mode": "headless",
+      "result": "CHALLENGE_FEEDBACK_RESULT failures=0 checks=22",
+      "log": ".local/challenge_feedback-024-final.log",
+      "sha256": "8057ccde0c57b4362bef22696e75af507a8e6c23e097d0287cb7126d9ba96635"
+    },
+    {
+      "suite": "acro_routes",
+      "mode": "headless",
+      "result": "ACRO_ROUTES_RESULT failures=0 checks=6 routes=40 vertical=156 frame_changes=181 turns=704/879",
+      "log": ".local/acro_routes-024-final.log",
+      "sha256": "e94aae147a95a89517a6d111bac22b606040a3b824e6743ec74abfc0893b4584"
+    },
+    {
+      "suite": "spatial_routes",
+      "mode": "window",
+      "result": "SPATIAL_ROUTES_RESULT failures=0 checks=30 routes=76 gates=721/1273 nonplanar=38 sharp=67 banked=49",
+      "log": ".local/spatial_routes-024-final-window.log",
+      "sha256": "824dfc3ae286184521be87d049504d6a3e8505816b227c04d03a5d472963ca41"
+    },
+    {
+      "suite": "race_guide",
+      "mode": "window",
+      "result": "RACE_GUIDE_RESULT failures=0 checks=19",
+      "log": ".local/race_guide-024-final-window.log",
+      "sha256": "573d8dbe25c24e2c84c7cfdbe2dde35eafaa674338a76423aa5cc6dd358bf095"
+    },
+    {
+      "suite": "refinement",
+      "mode": "window",
+      "result": "REFINEMENT_RESULT failures=0 checks=58",
+      "log": ".local/refinement-024-final-window.log",
+      "sha256": "ee707929f140bcc3d5780f1ae015351fcbde31993bd583d553127b96ffcd3532"
+    }
+  ],
+  "sample": {
+    "banked": 49,
+    "new_gates": 721,
+    "nonplanar": 38,
+    "old_gates": 1273,
+    "remaining_dense": [],
+    "routes": [
+      {
+        "bank_degrees": 179.331189222118,
+        "features": [
+          "corkscrew",
+          "tight_turn",
+          "spatial_s",
+          "wide_turn",
+          "spatial_s",
+          "wide_turn",
+          "spatial_s",
+          "wide_turn",
+          "corkscrew",
+          "wide_turn",
+          "spatial_s"
+        ],
+        "gates": 30,
+        "geometry_retained": false,
+        "id": "proc:4:surface:-3:-3:0:play:flow:precision:acro:smooth:spatial",
+        "legacy_frame_constraints": false,
+        "max_curvature": 0.126012653838667,
+        "nonplanarity_m": 23.4149780273438,
+        "old_gates": 19,
+        "seed": 271828
+      },
+      {
+        "bank_degrees": 155.064267115819,
+        "features": [
+          "corkscrew",
+          "wide_turn",
+          "spatial_s",
+          "wide_turn",
+          "spatial_s",
+          "wide_turn",
+          "spatial_s",
+          "wide_turn",
+          "corkscrew"
+        ],
+        "gates": 12,
+        "geometry_retained": false,
+        "id": "proc:4:surface:-3:-2:1:play:flow:acro:smooth:spatial",
+        "legacy_frame_constraints": false,
+        "max_curvature": 0.135824967228388,
+        "nonplanarity_m": 3.69924926757813,
+        "old_gates": 17,
+        "seed": 271828
+      },
+      {
+        "bank_degrees": 165.00786317784,
+        "features": [
+          "spatial_s",
+          "tight_turn",
+          "inclined_loop",
+          "wide_turn",
+          "corkscrew"
+        ],
+        "gates": 22,
+        "geometry_retained": false,
+        "id": "proc:4:surface:-3:0:0:play:flow:precision:spatial",
+        "legacy_frame_constraints": false,
+        "max_curvature": 0.0877714232241431,
+        "nonplanarity_m": 24.5897998809814,
+        "old_gates": 12,
+        "seed": 271828
+      },
+      {
+        "bank_degrees": 126.489637285498,
+        "features": [
+          "retained_curve"
+        ],
+        "gates": 4,
+        "geometry_retained": true,
+        "id": "proc:4:surface:-3:0:1:play:flow:precision:smooth:spatial",
+        "legacy_frame_constraints": false,
+        "max_curvature": 0.100317609617023,
+        "nonplanarity_m": 5.71728423892637E-06,
+        "old_gates": 17,
+        "seed": 271828
+      },
+      {
+        "bank_degrees": 179.020612345598,
+        "features": [
+          "corkscrew",
+          "wide_turn",
+          "spatial_s",
+          "tight_turn",
+          "spatial_s",
+          "tight_turn",
+          "inclined_loop",
+          "wide_turn",
+          "corkscrew",
+          "tight_turn",
+          "spatial_s"
+        ],
+        "gates": 37,
+        "geometry_retained": false,
+        "id": "proc:4:surface:-3:0:2:play:flow:precision:spatial",
+        "legacy_frame_constraints": false,
+        "max_curvature": 0.134418889096912,
+        "nonplanarity_m": 40.1262855529785,
+        "old_gates": 12,
+        "seed": 271828
+      },
+      {
+        "bank_degrees": 141.24744428641,
+        "features": [
+          "inclined_loop"
+        ],
+        "gates": 6,
+        "geometry_retained": false,
+        "id": "proc:4:surface:-3:0:3:play:flow:precision:spatial",
+        "legacy_frame_constraints": false,
+        "max_curvature": 0.134372923106123,
+        "nonplanarity_m": 7.44462013244629E-05,
+        "old_gates": 12,
+        "seed": 271828
+      },
+      {
+        "bank_degrees": 90.1312105966226,
+        "features": [
+          "retained_curve"
+        ],
+        "gates": 6,
+        "geometry_retained": true,
+        "id": "proc:4:surface:-2:-3:1:play:flow:precision:acro:smooth:spatial",
+        "legacy_frame_constraints": false,
+        "max_curvature": 0.100257556781585,
+        "nonplanarity_m": 0.12771463394165,
+        "old_gates": 19,
+        "seed": 271828
+      },
+      {
+        "bank_degrees": 0.0197823410294464,
+        "features": [
+          "key_nodes_only"
+        ],
+        "gates": 5,
+        "geometry_retained": true,
+        "id": "proc:4:surface:-2:-2:0:play:flow:acro:smooth:spatial",
+        "legacy_frame_constraints": false,
+        "max_curvature": 0.0833960158913192,
+        "nonplanarity_m": 2.4952392578125,
+        "old_gates": 12,
+        "seed": 271828
+      },
+      {
+        "bank_degrees": 161.90736923824,
+        "features": [
+          "spatial_s",
+          "wide_turn",
+          "spatial_s",
+          "wide_turn",
+          "spatial_s"
+        ],
+        "gates": 4,
+        "geometry_retained": false,
+        "id": "proc:4:surface:-2:-2:2:play:flow:acro:smooth:spatial",
+        "legacy_frame_constraints": false,
+        "max_curvature": 0.128958894613074,
+        "nonplanarity_m": 1.42053174972534,
+        "old_gates": 17,
+        "seed": 271828
+      },
+      {
+        "bank_degrees": 0.0,
+        "features": [
+          "key_nodes_only"
+        ],
+        "gates": 6,
+        "geometry_retained": true,
+        "id": "proc:4:surface:-2:-2:3:play:flow:acro:smooth:spatial",
+        "legacy_frame_constraints": false,
+        "max_curvature": 0.103889432616823,
+        "nonplanarity_m": 0.0,
+        "old_gates": 16,
+        "seed": 271828
+      },
+      {
+        "bank_degrees": 180.0,
+        "features": [
+          "retained_curve"
+        ],
+        "gates": 6,
+        "geometry_retained": true,
+        "id": "proc:4:sky:-2:-1:0:play:flow:acro:smooth:spatial",
+        "legacy_frame_constraints": false,
+        "max_curvature": 0.0417928321990281,
+        "nonplanarity_m": 9.44137573242188E-05,
+        "old_gates": 16,
+        "seed": 271828
+      },
+      {
+        "bank_degrees": 164.754917330151,
+        "features": [
+          "corkscrew",
+          "wide_turn",
+          "spatial_s"
+        ],
+        "gates": 6,
+        "geometry_retained": false,
+        "id": "proc:4:surface:-2:0:2:play:flow:acro:smooth:spatial",
+        "legacy_frame_constraints": false,
+        "max_curvature": 0.137140419960653,
+        "nonplanarity_m": 3.49992966651917,
+        "old_gates": 17,
+        "seed": 271828
+      },
+      {
+        "bank_degrees": 0.0,
+        "features": [
+          "key_nodes_only"
+        ],
+        "gates": 7,
+        "geometry_retained": true,
+        "id": "proc:4:surface:-2:0:3:play:flow:acro:smooth:spatial",
+        "legacy_frame_constraints": false,
+        "max_curvature": 0.112164682446543,
+        "nonplanarity_m": 9.5367431640625E-07,
+        "old_gates": 17,
+        "seed": 271828
+      },
+      {
+        "bank_degrees": 0.0,
+        "features": [
+          "key_nodes_only"
+        ],
+        "gates": 6,
+        "geometry_retained": true,
+        "id": "proc:4:surface:-1:-3:0:play:flow:acro:smooth:spatial",
+        "legacy_frame_constraints": false,
+        "max_curvature": 0.148330143336441,
+        "nonplanarity_m": 3.814697265625E-06,
+        "old_gates": 16,
+        "seed": 271828
+      },
+      {
+        "bank_degrees": 169.627258271062,
+        "features": [
+          "corkscrew",
+          "wide_turn",
+          "spatial_s",
+          "tight_turn",
+          "spatial_s",
+          "tight_turn",
+          "inclined_loop"
+        ],
+        "gates": 22,
+        "geometry_retained": false,
+        "id": "proc:4:surface:-1:-1:1:play:flow:precision:acro:smooth:spatial",
+        "legacy_frame_constraints": false,
+        "max_curvature": 0.134410924683565,
+        "nonplanarity_m": 31.2790107727051,
+        "old_gates": 24,
+        "seed": 271828
+      },
+      {
+        "bank_degrees": 179.190607789898,
+        "features": [
+          "inclined_loop",
+          "tight_turn",
+          "corkscrew",
+          "wide_turn",
+          "spatial_s"
+        ],
+        "gates": 17,
+        "geometry_retained": false,
+        "id": "proc:4:surface:0:-2:0:play:flow:precision:acro:smooth:spatial",
+        "legacy_frame_constraints": false,
+        "max_curvature": 0.12520433692162,
+        "nonplanarity_m": 24.2753067016602,
+        "old_gates": 15,
+        "seed": 271828
+      },
+      {
+        "bank_degrees": 0.0,
+        "features": [
+          "key_nodes_only"
+        ],
+        "gates": 5,
+        "geometry_retained": true,
+        "id": "proc:4:sky:0:-2:0:play:flow:smooth:spatial",
+        "legacy_frame_constraints": false,
+        "max_curvature": 0.100822303102138,
+        "nonplanarity_m": 2.75946440524422E-05,
+        "old_gates": 9,
+        "seed": 271828
+      },
+      {
+        "bank_degrees": 161.977230173634,
+        "features": [
+          "spatial_s",
+          "wide_turn",
+          "spatial_s",
+          "tight_turn",
+          "spatial_s",
+          "wide_turn",
+          "corkscrew",
+          "tight_turn",
+          "spatial_s",
+          "tight_turn",
+          "spatial_s",
+          "wide_turn",
+          "spatial_s"
+        ],
+        "gates": 26,
+        "geometry_retained": false,
+        "id": "proc:4:surface:0:-1:1:play:flow:precision:acro:smooth:spatial",
+        "legacy_frame_constraints": false,
+        "max_curvature": 0.135448455517655,
+        "nonplanarity_m": 13.1624250411987,
+        "old_gates": 43,
+        "seed": 271828
+      },
+      {
+        "bank_degrees": 118.659402096775,
+        "features": [
+          "spatial_s",
+          "wide_turn",
+          "spatial_s",
+          "tight_turn",
+          "inclined_loop"
+        ],
+        "gates": 15,
+        "geometry_retained": false,
+        "id": "proc:4:surface:0:-1:2:play:flow:precision:acro:smooth:spatial",
+        "legacy_frame_constraints": false,
+        "max_curvature": 0.125314312618346,
+        "nonplanarity_m": 15.6665716171265,
+        "old_gates": 21,
+        "seed": 271828
+      },
+      {
+        "bank_degrees": 0.0,
+        "features": [
+          "key_nodes_only"
+        ],
+        "gates": 5,
+        "geometry_retained": true,
+        "id": "proc:4:sky:0:-1:1:play:flow:smooth:spatial",
+        "legacy_frame_constraints": false,
+        "max_curvature": 0.100241987635382,
+        "nonplanarity_m": 3.0517578125E-05,
+        "old_gates": 8,
+        "seed": 271828
+      },
+      {
+        "bank_degrees": 161.272203607563,
+        "features": [
+          "spatial_s",
+          "wide_turn",
+          "inclined_loop",
+          "tight_turn",
+          "corkscrew",
+          "tight_turn",
+          "spatial_s"
+        ],
+        "gates": 21,
+        "geometry_retained": false,
+        "id": "proc:4:surface:0:0:1:play:flow:precision:acro:smooth:spatial",
+        "legacy_frame_constraints": false,
+        "max_curvature": 0.134421000049553,
+        "nonplanarity_m": 27.3326625823975,
+        "old_gates": 12,
+        "seed": 271828
+      },
+      {
+        "bank_degrees": 0.0197823410294464,
+        "features": [
+          "key_nodes_only"
+        ],
+        "gates": 5,
+        "geometry_retained": true,
+        "id": "proc:4:surface:-3:-3:1:play:flow:acro:smooth:spatial",
+        "legacy_frame_constraints": false,
+        "max_curvature": 0.116860017359223,
+        "nonplanarity_m": 1.62547302246094,
+        "old_gates": 11,
+        "seed": 42
+      },
+      {
+        "bank_degrees": 167.709387379055,
+        "features": [
+          "spatial_s",
+          "tight_turn",
+          "spatial_s",
+          "wide_turn",
+          "corkscrew"
+        ],
+        "gates": 10,
+        "geometry_retained": false,
+        "id": "proc:4:surface:-3:-2:2:play:flow:precision:spatial",
+        "legacy_frame_constraints": false,
+        "max_curvature": 0.126326854991878,
+        "nonplanarity_m": 6.36888408660889,
+        "old_gates": 12,
+        "seed": 42
+      },
+      {
+        "bank_degrees": 179.449991885671,
+        "features": [
+          "inclined_loop"
+        ],
+        "gates": 6,
+        "geometry_retained": false,
+        "id": "proc:4:surface:-3:-2:3:play:flow:precision:acro:smooth:spatial",
+        "legacy_frame_constraints": false,
+        "max_curvature": 0.134445342250775,
+        "nonplanarity_m": 0.000335097312927246,
+        "old_gates": 12,
+        "seed": 42
+      },
+      {
+        "bank_degrees": 106.465367438197,
+        "features": [
+          "retained_curve"
+        ],
+        "gates": 12,
+        "geometry_retained": true,
+        "id": "proc:4:surface:-3:-1:2:play:flow:precision:acro:smooth:spatial",
+        "legacy_frame_constraints": false,
+        "max_curvature": 0.119738297043756,
+        "nonplanarity_m": 2.6325159072876,
+        "old_gates": 40,
+        "seed": 42
+      },
+      {
+        "bank_degrees": 177.120975656218,
+        "features": [
+          "corkscrew",
+          "wide_turn",
+          "spatial_s",
+          "tight_turn",
+          "spatial_s",
+          "wide_turn",
+          "spatial_s",
+          "tight_turn",
+          "corkscrew",
+          "tight_turn",
+          "spatial_s"
+        ],
+        "gates": 13,
+        "geometry_retained": false,
+        "id": "proc:4:surface:-3:-1:3:play:flow:precision:acro:smooth:spatial",
+        "legacy_frame_constraints": false,
+        "max_curvature": 0.125991467095586,
+        "nonplanarity_m": 9.06351661682129,
+        "old_gates": 16,
+        "seed": 42
+      },
+      {
+        "bank_degrees": 0.0,
+        "features": [
+          "key_nodes_only"
+        ],
+        "gates": 8,
+        "geometry_retained": true,
+        "id": "proc:4:sky:-3:-1:1:play:flow:smooth:spatial",
+        "legacy_frame_constraints": false,
+        "max_curvature": 0.101108856587271,
+        "nonplanarity_m": 4.342256943346E-05,
+        "old_gates": 13,
+        "seed": 42
+      },
+      {
+        "bank_degrees": 153.997266832108,
+        "features": [
+          "spatial_s",
+          "tight_turn",
+          "spatial_s",
+          "tight_turn",
+          "corkscrew"
+        ],
+        "gates": 7,
+        "geometry_retained": false,
+        "id": "proc:4:sky:-3:-1:2:play:flow:acro:smooth:spatial",
+        "legacy_frame_constraints": false,
+        "max_curvature": 0.125098576811036,
+        "nonplanarity_m": 2.36475348472595,
+        "old_gates": 19,
+        "seed": 42
+      },
+      {
+        "bank_degrees": 177.887704359678,
+        "features": [
+          "spatial_s",
+          "tight_turn",
+          "spatial_s",
+          "wide_turn",
+          "inclined_loop"
+        ],
+        "gates": 15,
+        "geometry_retained": false,
+        "id": "proc:4:surface:-3:0:0:play:flow:precision:acro:smooth:spatial",
+        "legacy_frame_constraints": false,
+        "max_curvature": 0.125948158704735,
+        "nonplanarity_m": 34.6560211181641,
+        "old_gates": 22,
+        "seed": 42
+      },
+      {
+        "bank_degrees": 165.838279018192,
+        "features": [
+          "retained_curve"
+        ],
+        "gates": 4,
+        "geometry_retained": true,
+        "id": "proc:4:surface:-2:-3:0:play:flow:acro:smooth:spatial",
+        "legacy_frame_constraints": false,
+        "max_curvature": 0.0834490083047692,
+        "nonplanarity_m": 0.857277870178223,
+        "old_gates": 8,
+        "seed": 42
+      },
+      {
+        "bank_degrees": 0.0279764551182933,
+        "features": [
+          "key_nodes_only"
+        ],
+        "gates": 7,
+        "geometry_retained": true,
+        "id": "proc:4:surface:-2:-3:1:play:flow:acro:smooth:spatial",
+        "legacy_frame_constraints": false,
+        "max_curvature": 0.100076185460179,
+        "nonplanarity_m": 9.80396556854248,
+        "old_gates": 17,
+        "seed": 42
+      },
+      {
+        "bank_degrees": 172.287210432171,
+        "features": [
+          "corkscrew",
+          "wide_turn",
+          "spatial_s",
+          "wide_turn",
+          "spatial_s",
+          "wide_turn",
+          "spatial_s"
+        ],
+        "gates": 10,
+        "geometry_retained": false,
+        "id": "proc:4:surface:-2:-1:1:play:flow:acro:smooth:spatial",
+        "legacy_frame_constraints": false,
+        "max_curvature": 0.137713579378188,
+        "nonplanarity_m": 8.6135950088501,
+        "old_gates": 14,
+        "seed": 42
+      },
+      {
+        "bank_degrees": 0.0,
+        "features": [
+          "key_nodes_only"
+        ],
+        "gates": 6,
+        "geometry_retained": true,
+        "id": "proc:4:surface:-1:-3:3:play:flow:acro:smooth:spatial",
+        "legacy_frame_constraints": false,
+        "max_curvature": 0.112609753480658,
+        "nonplanarity_m": 3.814697265625E-06,
+        "old_gates": 15,
+        "seed": 42
+      },
+      {
+        "bank_degrees": 173.02273008484,
+        "features": [
+          "spatial_s",
+          "tight_turn",
+          "corkscrew",
+          "wide_turn",
+          "spatial_s"
+        ],
+        "gates": 10,
+        "geometry_retained": false,
+        "id": "proc:4:surface:-1:-2:0:play:flow:precision:smooth:spatial",
+        "legacy_frame_constraints": false,
+        "max_curvature": 0.137694182420347,
+        "nonplanarity_m": 9.21421813964844,
+        "old_gates": 29,
+        "seed": 42
+      },
+      {
+        "bank_degrees": 0.0,
+        "features": [
+          "key_nodes_only"
+        ],
+        "gates": 5,
+        "geometry_retained": true,
+        "id": "proc:4:sky:-1:-2:2:play:flow:smooth:spatial",
+        "legacy_frame_constraints": false,
+        "max_curvature": 0.100821404984618,
+        "nonplanarity_m": 4.57171263406053E-05,
+        "old_gates": 8,
+        "seed": 42
+      },
+      {
+        "bank_degrees": 175.095474391505,
+        "features": [
+          "spatial_s",
+          "tight_turn",
+          "spatial_s",
+          "wide_turn",
+          "spatial_s"
+        ],
+        "gates": 9,
+        "geometry_retained": false,
+        "id": "proc:4:surface:-1:-1:0:play:flow:precision:acro:smooth:spatial",
+        "legacy_frame_constraints": false,
+        "max_curvature": 0.113483707170763,
+        "nonplanarity_m": 4.76289796829224,
+        "old_gates": 19,
+        "seed": 42
+      },
+      {
+        "bank_degrees": 173.092375568962,
+        "features": [
+          "corkscrew",
+          "wide_turn",
+          "spatial_s"
+        ],
+        "gates": 11,
+        "geometry_retained": false,
+        "id": "proc:4:surface:-1:0:2:play:flow:precision:acro:smooth:spatial",
+        "legacy_frame_constraints": false,
+        "max_curvature": 0.0666880437116953,
+        "nonplanarity_m": 20.4916000366211,
+        "old_gates": 35,
+        "seed": 42
+      },
+      {
+        "bank_degrees": 151.277815423341,
+        "features": [
+          "spatial_s",
+          "wide_turn",
+          "spatial_s",
+          "wide_turn",
+          "spatial_s",
+          "wide_turn",
+          "corkscrew",
+          "wide_turn",
+          "spatial_s"
+        ],
+        "gates": 5,
+        "geometry_retained": false,
+        "id": "proc:4:surface:0:-3:0:play:flow:acro:smooth:spatial",
+        "legacy_frame_constraints": false,
+        "max_curvature": 0.125338299329173,
+        "nonplanarity_m": 1.3631786108017,
+        "old_gates": 17,
+        "seed": 42
+      },
+      {
+        "bank_degrees": 162.734150200861,
+        "features": [
+          "inclined_loop"
+        ],
+        "gates": 6,
+        "geometry_retained": false,
+        "id": "proc:4:surface:0:-2:0:play:flow:precision:acro:smooth:spatial",
+        "legacy_frame_constraints": false,
+        "max_curvature": 0.134374519494321,
+        "nonplanarity_m": 2.07424163818359E-05,
+        "old_gates": 24,
+        "seed": 42
+      },
+      {
+        "bank_degrees": 0.0197823410294464,
+        "features": [
+          "key_nodes_only"
+        ],
+        "gates": 7,
+        "geometry_retained": true,
+        "id": "proc:4:surface:0:-1:2:play:flow:acro:smooth:spatial",
+        "legacy_frame_constraints": false,
+        "max_curvature": 0.100723467501313,
+        "nonplanarity_m": 6.25080680847168,
+        "old_gates": 19,
+        "seed": 42
+      },
+      {
+        "bank_degrees": 177.702111985022,
+        "features": [
+          "spatial_s",
+          "wide_turn",
+          "spatial_s",
+          "tight_turn",
+          "corkscrew",
+          "tight_turn",
+          "spatial_s",
+          "wide_turn",
+          "spatial_s",
+          "tight_turn",
+          "spatial_s",
+          "tight_turn",
+          "corkscrew"
+        ],
+        "gates": 22,
+        "geometry_retained": false,
+        "id": "proc:4:surface:-3:-3:0:play:flow:precision:smooth:spatial",
+        "legacy_frame_constraints": false,
+        "max_curvature": 0.125754765011621,
+        "nonplanarity_m": 9.70769500732422,
+        "old_gates": 20,
+        "seed": 314159
+      },
+      {
+        "bank_degrees": 90.0000025044781,
+        "features": [
+          "retained_curve"
+        ],
+        "gates": 4,
+        "geometry_retained": true,
+        "id": "proc:4:surface:-3:-3:3:play:flow:precision:smooth:spatial",
+        "legacy_frame_constraints": false,
+        "max_curvature": 0.0399388755255715,
+        "nonplanarity_m": 0.0,
+        "old_gates": 12,
+        "seed": 314159
+      },
+      {
+        "bank_degrees": 175.272915309661,
+        "features": [
+          "spatial_s",
+          "tight_turn",
+          "spatial_s"
+        ],
+        "gates": 7,
+        "geometry_retained": false,
+        "id": "proc:4:surface:-3:-2:1:play:flow:precision:spatial",
+        "legacy_frame_constraints": false,
+        "max_curvature": 0.11219875815648,
+        "nonplanarity_m": 4.60044097900391,
+        "old_gates": 10,
+        "seed": 314159
+      },
+      {
+        "bank_degrees": 0.0,
+        "features": [
+          "key_nodes_only"
+        ],
+        "gates": 5,
+        "geometry_retained": true,
+        "id": "proc:4:sky:-3:-2:1:play:flow:smooth:spatial",
+        "legacy_frame_constraints": false,
+        "max_curvature": 0.10122761392285,
+        "nonplanarity_m": 6.09796479693614E-05,
+        "old_gates": 8,
+        "seed": 314159
+      },
+      {
+        "bank_degrees": 0.0,
+        "features": [
+          "key_nodes_only"
+        ],
+        "gates": 7,
+        "geometry_retained": true,
+        "id": "proc:4:surface:-3:-1:0:play:flow:acro:smooth:spatial",
+        "legacy_frame_constraints": false,
+        "max_curvature": 0.101795030655805,
+        "nonplanarity_m": 3.814697265625E-06,
+        "old_gates": 18,
+        "seed": 314159
+      },
+      {
+        "bank_degrees": 0.0,
+        "features": [
+          "key_nodes_only"
+        ],
+        "gates": 7,
+        "geometry_retained": true,
+        "id": "proc:4:surface:-3:0:2:play:flow:acro:smooth:spatial",
+        "legacy_frame_constraints": false,
+        "max_curvature": 0.100799280697875,
+        "nonplanarity_m": 0.0,
+        "old_gates": 17,
+        "seed": 314159
+      },
+      {
+        "bank_degrees": 176.685124691743,
+        "features": [
+          "spatial_s",
+          "wide_turn",
+          "spatial_s",
+          "wide_turn",
+          "spatial_s"
+        ],
+        "gates": 8,
+        "geometry_retained": false,
+        "id": "proc:4:surface:-2:-3:1:play:flow:acro:smooth:spatial",
+        "legacy_frame_constraints": false,
+        "max_curvature": 0.136082567162159,
+        "nonplanarity_m": 3.6671199798584,
+        "old_gates": 16,
+        "seed": 314159
+      },
+      {
+        "bank_degrees": 0.0,
+        "features": [
+          "key_nodes_only"
+        ],
+        "gates": 7,
+        "geometry_retained": true,
+        "id": "proc:4:surface:-2:-2:1:play:flow:acro:smooth:spatial",
+        "legacy_frame_constraints": false,
+        "max_curvature": 0.119277492264839,
+        "nonplanarity_m": 4.09066706197336E-06,
+        "old_gates": 16,
+        "seed": 314159
+      },
+      {
+        "bank_degrees": 88.2370433865461,
+        "features": [
+          "spatial_s",
+          "wide_turn",
+          "corkscrew"
+        ],
+        "gates": 5,
+        "geometry_retained": false,
+        "id": "proc:4:surface:-2:0:2:play:flow:acro:smooth:spatial",
+        "legacy_frame_constraints": false,
+        "max_curvature": 0.134079213082314,
+        "nonplanarity_m": 1.27555012702942,
+        "old_gates": 17,
+        "seed": 314159
+      },
+      {
+        "bank_degrees": 0.0,
+        "features": [
+          "key_nodes_only"
+        ],
+        "gates": 6,
+        "geometry_retained": true,
+        "id": "proc:4:sky:-2:0:1:play:flow:smooth:spatial",
+        "legacy_frame_constraints": false,
+        "max_curvature": 0.100502500688422,
+        "nonplanarity_m": 3.0517578125E-05,
+        "old_gates": 10,
+        "seed": 314159
+      },
+      {
+        "bank_degrees": 178.096485262679,
+        "features": [
+          "corkscrew",
+          "tight_turn",
+          "spatial_s",
+          "tight_turn",
+          "spatial_s",
+          "wide_turn",
+          "spatial_s",
+          "tight_turn",
+          "corkscrew"
+        ],
+        "gates": 17,
+        "geometry_retained": false,
+        "id": "proc:4:surface:-1:-3:2:play:flow:precision:acro:smooth:spatial",
+        "legacy_frame_constraints": false,
+        "max_curvature": 0.125367261920727,
+        "nonplanarity_m": 11.0683822631836,
+        "old_gates": 14,
+        "seed": 314159
+      },
+      {
+        "bank_degrees": 0.0,
+        "features": [
+          "key_nodes_only"
+        ],
+        "gates": 7,
+        "geometry_retained": true,
+        "id": "proc:4:sky:-1:-3:1:play:flow:smooth:spatial",
+        "legacy_frame_constraints": false,
+        "max_curvature": 0.100902531429013,
+        "nonplanarity_m": 4.57316818938125E-05,
+        "old_gates": 9,
+        "seed": 314159
+      },
+      {
+        "bank_degrees": 174.337941312918,
+        "features": [
+          "spatial_s",
+          "wide_turn",
+          "spatial_s",
+          "wide_turn",
+          "corkscrew"
+        ],
+        "gates": 5,
+        "geometry_retained": false,
+        "id": "proc:4:surface:-1:-2:0:play:flow:acro:smooth:spatial",
+        "legacy_frame_constraints": false,
+        "max_curvature": 0.125025855072021,
+        "nonplanarity_m": 4.99403381347656,
+        "old_gates": 13,
+        "seed": 314159
+      },
+      {
+        "bank_degrees": 162.093624855692,
+        "features": [
+          "spatial_s",
+          "wide_turn",
+          "spatial_s",
+          "wide_turn",
+          "corkscrew",
+          "wide_turn",
+          "spatial_s",
+          "wide_turn",
+          "spatial_s"
+        ],
+        "gates": 7,
+        "geometry_retained": false,
+        "id": "proc:4:surface:-1:-2:2:play:flow:acro:smooth:spatial",
+        "legacy_frame_constraints": false,
+        "max_curvature": 0.125061357543876,
+        "nonplanarity_m": 12.2362957000732,
+        "old_gates": 18,
+        "seed": 314159
+      },
+      {
+        "bank_degrees": 180.0,
+        "features": [
+          "retained_curve"
+        ],
+        "gates": 6,
+        "geometry_retained": true,
+        "id": "proc:4:sky:-1:-2:1:play:flow:acro:smooth:spatial",
+        "legacy_frame_constraints": false,
+        "max_curvature": 0.0418574286071305,
+        "nonplanarity_m": 0.000156402587890625,
+        "old_gates": 16,
+        "seed": 314159
+      },
+      {
+        "bank_degrees": 0.0,
+        "features": [
+          "key_nodes_only"
+        ],
+        "gates": 7,
+        "geometry_retained": true,
+        "id": "proc:4:sky:-1:-2:3:play:flow:smooth:spatial",
+        "legacy_frame_constraints": false,
+        "max_curvature": 0.100915889054663,
+        "nonplanarity_m": 3.0517578125E-05,
+        "old_gates": 10,
+        "seed": 314159
+      },
+      {
+        "bank_degrees": 0.0,
+        "features": [
+          "key_nodes_only"
+        ],
+        "gates": 6,
+        "geometry_retained": true,
+        "id": "proc:4:sky:0:-1:0:play:flow:smooth:spatial",
+        "legacy_frame_constraints": false,
+        "max_curvature": 0.100496247050068,
+        "nonplanarity_m": 3.0517578125E-05,
+        "old_gates": 11,
+        "seed": 314159
+      },
+      {
+        "bank_degrees": 0.0,
+        "features": [
+          "key_nodes_only"
+        ],
+        "gates": 9,
+        "geometry_retained": true,
+        "id": "proc:4:surface:-3:-3:1:play:flow:precision:acro:smooth:spatial",
+        "legacy_frame_constraints": false,
+        "max_curvature": 0.101274458168245,
+        "nonplanarity_m": 8.27670478820801,
+        "old_gates": 27,
+        "seed": 1919810
+      },
+      {
+        "bank_degrees": 135.32892809045,
+        "features": [
+          "corkscrew",
+          "spatial_s"
+        ],
+        "gates": 10,
+        "geometry_retained": false,
+        "id": "proc:4:surface:-3:-2:0:play:flow:precision:acro:smooth:spatial",
+        "legacy_frame_constraints": false,
+        "max_curvature": 0.0832303037441963,
+        "nonplanarity_m": 14.6823863983154,
+        "old_gates": 18,
+        "seed": 1919810
+      },
+      {
+        "bank_degrees": 0.0,
+        "features": [
+          "key_nodes_only"
+        ],
+        "gates": 5,
+        "geometry_retained": true,
+        "id": "proc:4:sky:-3:-2:0:play:flow:smooth:spatial",
+        "legacy_frame_constraints": false,
+        "max_curvature": 0.101149903673807,
+        "nonplanarity_m": 3.0517578125E-05,
+        "old_gates": 8,
+        "seed": 1919810
+      },
+      {
+        "bank_degrees": 180.0,
+        "features": [
+          "retained_curve"
+        ],
+        "gates": 6,
+        "geometry_retained": true,
+        "id": "proc:4:sky:-3:-2:1:play:flow:smooth:spatial",
+        "legacy_frame_constraints": false,
+        "max_curvature": 0.0418466617792636,
+        "nonplanarity_m": 0.000213623046875,
+        "old_gates": 16,
+        "seed": 1919810
+      },
+      {
+        "bank_degrees": 0.0197823410294464,
+        "features": [
+          "key_nodes_only"
+        ],
+        "gates": 5,
+        "geometry_retained": true,
+        "id": "proc:4:surface:-3:0:1:play:flow:acro:smooth:spatial",
+        "legacy_frame_constraints": false,
+        "max_curvature": 0.100326825223263,
+        "nonplanarity_m": 3.35635685920715,
+        "old_gates": 11,
+        "seed": 1919810
+      },
+      {
+        "bank_degrees": 154.240844357229,
+        "features": [
+          "spatial_s",
+          "wide_turn",
+          "corkscrew",
+          "tight_turn",
+          "spatial_s",
+          "tight_turn",
+          "spatial_s"
+        ],
+        "gates": 15,
+        "geometry_retained": false,
+        "id": "proc:4:surface:-2:-3:0:play:flow:precision:acro:smooth:spatial",
+        "legacy_frame_constraints": false,
+        "max_curvature": 0.126023053113577,
+        "nonplanarity_m": 3.86037039756775,
+        "old_gates": 30,
+        "seed": 1919810
+      },
+      {
+        "bank_degrees": 0.0,
+        "features": [
+          "key_nodes_only"
+        ],
+        "gates": 7,
+        "geometry_retained": true,
+        "id": "proc:4:surface:-2:-2:2:play:flow:acro:smooth:spatial",
+        "legacy_frame_constraints": true,
+        "max_curvature": 0.103847442651282,
+        "nonplanarity_m": 7.74520301818848,
+        "old_gates": 18,
+        "seed": 1919810
+      },
+      {
+        "bank_degrees": 177.563534597765,
+        "features": [
+          "spatial_s",
+          "tight_turn",
+          "spatial_s"
+        ],
+        "gates": 7,
+        "geometry_retained": false,
+        "id": "proc:4:surface:-2:-1:0:play:flow:precision:smooth:spatial",
+        "legacy_frame_constraints": false,
+        "max_curvature": 0.133744582828616,
+        "nonplanarity_m": 3.14498662948608,
+        "old_gates": 11,
+        "seed": 1919810
+      },
+      {
+        "bank_degrees": 114.223107925237,
+        "features": [
+          "spatial_s",
+          "wide_turn",
+          "spatial_s",
+          "wide_turn",
+          "spatial_s"
+        ],
+        "gates": 6,
+        "geometry_retained": false,
+        "id": "proc:4:surface:-2:0:1:play:flow:precision:acro:smooth:spatial",
+        "legacy_frame_constraints": false,
+        "max_curvature": 0.125114966961938,
+        "nonplanarity_m": 3.60122609138489,
+        "old_gates": 27,
+        "seed": 1919810
+      },
+      {
+        "bank_degrees": 180.0,
+        "features": [
+          "retained_curve"
+        ],
+        "gates": 6,
+        "geometry_retained": true,
+        "id": "proc:4:sky:-2:0:0:play:flow:acro:smooth:spatial",
+        "legacy_frame_constraints": false,
+        "max_curvature": 0.0417536069858626,
+        "nonplanarity_m": 0.00017547607421875,
+        "old_gates": 16,
+        "seed": 1919810
+      },
+      {
+        "bank_degrees": 141.02368432281,
+        "features": [
+          "spatial_s"
+        ],
+        "gates": 3,
+        "geometry_retained": false,
+        "id": "proc:4:surface:-1:-3:3:play:flow:precision:acro:smooth:spatial",
+        "legacy_frame_constraints": false,
+        "max_curvature": 0.0390561902008631,
+        "nonplanarity_m": 0.752720177173615,
+        "old_gates": 47,
+        "seed": 1919810
+      },
+      {
+        "bank_degrees": 91.0795467770452,
+        "features": [
+          "retained_curve"
+        ],
+        "gates": 4,
+        "geometry_retained": true,
+        "id": "proc:4:surface:-1:-2:0:play:flow:precision:acro:smooth:spatial",
+        "legacy_frame_constraints": false,
+        "max_curvature": 0.100237528277339,
+        "nonplanarity_m": 0.149501711130142,
+        "old_gates": 9,
+        "seed": 1919810
+      },
+      {
+        "bank_degrees": 180.0,
+        "features": [
+          "retained_curve"
+        ],
+        "gates": 6,
+        "geometry_retained": true,
+        "id": "proc:4:sky:-1:-2:2:play:flow:acro:smooth:spatial",
+        "legacy_frame_constraints": false,
+        "max_curvature": 0.0417758430358454,
+        "nonplanarity_m": 0.000118255615234375,
+        "old_gates": 16,
+        "seed": 1919810
+      },
+      {
+        "bank_degrees": 151.838541028719,
+        "features": [
+          "spatial_s",
+          "wide_turn",
+          "corkscrew",
+          "wide_turn",
+          "spatial_s",
+          "wide_turn",
+          "spatial_s"
+        ],
+        "gates": 5,
+        "geometry_retained": false,
+        "id": "proc:4:surface:-1:0:3:play:flow:acro:smooth:spatial",
+        "legacy_frame_constraints": false,
+        "max_curvature": 0.125040701761918,
+        "nonplanarity_m": 2.65575551986694,
+        "old_gates": 11,
+        "seed": 1919810
+      },
+      {
+        "bank_degrees": 0.0,
+        "features": [
+          "key_nodes_only"
+        ],
+        "gates": 7,
+        "geometry_retained": true,
+        "id": "proc:4:surface:0:-2:1:play:flow:acro:smooth:spatial",
+        "legacy_frame_constraints": false,
+        "max_curvature": 0.102111297475605,
+        "nonplanarity_m": 3.814697265625E-06,
+        "old_gates": 17,
+        "seed": 1919810
+      },
+      {
+        "bank_degrees": 0.0,
+        "features": [
+          "key_nodes_only"
+        ],
+        "gates": 7,
+        "geometry_retained": true,
+        "id": "proc:4:surface:0:-2:4:play:flow:acro:smooth:spatial",
+        "legacy_frame_constraints": false,
+        "max_curvature": 0.114642509615279,
+        "nonplanarity_m": 0.0,
+        "old_gates": 17,
+        "seed": 1919810
+      },
+      {
+        "bank_degrees": 177.122471885872,
+        "features": [
+          "spatial_s",
+          "wide_turn",
+          "spatial_s",
+          "tight_turn",
+          "inclined_loop",
+          "wide_turn",
+          "corkscrew",
+          "wide_turn",
+          "spatial_s",
+          "wide_turn",
+          "spatial_s",
+          "tight_turn",
+          "inclined_loop"
+        ],
+        "gates": 38,
+        "geometry_retained": false,
+        "id": "proc:4:surface:0:-1:1:play:flow:precision:acro:smooth:spatial",
+        "legacy_frame_constraints": false,
+        "max_curvature": 0.134426679187869,
+        "nonplanarity_m": 33.6081428527832,
+        "old_gates": 20,
+        "seed": 1919810
+      },
+      {
+        "bank_degrees": 0.0,
+        "features": [
+          "key_nodes_only"
+        ],
+        "gates": 5,
+        "geometry_retained": true,
+        "id": "proc:4:sky:0:-1:1:play:flow:smooth:spatial",
+        "legacy_frame_constraints": false,
+        "max_curvature": 0.100280510451142,
+        "nonplanarity_m": 1.52442498801975E-05,
+        "old_gates": 9,
+        "seed": 1919810
+      },
+      {
+        "bank_degrees": 167.019537218392,
+        "features": [
+          "spatial_s",
+          "tight_turn",
+          "inclined_loop"
+        ],
+        "gates": 13,
+        "geometry_retained": false,
+        "id": "proc:4:surface:0:0:1:play:flow:precision:acro:smooth:spatial",
+        "legacy_frame_constraints": false,
+        "max_curvature": 0.111367461530329,
+        "nonplanarity_m": 29.6579284667969,
+        "old_gates": 9,
+        "seed": 1919810
+      }
+    ],
+    "sharp": 67
+  },
+  "sources": [
+    {
+      "path": "game/scripts/world/spatial_courses.gd",
+      "sha256": "c6787857b288390f8969edd8db0cdf76b16ce64a50d82f65a60d440619b7e2a4"
+    },
+    {
+      "path": "game/scripts/world/continuous_courses.gd",
+      "sha256": "8f8c966e02f542be887c38b57a083296daba9948f67030309433121503cc71b5"
+    },
+    {
+      "path": "game/scripts/world/acro_courses.gd",
+      "sha256": "3e60b433b08165ad3361fcf1c26d3654c8e11c02e866b36443effc0c531c3cb0"
+    },
+    {
+      "path": "game/scripts/world/mission_courses.gd",
+      "sha256": "be335d37be0720b43aa1f42a748cb255443b75a57e3872dac67a08f5746d2eda"
+    },
+    {
+      "path": "game/scripts/world/biome_world.gd",
+      "sha256": "d1271b450dbee6c890bccc79afe0703ec268682b6a9e2a2695fc3569ddc12742"
+    },
+    {
+      "path": "game/scripts/progress/flight_challenge_rules.gd",
+      "sha256": "7df4f6c8f048e6bc6d15d7b8b824b6d3c925ad0403ddd34aacaf05695d618b95"
+    },
+    {
+      "path": "game/scripts/ui/race_route_guide.gd",
+      "sha256": "40508aad21c7f733812b52819053ca2fbf9cf23d4551a55a17e206b37ab6924f"
+    },
+    {
+      "path": "game/scripts/ui/mission_challenge_view.gd",
+      "sha256": "254d4db8e49f4527a99aa51f961427c58a52f277ac5db5875407b200fe709804"
+    },
+    {
+      "path": "game/content/base/manifest.tres",
+      "sha256": "ff0f42b5681bb4fbafb8728d0fe72fc5a27f9c96b5b2fd8b91d4a27bf507cae8"
+    }
+  ],
+  "binaries": [
+    {
+      "path": "builds/Debug/OpenFPV.exe",
+      "bytes": 103247360,
+      "sha256": "11d8c3935af51ec796a44383bac3a91cd1d53276affc1a2d996607f29dc0df4b"
+    },
+    {
+      "path": "builds/Debug/OpenFPV.pck",
+      "bytes": 6247032,
+      "sha256": "5ca8392a927f255090aaf914dc6707ec9e9a00bca0e18e6e96718885d8868260"
+    },
+    {
+      "path": "builds/Release/OpenFPV.exe",
+      "bytes": 115586184,
+      "sha256": "5ddadbe50a011307db4039728db26193e2bdddf4703ce520d3d9c66a829c9b48"
+    }
+  ],
+  "distribution": {
+    "ok": true,
+    "channels": 4,
+    "standalone": true,
+    "releaseOnlyExe": true
+  },
+  "limitations": [
+    "Geometry and recommended body frame are not a guarantee for every speed, drone or manual RC flight feel.",
+    "Existing active layouts remain unchanged. Six sampled courses keep their base environmental layout.",
+    "Retained narrow passages may use only a subset of the old gate positions and orientations. Their original geometry is rechecked but not retroactively certified against the new manoeuvre design metrics.",
+    "No full 38-suite run, new performance benchmark or continuous manual flight."
+  ]
+}

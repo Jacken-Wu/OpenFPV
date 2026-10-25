@@ -318,6 +318,9 @@ func _merge(result: Dictionary, source: Dictionary) -> void:
 
 func mission(id: String) -> MissionDefinition:
 	var fields := id.split(":")
+	if fields.size() < 6: return null
+	if fields[-1] == "spatial": fields = fields.slice(0, fields.size() - 1)
+	if fields[-1] == "smooth": fields = fields.slice(0, fields.size() - 1)
 	var base_fields := fields.slice(0, fields.size() - 1) if fields[-1] == "acro" else fields
 	if base_fields[-1] == "precision": base_fields = base_fields.slice(0, base_fields.size() - 1)
 	if base_fields.size() not in [6, 7, 8] or (base_fields.size() >= 7 and base_fields[6] not in ["play", "regional"]) or (base_fields.size() == 8 and (base_fields[6] != "play" or base_fields[7] != "flow")) or fields[0] != "proc" or fields[1] != "4" or fields[2] not in ["surface", "sky", "maze"] or not fields[3].is_valid_int() or not fields[4].is_valid_int():

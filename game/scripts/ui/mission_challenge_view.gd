@@ -172,7 +172,7 @@ func _build(mission: MissionDefinition) -> void:
 		for index in mission.checkpoints.size():
 			var number := Label3D.new()
 			number.text = ("起点 " if index == 0 else "终点 " if index == mission.checkpoints.size() - 1 else "") + str(index + 1)
-			number.position = mission.checkpoints[index] - mission.acceptance_point() + Vector3.UP * (half + 0.7)
+			number.position = mission.checkpoints[index] - mission.acceptance_point() + FlightChallengeRules.gate_basis_for(mission, index).y * (half + 0.7)
 			number.billboard = BaseMaterial3D.BILLBOARD_ENABLED
 			number.font_size = 32
 			number.pixel_size = 0.014
@@ -181,8 +181,9 @@ func _build(mission: MissionDefinition) -> void:
 			root.add_child(number)
 			if index == stage:
 				var gate := Node3D.new()
+				gate.name = "CurrentGate"
 				gate.position = mission.checkpoints[index] - mission.acceptance_point()
-				gate.basis = FlightChallengeRules.gate_basis(mission.gate_normals[index])
+				gate.basis = FlightChallengeRules.gate_basis_for(mission, index)
 				root.add_child(gate)
 				var line := half + 0.05
 				for side: float in [-1, 1]:
