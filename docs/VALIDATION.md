@@ -6,6 +6,8 @@
 
 README与资源Git属性调整不改变游戏运行逻辑。准备上传的是已完成0.22验证的完整源码及现有提交历史，原0.22测试证据仍见下节；本轮不重跑完整36组。上传前检查候选文件无构建exe、.local、.code、引擎导入缓存或个人存档，文本密钥模式检查无命中；GitHub仓库由用户创建，本轮不创建tag或Release。
 
+上传结果：2026-10-25 19:01 已将源码提交 b31b54859914323279f77fbe340f1db0b5febb2a 推送到origin/main，远程分支SHA与本机一致，远程tag为0，未调用任何Release创建操作。由此提交git archive解压干净副本，Godot重新导入、content专项和--smoke通过，指纹仍为27b7d65d366dc3e52caef89837cc1fd3858590f964d05992472ae1e300555b7f；README本地链接通过，Git候选460文件无本机产物，隔离玩家存档副本已清理。上传记录见[本次源码检查](benchmarks/source-upload-2026-10-25.json)。本轮仅对两个旧测试脚本整理末尾空行，保留生成许可原文；没有地形修复或新运行功能。
+
 ## 内容0.22：地图降噪、黑闪绘制路径与单exe（2026-10-25 17:52）
 
 引擎Godot4.7.2.stable.official.ed1daf0bf，内容0.22.0、世界4；源码/原生Debug/Release指纹一致：27b7d65d366dc3e52caef89837cc1fd3858590f964d05992472ae1e300555b7f。详细日志、帧记录、成品与源码SHA256见[本轮证据](benchmarks/content-0.22-map-render-release.json)，所有测试使用隔离档。

@@ -2,7 +2,7 @@
 
 ## 当前源码仓库与发布状态（2026-10-25）
 
-用户新建仓库git@github.com:Jacken-Wu/OpenFPV.git，网页https://github.com/Jacken-Wu/OpenFPV。README已提供实际仓库/Releases/Issues链接和最后一节的克隆命令。当前仅上传源码供继续测试，不创建tag或Release，下载页暂未提供exe；本机builds/Release/OpenFPV.exe仍可继续测试。此状态替代下文历史记录中的“仓库尚未建立/链接待补”。缓存、构建程序、个人存档和.code不上传。
+用户新建仓库git@github.com:Jacken-Wu/OpenFPV.git，网页https://github.com/Jacken-Wu/OpenFPV。README已提供实际仓库/Releases/Issues链接和最后一节的克隆命令。当前源码已推送main并经过无缓存导入/启动检查，供继续测试；不创建tag或Release，下载页暂未提供exe；本机builds/Release/OpenFPV.exe仍可继续测试。此状态替代下文历史记录中的“仓库尚未建立/链接待补”。缓存、构建程序、个人存档和.code不上传。
 
 ## 内容0.22：当前发行方式
 

@@ -1,0 +1,22 @@
+{
+  "date_local": "2026-10-25 19:01",
+  "repository": "git@github.com:Jacken-Wu/OpenFPV.git",
+  "branch": "main",
+  "initial_source_commit": "b31b54859914323279f77fbe340f1db0b5febb2a",
+  "remote_main_verified": true,
+  "remote_tags_at_verification": 0,
+  "release_created": false,
+  "committed_files": 460,
+  "fresh_source": "git archive HEAD extracted without engine cache or local templates",
+  "checks": {
+    "import_log": ".local/upload-clean-import.log",
+    "content_log": ".local/upload-clean-content.log",
+    "smoke_log": ".local/upload-clean-smoke.log",
+    "smoke_ok": true,
+    "fingerprint": "27b7d65d366dc3e52caef89837cc1fd3858590f964d05992472ae1e300555b7f",
+    "readme_local_links": true,
+    "ignored_artifacts_absent": true,
+    "credential_pattern_scan_matches": 0
+  },
+  "scope": "Current 0.22 source and existing history uploaded. No runtime logic change or claim of mountain fix; user withdrew that investigation after restart. Only source assets/docs, not native builds or personal saves."
+}

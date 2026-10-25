@@ -57,7 +57,7 @@ pitfalls:
 journal:
   - id: "2026-10-25-github-source-upload"
     date: "2026-10-25"
-    desc: "用户确认0.22黑闪试玩未再遇到；1919810废城0,-4/1平台临时未封闭山头，在本机新档/隔离活动存档副本四向画面均未复现，点约(342.5693,16.5712,-2920.312)、radius4。用户重启后同样消失，明确暂缓，故本轮不改地形、不记为修复。用户已新建git@github.com:Jacken-Wu/OpenFPV.git并明确授权上传当前项目/优化README，禁止建tag和发布Release；配置origin、整理main源码及历史。README补实际链接和未发布状态、玩法概览/目录、反馈与克隆，候选源码不含构建/存档/缓存/.code且密钥扫描无命中。"
+    desc: "用户确认0.22黑闪试玩未再遇到；1919810废城0,-4/1平台临时未封闭山头，在本机新档/隔离活动存档副本四向画面均未复现，点约(342.5693,16.5712,-2920.312)、radius4。用户重启后同样消失，明确暂缓，故本轮不改地形、不记为修复。用户已新建git@github.com:Jacken-Wu/OpenFPV.git并明确授权上传当前项目/优化README，禁止建tag和发布Release；已推送origin/main并核对一致，干净提交副本重新导入、内容和冒烟通过；无tag/Release。README补实际链接和未发布状态、玩法概览/目录、反馈与克隆，候选源码不含构建/存档/缓存/.code且密钥扫描无命中。"
     freshness: "volatile"
   - id: "2026-10-25-content022-map-render-release"
     date: "2026-10-25"
