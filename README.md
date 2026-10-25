@@ -1,6 +1,10 @@
 # OpenFPV
 
-<p align="center"><img src="game/assets/openfpv.svg" width="112" alt="OpenFPV 四旋翼图标"></p>
+<p align="center">
+  <img src="game/assets/openfpv.svg" width="112" height="112" align="middle" alt="OpenFPV 四旋翼图标">
+  &nbsp;&nbsp;
+  <img src="game/assets/logo_text.png" width="336" height="112" align="middle" alt="OpenFPV 艺术字">
+</p>
 
 <p align="center"><a href="https://github.com/Jacken-Wu/OpenFPV/releases">下载游戏</a> · <a href="https://github.com/Jacken-Wu/OpenFPV/issues">反馈问题</a> · <a href="LICENSE">MIT 许可</a></p>
 
