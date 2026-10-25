@@ -4,6 +4,7 @@ builds/
 captures/
 tmp/
 .local/
+.codex/
 *.log
 *.tmp
 *.bak

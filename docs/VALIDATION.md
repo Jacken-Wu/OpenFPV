@@ -1,5 +1,9 @@
 # P1 验证记录
 
+## README与Git跟踪整理（2026-10-25）
+
+本轮仅重写README和调整Git跟踪规则，不改变运行代码。检查README本地文件/章节链接、Markdown代码块及实际构建脚本路径；.codex使用git rm --cached移出索引，本地memory/changelog保留，git check-ignore确认排除。同步main采用普通提交，不改写历史，不创建tag或Release；不重复游戏逻辑和画面检查。
+
 ## 源码上传准备与暂缓地形问题（2026-10-25）
 
 用户确认0.22实际试玩未再遇到原黑闪。新报告seed1919810、失落废城区0,-4/1平台上方有未封闭山体：先按相同种子/世界4/extension_radius=4生成，再只读复制活动存档到.local隔离副本对照。两者站点均为v4:surface:0:-4:p0，约(342.5693,16.5712,-2920.312)，附近实际地表在约14～16米，四向正常窗口均未见山体包覆；记录.local/portal-probe023-before.log、portal-view023-before.log、portal-view023-saved.log，图像.local/test-results/portal023-before与portal023-saved。没有改写原档。用户随后重启也无法再现，明确要求先不处理；本轮不修改地形或引入“已修复”结论。
