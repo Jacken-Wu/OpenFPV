@@ -85,7 +85,9 @@ func _dispatch() -> void:
 		return
 	var candidates: Array = []
 	for key: Vector3i in desired:
-		if not active.has(key) and not pending.has(key):
+		# A completed worker hands ownership to assembly until publication or
+		# cancellation. It is still in flight even after pending is cleared.
+		if not active.has(key) and not pending.has(key) and (assembly.is_empty() or assembly.key != key):
 			candidates.append(key)
 	candidates.sort_custom(func(a: Vector3i, b: Vector3i) -> bool: return Vector3(a - last_key).length_squared() < Vector3(b - last_key).length_squared())
 	for index in mini(4 - pending.size(), candidates.size()):
@@ -132,7 +134,9 @@ func _commit_results() -> void:
 			continue
 		WorkerThreadPool.wait_for_task_completion(pending[key].task)
 		pending.erase(key)
-		if not desired.has(key):
+		# Never replace an owned root: overwriting active would orphan its
+		# visuals/colliders, excluding them from origin shifts and retirement.
+		if not desired.has(key) or active.has(key):
 			discarded += 1
 			continue
 		if not result.objects.is_empty():

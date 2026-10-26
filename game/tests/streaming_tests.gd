@@ -19,6 +19,7 @@ func check(value: bool, message: String) -> void:
 	failed += int(not value)
 	print("PASS " if value else "FAIL ", message)
 func run() -> void:
+	await check_chunk_ownership()
 	var streamer := WorldStreamer.new()
 	streamer.generator = FixtureGenerator.new()
 	streamer.radius = 1
@@ -104,3 +105,92 @@ func run() -> void:
 	check(world.mission(task.id).checkpoints == task.checkpoints and catalog.fingerprint() == ContentCatalog.new().fingerprint(), "metadata lookup preserves objective identity and immutable content")
 	print("STREAMING_RESULT failures=%d checks=%d" % [failed, checked])
 	quit(1 if failed else 0)
+
+func check_chunk_ownership() -> void:
+	# Drive the real worker/commit path explicitly so assembly spans dispatches
+	# regardless of frame timing. One desired key makes duplicate requests visible.
+	var streamer := WorldStreamer.new()
+	streamer.generator = FixtureGenerator.new()
+	streamer.radius = 0
+	streamer.vertical_radius = 0
+	streamer.commit_budget_us = 200
+	root.add_child(streamer)
+	streamer.set_process(false)
+	streamer._refresh(Vector3i.ZERO)
+	streamer._dispatch()
+	for job: Dictionary in streamer.pending.values():
+		while not WorkerThreadPool.is_task_completed(job.task): await process_frame
+	for step in 5000:
+		streamer._commit_results()
+		if not streamer.assembly.is_empty(): break
+	check(not streamer.assembly.is_empty(), "ownership fixture reaches unpublished multi-frame assembly")
+	var first_ticket := streamer.serial
+	streamer._dispatch()
+	check(streamer.serial == first_ticket, "assembling chunk retains ownership and cannot be dispatched twice")
+	for step in 5000:
+		for job: Dictionary in streamer.pending.values():
+			while not WorkerThreadPool.is_task_completed(job.task): await process_frame
+		streamer._commit_results()
+		streamer._dispatch()
+		if streamer.active.has(Vector3i.ZERO) and streamer.pending.is_empty() and streamer.results.is_empty() and streamer.assembly.is_empty(): break
+	check(streamer.get_child_count() == 1 and streamer.active.size() == 1, "one chunk key publishes exactly one scene root without orphan geometry")
+	# Even an otherwise valid late duplicate must not overwrite the owned root.
+	var owned: Node3D = streamer.active[Vector3i.ZERO]
+	streamer.active.erase(Vector3i.ZERO)
+	streamer._dispatch()
+	streamer.active[Vector3i.ZERO] = owned
+	for job: Dictionary in streamer.pending.values():
+		while not WorkerThreadPool.is_task_completed(job.task): await process_frame
+	var discarded_before := streamer.discarded
+	for step in 5000:
+		streamer._commit_results()
+		if streamer.pending.is_empty(): break
+	check(streamer.discarded == discarded_before + 1 and streamer.assembly.is_empty() and streamer.active[Vector3i.ZERO] == owned and streamer.get_child_count() == 1, "late duplicate result is discarded without replacing the owned scene root")
+	var shift := Vector3(64, 128, -64)
+	streamer.shift_origin(shift)
+	var aligned := true
+	for child: Node3D in streamer.get_children():
+		aligned = aligned and child.position.is_equal_approx(-shift)
+	check(aligned, "every published root follows horizontal and vertical origin shifts")
+	await physics_frame
+	await physics_frame
+	var space := streamer.get_world_3d().direct_space_state
+	check(space.intersect_ray(PhysicsRayQueryParameters3D.create(Vector3(0, 8, 0), Vector3.ZERO)).is_empty(), "origin shift leaves no floating collider at the old scene position")
+	check(not space.intersect_ray(PhysicsRayQueryParameters3D.create(Vector3(0, 8, 0) - shift, -shift)).is_empty(), "owned chunk collider follows the shifted terrain")
+	streamer._refresh(Vector3i(64, 0, 64))
+	await physics_frame
+	await physics_frame
+	check(space.intersect_ray(PhysicsRayQueryParameters3D.create(Vector3(0, 8, 0), Vector3.ZERO)).is_empty(), "unloading leaves no untracked collision behind")
+	check(space.intersect_ray(PhysicsRayQueryParameters3D.create(Vector3(0, 8, 0) - shift, -shift)).is_empty(), "retirement immediately disables the shifted chunk collider")
+	streamer.replace_generator(FixtureGenerator.new())
+	var no_visible_roots := true
+	for child: Node3D in streamer.get_children():
+		no_visible_roots = no_visible_roots and not child.visible
+	check(no_visible_roots, "world replacement cannot retain a visible orphan from the previous world")
+	streamer._refresh(Vector3i.ZERO)
+	streamer._dispatch()
+	for job: Dictionary in streamer.pending.values():
+		while not WorkerThreadPool.is_task_completed(job.task): await process_frame
+	for step in 5000:
+		streamer._commit_results()
+		if not streamer.assembly.is_empty(): break
+	var unpublished: Node3D = streamer.assembly.root
+	streamer.shift_origin(-shift)
+	for step in 5000:
+		streamer._commit_results()
+		streamer._dispatch()
+		if streamer.active.has(Vector3i.ZERO): break
+	check(streamer.active.get(Vector3i.ZERO) == unpublished and unpublished.position.is_equal_approx(shift), "assembly publishes once at the current origin after an in-flight shift")
+	streamer.replace_generator(FixtureGenerator.new())
+	streamer._refresh(Vector3i.ZERO)
+	streamer._dispatch()
+	for job: Dictionary in streamer.pending.values():
+		while not WorkerThreadPool.is_task_completed(job.task): await process_frame
+	for step in 5000:
+		streamer._commit_results()
+		if not streamer.assembly.is_empty(): break
+	var cancelled: Node3D = streamer.assembly.root
+	streamer.replace_generator(FixtureGenerator.new())
+	check(not is_instance_valid(cancelled) and streamer.assembly.is_empty() and streamer.pending.is_empty() and streamer.results.is_empty() and streamer.active.is_empty(), "world replacement cancels owned assembly and drains its remaining work")
+	streamer.queue_free()
+	await process_frame

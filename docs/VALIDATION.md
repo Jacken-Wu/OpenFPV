@@ -1,5 +1,19 @@
 # P1 验证记录
 
+## 0.24.1源码提交与标签（2026-10-26）
+
+用户授权将本轮浮空地形块修复提交到main并推送新标签；采用`0.24.1`作为0.24的补丁版本，标签目标为包含修复、回归及证据文档的同一提交。远程main在操作前与本地HEAD一致，远程不存在此标签。本次沿用下方修复验证和已重建的本地Debug/Release，不重复运行游戏测试；世界4和内容数据0.24.0保持不变，不因标签升级重置存档。GitHub Release由用户自行发布，本次仅提交源码与版本标签。
+
+## 偶发浮空地形块：重复组装失去节点管理（2026-10-26）
+
+Godot4.7.2.stable.official.ed1daf0bf，世界4、内容0.24.0不变。使用真实后台生成、900碰撞物件和200微秒提交预算，在块进入assembly后再次调用派发，可稳定复现同key重复发布。旧版本六项断言失败：重复请求、两份场景根、原点平移遗漏、旧位置保留碰撞、卸载后残留、换世界后仍可见；日志`.local/test-results/streaming-ownership-before.log`无脚本/引擎错误。
+
+修复将assembly视为占用中的key，并拒绝覆盖active的迟到重复结果。相同回归及补充边界检查在headless和正常Mobile/Vulkan窗口均通过24项；窗口设备RTX4060Ti。使用真实物理射线证明水平/垂直原点移动后旧坐标没有浮空碰撞、正确坐标仍有碰撞；退役即时关闭碰撞，组装期间移动原点按最新位置发布，切换世界取消未发布根。正常窗口还验证真实MultiMesh变换及批次边界。日志为`streaming-ownership-after.log`、`streaming-ownership-window.log`。
+
+相关headless回归world、scenery26、regions45、developer72全部零失败，覆盖生产种子世界启动、地形/机体真实碰撞、原点平移、传送就绪和世界替换。原生Debug/Release重新构建、图标与许可、源码/成品启动及内容指纹一致检查通过；Test-Distribution四进程数据隔离、Release单exe独立运行通过。当前本地成品为`builds/Release/OpenFPV.exe`，Debug需同目录PCK。结果与源码/产物/日志哈希见[证据记录](benchmarks/terrain-chunk-ownership-fix.json)。
+
+本轮没有运行完整38组、长期RC飞行或新的性能测量；未声称所有偶发现场均已复测。确定性重现的生命周期漏洞已修复，用户原现场仍待新版实测。既有存档、世界生成、任务及奖励不变，无需清档；已在旧进程内生成的残留节点随退出清除。没有推送、修改标签或发布GitHub Release。
+
 ## README 品牌排版（2026-10-26）
 
 README 顶部在同一居中段落中并排引用现有 SVG 图标和 `game/assets/logo_text.png`，分别以 112×112 和 336×112 显示，保持资源宽高比并垂直居中。图片路径存在、图片内容已查看、`git diff --check` 通过；GitHub 页面实际渲染未自动验证。本轮仅文档和图片改动，不运行引擎或游戏测试；用户检查后授权将 README、两张新图片及其他现有改动一并提交并推送。

@@ -1,0 +1,188 @@
+{
+  "recorded_at": "2026-10-26T15:58:39+08:00",
+  "engine": "4.7.2.stable.official.ed1daf0bf",
+  "world_version": 4,
+  "content_version": "0.24.0",
+  "cause": "Assembly no longer appeared in pending but did not yet appear in active; duplicate dispatch/publication orphaned the earlier scene root and collider.",
+  "regression_before_failures": 6,
+  "regression_after_checks": 24,
+  "window": "Mobile/Vulkan, NVIDIA GeForce RTX 4060 Ti",
+  "source_build_info": {
+    "configuration": "Release",
+    "debug": false,
+    "editor": false,
+    "licenses": {
+      "engine_sha256": "0673f16579d902765eb0635d09949f254359217e8b2cdaa47cecc98088f033c7",
+      "ok": true,
+      "project_sha256": "ae94d2d06d68854a3c9fddc5ad9e13ae3a7c5ae1188c15e1d7d9c66329fea6b2"
+    },
+    "template": true,
+    "user_data_dir": "C:/Users/Jacken/AppData/Roaming/OpenFPV/Release"
+  },
+  "distribution": {
+    "releaseEmbedded": true,
+    "reports": [
+      {
+        "credits": 111,
+        "debug": true,
+        "directory": "C:/Users/Jacken/AppData/Roaming/Godot/app_userdata/OpenFPV · 重连边境",
+        "existing": false,
+        "ok": true,
+        "photo": "absent"
+      },
+      {
+        "credits": 222,
+        "debug": false,
+        "directory": "C:/Users/Jacken/AppData/Roaming/OpenFPV/Release",
+        "existing": false,
+        "ok": true,
+        "photo": "absent"
+      },
+      {
+        "credits": 111.0,
+        "debug": true,
+        "directory": "C:/Users/Jacken/AppData/Roaming/Godot/app_userdata/OpenFPV · 重连边境",
+        "existing": true,
+        "ok": true,
+        "photo": "111"
+      },
+      {
+        "credits": 222.0,
+        "debug": false,
+        "directory": "C:/Users/Jacken/AppData/Roaming/OpenFPV/Release",
+        "existing": true,
+        "ok": true,
+        "photo": "222"
+      }
+    ],
+    "ok": true,
+    "releaseOnlyExe": true,
+    "debugHasNoDistributionDocs": true,
+    "standalone": "D:\\files\\projects\\codex\\OpenFPV\\.local\\test-results\\distribution_639285982143667298\\standalone\\OpenFPV.exe"
+  },
+  "logs": [
+    {
+      "path": ".local/test-results/streaming-ownership-before.log",
+      "sha256": "31b8d47cfe52e55a53de63c8992fbc3d383e9ca4d8846e97da249f7bfa75b876",
+      "pass_count": 14,
+      "fail_count": 6,
+      "result": [
+        "STREAMING_RESULT failures=6 checks=20"
+      ],
+      "engine_errors": false
+    },
+    {
+      "path": ".local/test-results/streaming-ownership-after.log",
+      "sha256": "2d5155654e461f310b7f061e01d949a4bf18654f046bea341cac645f83f423f1",
+      "pass_count": 24,
+      "fail_count": 0,
+      "result": [
+        "STREAMING_RESULT failures=0 checks=24"
+      ],
+      "engine_errors": false
+    },
+    {
+      "path": ".local/test-results/streaming-ownership-window.log",
+      "sha256": "ff2045b50bf8d5acdeac515035e76783bed833d6b1cea2e06223230e642ab5b9",
+      "pass_count": 24,
+      "fail_count": 0,
+      "result": [
+        "STREAMING_RESULT failures=0 checks=24"
+      ],
+      "engine_errors": false
+    },
+    {
+      "path": ".local/test-results/terrain-fix-world.log",
+      "sha256": "8ec4992fedf0ff849f8f5b4a2a9a72308c733f046e4ebff3c9e1f90ccc1d488e",
+      "pass_count": 19,
+      "fail_count": 0,
+      "result": [
+        "WORLD_RESULT failures=0"
+      ],
+      "engine_errors": false
+    },
+    {
+      "path": ".local/test-results/terrain-fix-scenery.log",
+      "sha256": "d724ade2785c1268a6391155b5487888f538415fbf0eacd862661761017e01e4",
+      "pass_count": 26,
+      "fail_count": 0,
+      "result": [
+        "SCENERY_RESULT failures=0 checks=26"
+      ],
+      "engine_errors": false
+    },
+    {
+      "path": ".local/test-results/terrain-fix-regions.log",
+      "sha256": "74c644bbdfd9ab61ab9572451d2dd731739d15a3950c61ea4fcfc6e2ee4c4c1a",
+      "pass_count": 45,
+      "fail_count": 0,
+      "result": [
+        "REGIONS_RESULT failures=0 checks=45"
+      ],
+      "engine_errors": false
+    },
+    {
+      "path": ".local/test-results/terrain-fix-developer.log",
+      "sha256": "53dc9f8e54d7a35a195cfb9a70da2908c781158a4ffee2a3269e8c30de0e779c",
+      "pass_count": 72,
+      "fail_count": 0,
+      "result": [
+        "DEVELOPER_RESULT failures=0 checks=72"
+      ],
+      "engine_errors": false
+    },
+    {
+      "path": ".local/test-results/terrain-fix-build-Debug.log",
+      "sha256": "501ea0c8da0f761bf1cd592561ec235e61f7ba52e1dbc31ca253cbdad47717b1",
+      "pass_count": 0,
+      "fail_count": 0,
+      "result": [],
+      "engine_errors": false
+    },
+    {
+      "path": ".local/test-results/terrain-fix-build-Release.log",
+      "sha256": "86745f2e7011e3441237a09a2971cf323aa8cc89a8370cf815b2f27489aefca1",
+      "pass_count": 0,
+      "fail_count": 0,
+      "result": [],
+      "engine_errors": false
+    },
+    {
+      "path": ".local/test-results/terrain-fix-distribution.log",
+      "sha256": "45320b95c5982520795510122159420ad40b9fe5082907e8bc038a9bcdaded14",
+      "pass_count": 0,
+      "fail_count": 0,
+      "result": [
+        "DISTRIBUTION_RESULT failures=0 channels=4 standalone=true"
+      ],
+      "engine_errors": false
+    }
+  ],
+  "files": [
+    {
+      "path": "game/scripts/world/world_streamer.gd",
+      "sha256": "7509238723ad57dcb80a7a4f6b3900ce4715d8162430e30354a914ec65734807"
+    },
+    {
+      "path": "game/tests/streaming_tests.gd",
+      "sha256": "baa1771699b8c17cfd371d1713d9b3efb94bbedc2504e2c26caa715a359c89f8"
+    },
+    {
+      "path": "builds/Debug/OpenFPV.exe",
+      "sha256": "11d8c3935af51ec796a44383bac3a91cd1d53276affc1a2d996607f29dc0df4b"
+    },
+    {
+      "path": "builds/Debug/OpenFPV.pck",
+      "sha256": "d44577ebcf3327a5abae986afc401de8427f0ccf173b2c2f44648034c58d737e"
+    },
+    {
+      "path": "builds/Release/OpenFPV.exe",
+      "sha256": "ecfebb8d33c00896a15b8a23be57a04982239077dbafdfddd84adee5bcaef8e7"
+    }
+  ],
+  "limits": [
+    "No full 38-suite run",
+    "No new performance measurements",
+    "Original random user scene and long human RC flight require follow-up"
+  ]
+}
